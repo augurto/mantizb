@@ -15,11 +15,11 @@ require 'vendor/autoload.php';
 $mail = new PHPMailer(true);
 $mail->isSMTP();
 $mail->SMTPDebug = 0;
-$mail->Host = 'mail.edeproca.com';
+$mail->Host = 'ego.17.22@gmail.com';
 $mail->Port = 465;
 $mail->SMTPSecure = 'ssl';
 $mail->SMTPAuth = true;
-$mail->Username = "admin@edeproca.com";
+$mail->Username = "ego.17.22@gmail.com";
 $mail->Password = "cartagena2020";
 
 while ($row=mysqli_fetch_array($sql)){
@@ -31,7 +31,7 @@ $codigo_proyecto=$row['codigo_proyecto'];
   $rw=mysqli_fetch_array($g);
   $nombre_proyecto=$rw["nombre_proyecto"];
 
-$mail->setFrom('edeproca@edeproca.com', 'SISTEMA DE GESTION DE PROYECTO');
+$mail->setFrom('ego.17.22@gmail.com', 'SISTEMA DE GESTION DE PROYECTO');
 $mail->addAddress($username);
 $mail->Subject = "SISTEMA DE GESTION DE PROYECTO";
 $mail->msgHTML('<br>Buen dia :)<br>El presente correo  es para informarle que usted ha sido integado(a) al proyecto '.$nombre_proyecto.'. con el rol de '.$rol.' Le invitamos a que acceda al sistema y se ponga a la mano con el proyecto.<br>Hasta pronto que tenga un buen dia.');
