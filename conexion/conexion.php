@@ -1,6 +1,6 @@
 <?php
 
-	mysql_connect("localhost","edeproca_fix_test_user","fix_test_user");
-	mysql_select_db("edeproca_p");
+	mysql_connect("localhost","u415020159_mantizb","Mantizb*#17");
+	mysql_select_db("u415020159_mantizb");
 
 ?>
