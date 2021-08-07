@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost","edeproca_fix_test_user","fix_test_user", "edeproca_p");
+$mysqli = new mysqli("localhost","u415020159_mantizb","Mantizb*#17", "u415020159_mantizb");
 
 if($mysqli -> connect_errno){
 echo "BD".$mysqli->connect_error;
