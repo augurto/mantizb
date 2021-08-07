@@ -28,18 +28,18 @@
                   <input type="email" class="form-control" id="email_m" name="email" placeholder="Email" required="">
                 </div>
          
-                <label>Cedula</label>
+                <label>DNI</label>
         <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
                     <span class="input-group-text">#</span>
                   </div>
-                  <input type="number" class="form-control" name="cedula" placeholder="Cedula" required="">
+                  <input type="number" class="form-control" name="cedula" placeholder="DNI" required="">
                 </div> 
                   <label>Rol</label>
                 <div class="form-group">
                     <select class="form-control" name="rol">
-                      <option value="Estudiante">Estudiante</option>
+                      <option value="Estudiante">Colaborador</option>
                       <option value="Investigador">Investigador</option>
                     </select>
                   </div>
