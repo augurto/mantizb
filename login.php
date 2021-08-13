@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>MEAVE</title>
+  <title>MANTIZ</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -40,7 +40,7 @@
                 <br>
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4"><b>MEAVE</b></h1>
+                    <h1 class="h4 text-gray-900 mb-4"><b>MANTIZ</b></h1>
                   </div>
                   <div class="alert alert-danger" id="error" style="display: none;" role="alert"><button type="button" class="close" data-dismiss="alert">&times;</button>Nombre de usuario o contraseña inválidos.</div>
 

@@ -5,7 +5,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <img src="img/avatar.png" width="50px" height="40px">
         </div>
-        <div class="sidebar-brand-text mx-3">MEAVE <sup>TM</sup></div>
+        <div class="sidebar-brand-text mx-3">MANTIZ <sup>cusco</sup></div>
       </a>
 
       <!-- Divider -->
