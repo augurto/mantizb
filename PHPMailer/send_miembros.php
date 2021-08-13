@@ -34,7 +34,7 @@ $codigo_proyecto=$row['codigo_proyecto'];
 $mail->setFrom('ego.17.22@gmail.com', 'SISTEMA DE GESTION DE PROYECTO');
 $mail->addAddress($username);
 $mail->Subject = "SISTEMA DE GESTION DE PROYECTO";
-$mail->msgHTML('<br>Buen dia :)<br>El presente correo  es para informarle que usted ha sido integado(a) al proyecto '.$nombre_proyecto.'. con el rol de '.$rol.' Le invitamos a que acceda al sistema y se ponga a la mano con el proyecto.<br>Hasta pronto que tenga un buen dia.');
+$mail->msgHTML('<br>Buen dia :)<br>El presente correo  es para informarle que usted ha sido integado(a) al proyecto '.$nombre_proyecto.'. con el rol de '.' Le invitamos a que acceda al sistema y se ponga a la mano con el proyecto.<br>Hasta pronto que tenga un buen dia.');
 				}
 
 

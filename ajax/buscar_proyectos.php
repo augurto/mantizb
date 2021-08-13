@@ -65,7 +65,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Saldo</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">$<?php echo number_format($saldo,2);?></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">S/<?php echo number_format($saldo,2);?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-dollar-sign  fa-2x text-gray-300"></i>
@@ -189,7 +189,7 @@
                     	<td><?php echo $count++; ?></td>
                       <td><a href="info_proyecto.php?cod=<?php echo $codigo_; ?>"><?php echo $nombre; ?></a></td>
                       <td width="4%"><?php echo $codigo_; ?></td>
-                      <td width="5%">$ <?php echo number_format($presupuesto); ?></td>
+                      <td width="5%">S/<?php echo number_format($presupuesto); ?></td>
                       <td><?php echo $fecha; ?></td>
                       <td><a href="#" class="btn btn-<?php echo $label_class;?> btn-icon-split">
                     <span class="icon text-white-50">
