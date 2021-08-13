@@ -58,7 +58,7 @@ session_start();
 						$cedula=$row['cedula'];
 						$estado=$row['estado'];
 						$email=$row['email'];
-						$rol=$row['rol'];
+						$rol=$row['rol2'];
 						$grupo=$row['grupo'];
 						if ($estado=='activo'){$label_class='warning '; $ico='info';}
 						else{$text_estado="inactivo";$label_class='danger'; $ico='exclamation-triangle';}
