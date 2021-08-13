@@ -13,7 +13,12 @@
 		$estado=mysqli_real_escape_string($con,(strip_tags($_POST["estado"],ENT_QUOTES)));
 		$email=mysqli_real_escape_string($con,(strip_tags($_POST["email"],ENT_QUOTES)));
 		$permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
- 
+			if ($_POST["rol"]="estudiante") {
+				# code...
+				$rol2="Colaborador";
+			} else {
+				$rol2="Investigador";
+			}
 function generate_string($input, $strength = 16) {
     $input_length = strlen($input);
     $random_string = '';
@@ -33,7 +38,7 @@ $rand=generate_string($permitted_chars, 7);
                 if ($query_check_user == 1) {
                     $errors[] = "Lo sentimos , la cedula o el email ya está en uso.";
                 } else {
-		$sql="INSERT INTO miembros (nombre, cedula, email, rol, grupo, rand, estado) VALUES ('$nombre', '$cedula','$email','$rol', '$grupo','$cedula', '$estado')";
+		$sql="INSERT INTO miembros (nombre, cedula, email, rol, grupo, rand, estado, rol2) VALUES ('$nombre', '$cedula','$email','$rol', '$grupo','$cedula', '$estado','$rol2')";
 		$query_new_insert = mysqli_query($con,$sql);
 			if ($query_new_insert){
 				$messages[] = "Ingresado satisfactoriamente.";
