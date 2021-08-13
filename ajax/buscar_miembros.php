@@ -42,7 +42,7 @@ session_start();
                   <thead>
                     <tr>
                     <th>Nombre</th>
-					<th>Cedula</th>
+					<th>DNI</th>
 					<th>Email</th>
 					<th>Rol</th>
 					<th>Grupo</th>
