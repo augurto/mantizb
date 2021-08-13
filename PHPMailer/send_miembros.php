@@ -19,8 +19,8 @@ $mail->Host = 'ego.17.22@gmail.com';
 $mail->Port = 465;
 $mail->SMTPSecure = 'ssl';
 $mail->SMTPAuth = true;
-$mail->Username = "ego.17.22@gmail.com";
-$mail->Password = "cartagena2020";
+$mail->Username = "augurto.17@gmail.com";
+$mail->Password = "ExaelAzazel1717";
 
 while ($row=mysqli_fetch_array($sql)){
 $username=$row['username'];

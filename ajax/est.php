@@ -18,7 +18,7 @@
 				$query_check_user=mysqli_num_rows($query_check_user_name);
 
                 if ($query_check_user == 1) {
-                    $errors[] = "ya el estudiante está asociado.";
+                    $errors[] = "ya el colaborador está asociado.";
                 } else {
 		$sql="INSERT INTO  estudiantes_proyecto (codigo_proyecto, estudiante) VALUES ('$ce', '$estudiante')";
 		$query_new_insert = mysqli_query($con,$sql);
