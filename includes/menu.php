@@ -3,7 +3,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15">
-          <img src="img/avatar.png" width="50px" height="40px">
+         <!--  <img src="img/avatar.png" width="50px" height="40px">  colocar imagen o logo -->
         </div>
         <div class="sidebar-brand-text mx-3">MANTIZ <sup>🅜</sup></div>
       </a>
