@@ -49,6 +49,7 @@
                             <!-- Datos del formulario -->
                             Usuario: <input  type="text" class="form-control form-control-user"  name="usuario" placeholder="Ingrese un usuario" />
                             Password: <input type="text" class="form-control form-control-user"  name="pass" placeholder="Escriba una contraseña" />
+                            <br>
                             <!-- Botón de envío de formulario -->
                             <input type="submit" class="btn btn-primary btn-user btn-block login" value="Enviar formulario" />
                             <br>
