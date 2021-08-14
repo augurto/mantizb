@@ -23,7 +23,7 @@ echo "Se realizo la conexion  ";
 $sql = "INSERT INTO usuarios (username , password, rol,codigo_proyecto, pass2) VALUES ('$usuario', '$sha1','Inv Principal','$usuario', '$pass')";
 
  
-}
+
 if (mysqli_query($conn, $sql)) {
       $insertar2 = "INSERT INTO miembros (nombre , grupo, rand, rol,rol2, estado) VALUES ('$usuario','51', '$pass','Investigador','$usuario', 'activo')";
       sleep(2);
