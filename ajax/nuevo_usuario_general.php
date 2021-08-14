@@ -2,7 +2,7 @@
 require_once ("../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 require_once ("../config/conexion.php");//Contiene funcion que conecta a la base de datos
 $usuario = $_POST["usuario"];
-$password = $_POST["pass"];
+$pass = $_POST["pass"];
 $sha1 = sha1($password);
 
 $servername = "localhost";
@@ -16,13 +16,19 @@ if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
 }
  
-echo "Connected successfully";
- 
-$sql = "INSERT INTO usuarios (username , password, rol,codigo_proyecto, pass2) VALUES ('$usuario', '$sha1','Inv Principal','null', '$sha1')";
+echo "Se realizo la conexion  ";
+
+$sql3 = "INSERT INTO miembros (nombre , rand, rol,rol2, estado) VALUES ('$usuario', '$pass','Investigador','$usuario', 'activo')";
+
+$sql = "INSERT INTO usuarios (username , password, rol,codigo_proyecto, pass2) VALUES ('$usuario', '$sha1','Investigador','$usuario', '$pass')";
 if (mysqli_query($conn, $sql)) {
       echo "Usario registrado con exito :3";
+      sleep(2);
+      header("Location: ../login.php");
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        sleep(2);
+      header("Location: ../login.php");
 }
 mysqli_close($conn);
 ?>
