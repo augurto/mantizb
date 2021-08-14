@@ -5,7 +5,7 @@ $usuario = $_POST["usuario"];
 $password = $_POST["pass"];
 $sha1 = sha1($password);
 
-$sql=" INSERT INTO usuarios (username , password, pass2) values ('$usuario', '$sha1', '$sha1')";
+$sql=" INSERT INTO usuarios (username , password, pass2) VALUES ('$usuario', '$sha1', '$sha1')";
 
         if (mysqli_query($conn, $sql)) {
             echo "Usuario Registrado";
