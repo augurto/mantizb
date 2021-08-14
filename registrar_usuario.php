@@ -56,13 +56,22 @@
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
               
-                  <div th:if="${param.logout}" id="logged"  class="alert alert-success" role="alert">
-                Usted ha sido desconectado.
-                </div>
+                        </div>
        
-                      </div>
-                    </div>
+                        </div>
+                   
                        <button type="submit" class="btn btn-primary btn-user btn-block login" id="login"><i class="fas fa-sign-in-alt"></i>  Registrar </button>
+
+
+                       <form name="formulario" method="post" action="/send.php">
+                            <!-- Datos del formulario -->
+                            Usuario: <input  type="text" class="form-control form-control-user"  name="usuario" />
+                            Password: <input type="text" class="form-control form-control-user"  name="pass" />
+                            <!-- Botón de envío de formulario -->
+                            <input type="submit" class="btn btn-primary btn-user btn-block login" value="Enviar formulario" />
+                            <!-- Botón de reseteo de formulario -->
+                            <input type="reset" class="btn btn-primary btn-user btn-block login" value="Borrar formulario" />
+                        </form>
                 <br>
        
                 <br>
