@@ -42,7 +42,7 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4"><b>MANTIZ</b></h1>
                   </div>
-                  <div class="alert alert-danger" id="error" style="display: none;" role="alert"><button type="button" class="close" data-dismiss="alert">&times;</button>Nombre de usuario o contraseña inválidos.</div>
+                  <div class="alert alert-danger" id="error" style="display: none;" role="alert"></div>
 
                   <form class="user" id="login" name="login">
                     <div class="form-group">
@@ -55,16 +55,16 @@
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
-                <?php if(isset($_GET['session_destroy'])){?>
+              
                   <div th:if="${param.logout}" id="logged"  class="alert alert-success" role="alert">
                 Usted ha sido desconectado.
                 </div>
               <?php } ?>
                       </div>
                     </div>
-                       <button type="submit" class="btn btn-primary btn-user btn-block login" id="login"><i class="fas fa-sign-in-alt"></i>  Iniciar Sesion </button>
+                       <button type="submit" class="btn btn-primary btn-user btn-block login" id="login"><i class="fas fa-sign-in-alt"></i>  Registrar </button>
                 <br>
-                <a href="registrar_usuario.php">Registrarse</a>
+       
                 <br>
                 <br>
                   </form>
@@ -92,33 +92,6 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
-<script type="text/javascript">
-    $( "#login" ).submit(function( even) {
-  var parametros = $(this).serialize();
-     $.ajax({
-            type: "POST",
-            url: "ajax/acceso.php",
-            data: parametros,
-             beforeSend: function(objeto){
-                $(".login").html("Cargando...");
-              },
-            success: function(datos){
-                 $(".login").html("<i class='fas fa-sign-in-alt'></i>  Iniciar Sesion");
-            if(datos=='1'){
-               swal("Bienvenido(a) al sistema", {
-      icon: "success",
-    });
-                location.href="index.php";
-            }else{
-             swal("El usuario o la contraseña no es valida", {
-      icon: "error",
-    });
-            }
-          }
-    });
-  even.preventDefault();
-})
 
-</script>
 </html>
 
