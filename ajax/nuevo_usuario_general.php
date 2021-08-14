@@ -18,11 +18,12 @@ if (!$conn) {
  
 echo "Se realizo la conexion  ";
 
-$sql3 = "INSERT INTO miembros (nombre , grupo, rand, rol,rol2, estado) VALUES ('$usuario','51', '$pass','Investigador','$usuario', 'activo')";
+
 
 $sql = "INSERT INTO usuarios (username , password, rol,codigo_proyecto, pass2) VALUES ('$usuario', '$sha1','Inv Principal','$usuario', '$pass')";
 if (mysqli_query($conn, $sql)) {
-      echo "Usario registrado con exito :3";
+      /* echo "Usario registrado con exito :3"; */
+      $sql3 = "INSERT INTO miembros (nombre , grupo, rand, rol,rol2, estado) VALUES ('$usuario','51', '$pass','Investigador','$usuario', 'activo')";
       sleep(2);
       header("Location: ../login.php");
 } else {
