@@ -44,39 +44,18 @@
                   </div>
                   <div class="alert alert-danger" id="error" style="display: none;" role="alert"></div>
 
-                  <form class="user" id="login" name="login">
-                    <div class="form-group">
-                      <label for="exampleInputEmail">Usuario:</label>
-                      <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="username" aria-describedby="emailHelp" placeholder="Usuario" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail">Contraseña:</label>
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" name="password" placeholder="Password" required>
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox small">
-              
-                        </div>
-       
-                        </div>
-                   
-                       <button type="submit" class="btn btn-primary btn-user btn-block login" id="login"><i class="fas fa-sign-in-alt"></i>  Registrar </button>
-
-
-                       <form name="formulario" method="post" action="/send.php">
+                  
+                       <form name="formulario" method="post" action="ajax/nuevo_usuario_general.php">
                             <!-- Datos del formulario -->
-                            Usuario: <input  type="text" class="form-control form-control-user"  name="usuario" />
-                            Password: <input type="text" class="form-control form-control-user"  name="pass" />
+                            Usuario: <input  type="text" class="form-control form-control-user"  name="usuario" placeholder="Ingrese un usuario" />
+                            Password: <input type="text" class="form-control form-control-user"  name="pass" placeholder="Escriba una contraseña" />
                             <!-- Botón de envío de formulario -->
                             <input type="submit" class="btn btn-primary btn-user btn-block login" value="Enviar formulario" />
+                            <br>
                             <!-- Botón de reseteo de formulario -->
                             <input type="reset" class="btn btn-primary btn-user btn-block login" value="Borrar formulario" />
                         </form>
-                <br>
-       
-                <br>
-                <br>
-                  </form>
+             
                 </div>
               </div>
             </div>

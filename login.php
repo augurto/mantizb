@@ -64,7 +64,9 @@
                     </div>
                        <button type="submit" class="btn btn-primary btn-user btn-block login" id="login"><i class="fas fa-sign-in-alt"></i>  Iniciar Sesion </button>
                 <br>
+                <center>
                 <a href="registrar_usuario.php">Registrarse</a>
+                </center>
                 <br>
                 <br>
                   </form>
