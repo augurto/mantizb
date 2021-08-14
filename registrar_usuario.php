@@ -59,7 +59,7 @@
                   <div th:if="${param.logout}" id="logged"  class="alert alert-success" role="alert">
                 Usted ha sido desconectado.
                 </div>
-              <?php } ?>
+       
                       </div>
                     </div>
                        <button type="submit" class="btn btn-primary btn-user btn-block login" id="login"><i class="fas fa-sign-in-alt"></i>  Registrar </button>
