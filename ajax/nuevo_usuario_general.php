@@ -22,11 +22,11 @@ echo "Se realizo la conexion  ";
 
 $sql = "INSERT INTO usuarios (username , password, rol,codigo_proyecto, pass2) VALUES ('$usuario', '$sha1','Inv Principal','$usuario', '$pass')";
 
- 
+$ejecutado= mysqli_query($conn, $sql);
 
-if (mysqli_query($conn, $sql)) {
+if ($ejecutado==1) {
       $insertar2 = "INSERT INTO miembros (nombre , grupo, rand, rol,rol2, estado) VALUES ('$usuario','51', '$pass','Investigador','$usuario', 'activo')";
-      sleep(2);
+    
       header("Location: ../login.php");
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
