@@ -20,12 +20,12 @@ echo "Se realizo la conexion  ";
 
 
 
-$sql = "INSERT INTO usuarios (username , password, rol,codigo_proyecto, pass2) VALUES ('$usuario', '$sha1','Inv Principal','$usuario', '$pass')";
 
-$ejecutado= mysqli_query($conn, $sql);
+$insertar2 = "INSERT INTO miembros (nombre , grupo, rand, rol,rol2, estado) VALUES ('$usuario','51', '$pass','Investigador','$usuario', 'activo')";
+$ejecutado= mysqli_query($conn, $insertar2);
 
 if ($ejecutado==1) {
-      $insertar2 = "INSERT INTO miembros (nombre , grupo, rand, rol,rol2, estado) VALUES ('$usuario','51', '$pass','Investigador','$usuario', 'activo')";
+      $sql = "INSERT INTO usuarios (username , password, rol,codigo_proyecto, pass2) VALUES ('$usuario', '$sha1','Inv Principal','$usuario', '$pass')";
     
       header("Location: ../login.php");
 } else {
