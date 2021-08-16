@@ -9,6 +9,7 @@ $carpeta='../entregables/'.$direccion.'/'.$est;
 /* $carpeta='archivos/proyectos/'.$direccion; */
 $nombre=$_FILES['exampleInputFile']['name'];
 $guardado=$_FILES['exampleInputFile']['tmp_name'];
+$nombre_usuario=$_SESSION["username"];
 
 $servername = "localhost";
 $database = "u415020159_mantizb";
