@@ -90,6 +90,8 @@
 							$rows=mysqli_fetch_array($query1);
 
 							$sql2="SELECT * FROM  miembros where email='".$c."'";
+							$rwse=mysqli_fetch_array($sql2);
+                   		 	$id_username=$rwse["id"];
 							$query2 = mysqli_query($con, $sql2);
 							$row2=mysqli_fetch_array($query2);
 							$id_es=$row2['id'];
