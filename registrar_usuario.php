@@ -20,6 +20,7 @@ if(isset($_POST['insertar']))// SI SE PRESIONA EL BOTÓN INSERTAR OCURRE LO SIGU
 
 $usuario=$_POST['usuario'];
 $pass=$_POST['pass'];
+$sha1=sha1($pass);
 /* $carrera=$_POST['carrera'];
 $grupo=$_POST['grupo']; */
 
@@ -33,7 +34,7 @@ if ($insertarUno==true)// SI LA QUERY ANTERIOR SE EJECUTA CON EXITO, SE EJECUTA 
 
 if($insertarDos=true)// MENSAJE DE CONFIRMACIÓN DE INSERCIÓN
 {
-	echo "<center><strong><h4>¡INSERCIÓN EXITOSA!<BR><a href='insertar_dos_tablas.php'>CLICK PARA VERIFICAR</a></strong></h4></center>";
+	echo "<center><strong><h4>¡INSERCIÓN EXITOSA!<BR><a href='login.php'>CLICK PARA INICIAR SESSION</a></strong></h4></center>";
 }
 }
 ?>
@@ -88,13 +89,15 @@ if($insertarDos=true)// MENSAJE DE CONFIRMACIÓN DE INSERCIÓN
 
                                         <!-- //////////FORMULARIO PARA INSERTAR DATOS//////////// -->
                         <form method="post">
-                        <h3 class="bg-primary" style="padding: .5%;">INSERTAR NUEVO USUARIO</h3>
+                        <h3 style="padding: .5%;">INSERTAR NUEVO USUARIO</h3>
                           <input name="usuario" type="text" placeholder="usuario" class="form-control form-control-user"  >
                           <input name="pass" type="text" placeholder="password" class="form-control form-control-user"  >
                           <!-- <input name="carrera" type="text" placeholder="carrera" class="form-control form-inline">
                           <input name="grupo" type="text" placeholder="grupo" class="form-control form-inline"> -->
-                          <input name="insertar" type="submit" value="Insertar Valores" class="btn btn-info">
-                          <input type="reset" class="btn btn-primary btn-user btn-block login" value="Borrar formulario" />
+                          <input name="insertar" type="submit" class="btn btn-primary btn-user btn-block login" value="Insertar Valores">
+                          <center>
+                          <input type="reset"  class="btn btn-info" value="Borrar formulario" />
+                          </center>
                         </form>
                 </div>
               </div>
