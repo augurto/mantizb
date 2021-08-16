@@ -89,12 +89,15 @@ if($insertarDos=true)// MENSAJE DE CONFIRMACIÓN DE INSERCIÓN
 
                                         <!-- //////////FORMULARIO PARA INSERTAR DATOS//////////// -->
                         <form method="post">
-                        <h3 style="padding: .5%;">INSERTAR NUEVO USUARIO</h3>
+                        <h5 style="padding: .5%;">INSERTAR NUEVO USUARIO</h5>
                           <input name="usuario" type="text" placeholder="usuario" class="form-control form-control-user"  >
+                          <br>
                           <input name="pass" type="text" placeholder="password" class="form-control form-control-user"  >
                           <!-- <input name="carrera" type="text" placeholder="carrera" class="form-control form-inline">
                           <input name="grupo" type="text" placeholder="grupo" class="form-control form-inline"> -->
+                          <br>
                           <input name="insertar" type="submit" class="btn btn-primary btn-user btn-block login" value="Insertar Valores">
+                          br
                           <center>
                           <input type="reset"  class="btn btn-info" value="Borrar formulario" />
                           </center>
