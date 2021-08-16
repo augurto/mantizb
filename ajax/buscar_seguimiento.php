@@ -75,7 +75,7 @@ session_start();
 						
 						<td><?php echo $count++; ?></td>
 						<td><?php echo $nombre; ?></td>
-						<td><a href="entregables/<?php echo $documento; ?>" download="entregables/<?php echo $documento; ?>"><?php $documento?></a></td>
+						<td><a href="entregables/<?php echo $documento; ?>" download="entregables/<?php echo $documento; ?>"><?php echo $documento?></a></td>
 					
 					</tr>
 					<?php
