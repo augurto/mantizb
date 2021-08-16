@@ -27,7 +27,7 @@ echo "Connected successfully";
 $g=mysqli_query($conn,"SELECT * FROM miembros WHERE email='".$nombre_usuario."'");
                    $rw=mysqli_fetch_array($g);
                     $id_miem=$rw["id"];
-$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$direccion', '$nombre','$entregable','$descripcion','$id_miem')";
+$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$direccion', '$nombre','$entregable','$descripcion','$nombre_usuario')";
 
 if (mysqli_query($conn, $sql)) {
 
