@@ -15,8 +15,12 @@ if (empty($_FILES["exampleInputFile"]["name"])) {
                    $rw=mysqli_fetch_array($g);
                     $id_miem=$rw["id"];
 
+
+
+
+
 			$descripcion=mysqli_real_escape_string($con,(strip_tags($_GET["descripcion"],ENT_QUOTES)));
-			$target_dir="../entregables/";
+			$target_dir="../entregables/$cdd";
 				$image_name = basename($_FILES["exampleInputFile"]["name"]);
 				$target_file = $target_dir . $image_name;
 				$imageFileZise=$_FILES["exampleInputFile"]["size"];
@@ -29,12 +33,41 @@ if (empty($_FILES["exampleInputFile"]["name"])) {
                 } else {
 		$sql="INSERT INTO seguimientos (codigo_proyecto, documento, id_seg, descripcion, id_miembros) VALUES ('$cdd', '$image_name', '$nomb','$descripcion','$id_miem')";
 		$query_new_insert = mysqli_query($con,$sql);
+		
+
+		if (mysqli_query($conn, $sql)) {
+
+			if(!file_exists($target_dir)){
+				mkdir($target_dir,0777,true);
+				if(file_exists($target_dir)){
+					if(move_uploaded_file($guardado, $target_dir.'/'.$cdd)){
+						echo "Archivo guardado con exito";
+					}else{
+						echo "Archivo no se pudo guardar";
+					}
+			
+				}
+			}else{
+				if(move_uploaded_file($guardado, $target_dir.'/'.$cdd)){
+				
+					echo "Archivo guardado con exito";
+				}else{
+					echo "Archivo no se pudo guardar o no seleciono ningun archivo";
+				}
+			}
+			/* header("Location: ver_entregables.php?var1=$direccion"); */
+			header("Location: ver_entregables.php?id_p=$target_dir&id_est=$codigo");
+			exit;
+			
+			}
+
+		/* 	
 			if ($query_new_insert){
 					move_uploaded_file($_FILES["exampleInputFile"]["tmp_name"], $target_file);
 				$messages[] = "Ingresado satisfactoriamente.";
 			} else{
 				$errors []= "Lo siento algo ha salido mal intenta nuevamente.".mysqli_error($con);
-			}
+			} */
 		}
 		} else {
 			$errors []= "Error desconocido.";
