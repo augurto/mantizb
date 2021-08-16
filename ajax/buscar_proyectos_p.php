@@ -97,7 +97,7 @@
 							$id=$rows['id'];
 						$nombre=$rows['nombre_proyecto'];
 						$codigo=$rows['codigo'];
-						$estado=$rows['rol2'];
+						$estado=$rows['rol'];
 						$fecha=$rows['fecha_agregado'];
 						$presupuesto=$rows['presupuesto'];
 					
@@ -114,7 +114,7 @@
 						<td><?php echo $codigo; ?></td>
 						<td>S/ <?php echo number_format($presupuesto);?></td>
 						<td ><?php echo $fecha; ?></td>
-						<td><?php echo $row['rol']; ?></td>
+						<td><?php echo $row['rol2']; ?></td>
 						<td>
 							<?php if($row['rol']=='Inv Principal'){?>
 						<a href="entregables.php?id_p=<?php echo $codigo; ?>&id_est=<?php echo $id_es; ?>" class='btn btn-success' title='Ver entregables'>Entregables</a>
