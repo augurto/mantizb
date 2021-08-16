@@ -1,11 +1,11 @@
 <?php 
 $entregable=$_GET["nom"];
-$name_entregable=$_POST["entregable"];
+
 $est=$_GET["cd"];
 $descripcion=$_GET["descripcion"];
 
 $direccion=$_GET["cdd"]; /* codigo de proyecto */
-$carpeta='../entregable/'.$direccion.'/'.$name_entregable;
+$carpeta='../entregable/'.$direccion.'/'.$est;
 /* $carpeta='archivos/proyectos/'.$direccion; */
 $nombre=$_FILES['exampleInputFile']['name'];
 $guardado=$_FILES['exampleInputFile']['tmp_name'];
