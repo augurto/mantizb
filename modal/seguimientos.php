@@ -24,12 +24,12 @@
          $link->set_charset("utf8") or die();
          $consulta = "SELECT id FROM miembros where nombre = $abc";
          $resultDir = mysqli_query($link, $consulta);
-         /* if ($pos = mysqli_fetch_row($resultDir)) {
+         if ($pos = mysqli_fetch_row($resultDir)) {
              array_push($direccionesOrigen, $pos);
-         } */
+         }
         
         ?>
-        <input type="text" value="<?php  echo $resultDir;?>">
+        <input type="text" value="<?php  echo $pos;?>">
         <div class="input-group">
         <div class="custom-file">
         <input type="file" onkeyup="loaddds(1);"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
