@@ -1,3 +1,43 @@
+<?php
+////////////////// CONEXION A LA BASE DE DATOS //////////////////
+$host = 'localhost';
+$basededatos = 'u415020159_mantizb';
+$usuario = 'u415020159_mantizb';
+$contraseña = 'Mantizb*#17';
+
+$conexion = new mysqli($host, $usuario,$contraseña, $basededatos);
+if ($conexion -> connect_errno) {
+die( "Fallo la conexión : (" . $conexion -> mysqli_connect_errno() 
+. ") " . $conexion -> mysqli_connect_error());
+}
+/*  ///////////////////CONSULTA DE AMBAS TABLAS///////////////////////
+$queryAlumnos= $conexion->query("SELECT * FROM alumnos order by id_alumno");
+$queryAlumnosDos=$conexion->query("SELECT * FROM alumnos_dos order by id_alumno_dos"); */
+
+/////////// INSERTAR REGISTRO A AMBAS TABLAS ///////////////////////
+if(isset($_POST['insertar']))// SI SE PRESIONA EL BOTÓN INSERTAR OCURRE LO SIGUIENTE:
+{
+
+$usuario=$_POST['usuario'];
+$pass=$_POST['pass'];
+/* $carrera=$_POST['carrera'];
+$grupo=$_POST['grupo']; */
+
+// SE EJECUTA LA PRIMER INSERCIÓN A LA TABLA NO. 1 
+$insertarUno=$conexion->query("INSERT INTO usuarios  (username , password, rol,codigo_proyecto, pass2)  VALUES ('$usuario', '$sha1','Investigador','$usuario', '$pass')");
+if ($insertarUno==true)// SI LA QUERY ANTERIOR SE EJECUTA CON EXITO, SE EJECUTA LA INSERCIÓN A LA TABLA 2
+{
+	$insertarDos=$conexion->query("INSERT INTO miembros  (nombre , grupo, rand, rol,rol2, estado) VALUES ('$usuario','51', '$pass','Investigador','$usuario', 'activo')");
+}
+
+
+if($insertarDos=true)// MENSAJE DE CONFIRMACIÓN DE INSERCIÓN
+{
+	echo "<center><strong><h4>¡INSERCIÓN EXITOSA!<BR><a href='insertar_dos_tablas.php'>CLICK PARA VERIFICAR</a></strong></h4></center>";
+}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,18 +85,17 @@
                   <div class="alert alert-danger" id="error" style="display: none;" role="alert"></div>
 
                   
-                       <form name="formulario" method="post" action="ajax/nuevo_usuario_general.php">
-                            <!-- Datos del formulario -->
-                            Usuario: <input  type="text" class="form-control form-control-user"  name="usuario" placeholder="Ingrese un usuario" />
-                            Password: <input type="text" class="form-control form-control-user"  name="pass" placeholder="Escriba una contraseña" />
-                            <br>
-                            <!-- Botón de envío de formulario -->
-                            <input type="submit" class="btn btn-primary btn-user btn-block login" value="Enviar formulario" />
-                            <br>
-                            <!-- Botón de reseteo de formulario -->
-                            <input type="reset" class="btn btn-primary btn-user btn-block login" value="Borrar formulario" />
+
+                                        <!-- //////////FORMULARIO PARA INSERTAR DATOS//////////// -->
+                        <form method="post">
+                        <h3 class="bg-primary" style="padding: .5%;">INSERTAR NUEVO USUARIO</h3>
+                          <input name="usuario" type="text" placeholder="usuario" class="form-control form-control-user"  >
+                          <input name="pass" type="text" placeholder="password" class="form-control form-control-user"  >
+                          <!-- <input name="carrera" type="text" placeholder="carrera" class="form-control form-inline">
+                          <input name="grupo" type="text" placeholder="grupo" class="form-control form-inline"> -->
+                          <input name="insertar" type="submit" value="Insertar Valores" class="btn btn-info">
+                          <input type="reset" class="btn btn-primary btn-user btn-block login" value="Borrar formulario" />
                         </form>
-             
                 </div>
               </div>
             </div>
