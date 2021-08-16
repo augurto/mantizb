@@ -97,7 +97,7 @@ if($insertarDos=true)// MENSAJE DE CONFIRMACIÓN DE INSERCIÓN
                           <input name="grupo" type="text" placeholder="grupo" class="form-control form-inline"> -->
                           <br>
                           <input name="insertar" type="submit" class="btn btn-primary btn-user btn-block login" value="Insertar Valores">
-                          br
+                          <br>  
                           <center>
                           <input type="reset"  class="btn btn-info" value="Borrar formulario" />
                           </center>
