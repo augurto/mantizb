@@ -19,17 +19,16 @@
        <div class="form-group">
         <label for="exampleInputFile">Archivo</label>
         <?php 
+        require_once ("../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
+        require_once ("../config/conexion.php");//Contiene funcion que conecta a la base de datos
         $abc=$_SESSION["username"];
-         $link = new mysqli("127.0.0.1", "u415020159_mantizb", "Mantizb*#17", "u415020159_mantizb"); 
-         $link->set_charset("utf8") or die();
-         $consulta = "SELECT id FROM miembros where nombre = $abc";
-         $resultDir = mysqli_query($link, $consulta);
-         if ($pos = mysqli_fetch_row($resultDir)) {
-             array_push($direccionesOrigen, $pos);
-         }
+
+        $ge=mysqli_query($con,"SELECT id FROM miembros WHERE nombre='".$abc."'");
+        $rws=mysqli_fetch_array($ge);
+         $entregables=$rw["id"];
         
         ?>
-        <input type="text" value="<?php  echo $pos["id"];?>">
+        <input type="text" value="<?php  echo $rw[0];?>">
         <div class="input-group">
         <div class="custom-file">
         <input type="file" onkeyup="loaddds(1);"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
