@@ -5,7 +5,7 @@ $est=$_GET["cd"];
 $descripcion=$_GET["descripcion"];
 
 $direccion=$_GET["cdd"]; /* codigo de proyecto */
-$carpeta='../entregable/'.$direccion.'/'.$est;
+$carpeta='../entregables/'.$direccion.'/'.$est;
 /* $carpeta='archivos/proyectos/'.$direccion; */
 $nombre=$_FILES['exampleInputFile']['name'];
 $guardado=$_FILES['exampleInputFile']['tmp_name'];
