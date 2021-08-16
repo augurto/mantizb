@@ -8,7 +8,7 @@
           </button>
         </div> 
         <div class="modal-body">
-        <form class="form-horizontal" name="seg" id="seg" method="post"> <?php if($_SESSION['prol']=="administrador" || $_SESSION['prol']=="estudiante" || $_SESSION['prol']=="Inv Principal"){?>
+        <form class="form-horizontal" name="seg" id="seg" method="post"> <?php if($_SESSION['prol']=="administrador" || $_SESSION['prol']=="estudiante" || $_SESSION['prol']=="Inv Principal"|| $_SESSION['prol']=="Coinvestigador" |){?>
       <div id="resultados_ajax11"></div>
                 <div class="col-lg-12">
                 <div class="form-group">
