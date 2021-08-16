@@ -39,7 +39,7 @@
       <?php }else{?>
       <input type="hidden" name="cd" placeholder="Nombre del seguimiento"  id="cd"  class="form-control">
       <input type="hidden" name="cdd" placeholder="Nombre del seguimiento"  id="cdd"  class="form-control">
-      <input type="text" name="coddd" value="<?php  echo $_GET["id_est"];?>"  id="coddd"  class="form-control">
+      <input type="text" name="coddd" value="<?php  echo $_GET["id_est"];?>"  id="coddd" >
       <?php }?>
           
         </div>
