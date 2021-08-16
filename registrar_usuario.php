@@ -25,10 +25,10 @@ $sha1=sha1($pass);
 $grupo=$_POST['grupo']; */
 
 // SE EJECUTA LA PRIMER INSERCIÓN A LA TABLA NO. 1 
-$insertarUno=$conexion->query("INSERT INTO usuarios  (username , password, rol,codigo_proyecto, pass2)  VALUES ('$usuario', '$sha1','Investigador','$usuario', '$pass')");
+$insertarUno=$conexion->query("INSERT INTO usuarios  (username , password, rol,codigo_proyecto, pass2)  VALUES ('$usuario', '$sha1','Inv Principal','$usuario', '$pass')");
 if ($insertarUno==true)// SI LA QUERY ANTERIOR SE EJECUTA CON EXITO, SE EJECUTA LA INSERCIÓN A LA TABLA 2
 {
-	$insertarDos=$conexion->query("INSERT INTO miembros  (nombre , grupo, rand, rol,rol2, estado) VALUES ('$usuario','51', '$pass','Investigador','$usuario', 'activo')");
+	$insertarDos=$conexion->query("INSERT INTO miembros  (nombre ,email, grupo, rand, rol,rol2, estado) VALUES ('$usuario','$usuario','51', '$pass','Investigador','$usuario', 'activo')");
 }
 
 
