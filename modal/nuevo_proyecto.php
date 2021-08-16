@@ -77,7 +77,7 @@
          <input type="hidden" class="form-control" name="ce" id="ce">  
                   <select class="form-control select2" id="estudiante" name="estudiante" style="width: 100%;">
                     <?php
-                    $inv=mysqli_query($con,"select * from miembros where rol='Estudiante'");
+                    $inv=mysqli_query($con,"select * from miembros");
                     while ($rw=mysqli_fetch_array($inv)){
                       $id=$rw["id"];
                       $nombre=$rw["nombre"];
