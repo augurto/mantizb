@@ -116,7 +116,7 @@
                 <!-- Counter - Messages -->
               </a>
                   <div  align="center"><img src="img/file.png" width="150px" height="auto"></div>
-                  <div align="center"><a href="entregables/<?php echo  $documento; ?>" download="entregables/<?php echo  $documento; ?>"><i class="fa fa-download"></i> Descargar <?php echo $documento; ?></a></div>
+                  <div align="center"><a href="entregables/<?php echo  $documento; ?>" download="entregables/<?php echo  $documento; ?>"><i class="fa fa-download"></i> <?php echo $documento; ?></a></div>
                   <br>
                <?php echo $descripcion; ?>
                 </div>
