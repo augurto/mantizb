@@ -24,7 +24,7 @@ if (empty($_FILES["exampleInputFile"]["name"])) {
 		$sql2 = "SELECT * FROM seguimientos WHERE id_seg = '" . $nomb . "' &&  id_miembros = '" . $id_miem . "';";
                 $query_check_user_name = mysqli_query($con,$sql2);
 				$query_check_user=mysqli_num_rows($query_check_user_name);
-                if ($query_check_user == -1) {
+                if ($query_check_user == 0) {
                     $errors[] = "Lo sentimos , ya se a entregado esta actividad.";
                 } else {
 		$sql="INSERT INTO seguimientos (codigo_proyecto, documento, id_seg, descripcion, id_miembros) VALUES ('$cdd', '$image_name', '$nomb','$descripcion','$id_miem')";
