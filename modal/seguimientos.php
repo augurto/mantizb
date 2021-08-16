@@ -17,11 +17,11 @@
           </div>
       <div class="col-sm-12">
        <div class="form-group">
-        <label for="exampleInputFile">Documento</label>
+        <label for="exampleInputFile">Archivo</label>
         <div class="input-group">
         <div class="custom-file">
         <input type="file" onkeyup="loaddds(1);"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
-        <label class="custom-file-label" for="exampleInputFile">Documento</label>
+        <label class="custom-file-label" for="exampleInputFile">Archivo</label>
                       </div>
                     </div>
                   </div>
@@ -34,7 +34,7 @@
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-primary" id="seg" name="seg">Guardar datos</button>
+            <button type="submit" class="btn btn-primary" id="seg" name="seg">Guardar </button>
       <?php }else{?>
       <input type="hidden" name="cd" placeholder="Nombre del seguimiento"  id="cd"  class="form-control">
       <input type="hidden" name="cdd" placeholder="Nombre del seguimiento"  id="cdd"  class="form-control">

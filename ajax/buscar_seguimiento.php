@@ -52,7 +52,7 @@ session_start();
                     <tr>
                       <th>#</th>
                       <th>Entregable</th>
-                      <th>Documento</th>
+                      <th>Archivos</th>
                        </tr>
                   </thead>
                   <tbody>
@@ -75,7 +75,7 @@ session_start();
 						
 						<td><?php echo $count++; ?></td>
 						<td><?php echo $nombre; ?></td>
-						<td><a href="entregables/<?php echo $documento; ?>" download="entregables/<?php echo $documento; ?>">Descargar</a></td>
+						<td><a href="entregables/<?php echo $documento; ?>" download="entregables/<?php echo $documento; ?>"><?php $documento?></a></td>
 					
 					</tr>
 					<?php
