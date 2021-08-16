@@ -28,7 +28,7 @@ $g=mysqli_query($conn,"SELECT * FROM miembros WHERE email='".$nombre_usuario."' 
                    $rw=mysqli_fetch_array($g);
                     $varita=$rw[0];
 				
-$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$direccion', '$nombre','$entregable','$descripcion','$varita')";
+$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$direccion', '$nombre','$entregable','$varita','49')";
 
 if (mysqli_query($conn, $sql)) {
 
