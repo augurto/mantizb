@@ -24,7 +24,7 @@
 		$query_new_insert = mysqli_query($con,$sql);
 			if ($query_new_insert){
 					$sha=sha1($rand);
-					$sql2="INSERT INTO  usuarios (username, password, rol, codigo_proyecto) VALUES ('$email', '$sha', 'estudiante', '$ce')";
+					$sql2="INSERT INTO  usuarios (username, password, rol,rol2, codigo_proyecto) VALUES ('$email', '$sha', 'estudiante','Colaborador', '$ce')";
 		$query_new_insert2 = mysqli_query($con,$sql2);
 				$messages[] = "Ingresado satisfactoriamente.";
 			} else{

@@ -97,7 +97,7 @@
 							$id=$rows['id'];
 						$nombre=$rows['nombre_proyecto'];
 						$codigo=$rows['codigo'];
-						$estado=$rows['rol'];
+						$estado=$rows['rol2'];
 						$fecha=$rows['fecha_agregado'];
 						$presupuesto=$rows['presupuesto'];
 					

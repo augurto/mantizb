@@ -26,7 +26,7 @@
 			if ($query_new_insert){
 				if($rol=='Inv Principal' || $rol=='Coinvestigador'){
 					$sha=sha1($rand);
-					$sql2="INSERT INTO  usuarios (username, password, rol, codigo_proyecto) VALUES ('$email', '$sha', '$rol', '$c')";
+					$sql2="INSERT INTO  usuarios (username, password, rol,rol2, codigo_proyecto) VALUES ('$email', '$sha', '$rol','$rol', '$c')";
 		$query_new_insert2 = mysqli_query($con,$sql2);
 				}
 				$messages[] = "Ingresado satisfactoriamente.";
