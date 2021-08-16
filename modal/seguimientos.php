@@ -31,6 +31,7 @@
         </select>
         <input type="hidden" name="cd" placeholder="Nombre del seguimiento"  id="cd"  class="form-control">
         <input type="hidden" name="cdd" placeholder="Nombre del seguimiento"  id="cdd"  class="form-control">
+        <input type="text" name="coddd" placeholder="Nombre del seguimiento"  id="coddd"  class="form-control">
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
@@ -38,6 +39,7 @@
       <?php }else{?>
       <input type="hidden" name="cd" placeholder="Nombre del seguimiento"  id="cd"  class="form-control">
       <input type="hidden" name="cdd" placeholder="Nombre del seguimiento"  id="cdd"  class="form-control">
+      <input type="text" name="coddd" value="<?php  echo $id_est;?>"  id="coddd"  class="form-control">
       <?php }?>
           
         </div>
