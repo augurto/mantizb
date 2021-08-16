@@ -118,9 +118,15 @@
 						<td>
 							<?php if($row['rol']=='Inv Principal'){?>
 						<a href="entregables.php?id_p=<?php echo $codigo; ?>&id_est=<?php echo $id_es; ?>" class='btn btn-success' title='Ver entregables'>Entregables</a>
+						<?php }else if ($row['rol']=='estudiante'){?>
+							<span class="text">Entregables</span>
+                  </a> <a href="ver_entregables.php?id_p=<?php echo $codigo;?>&id_est=<?php echo $id_username;?>" class="btn btn-info btn-icon-split" title='Ver entregables'>
 						<?php }else{?>
 							<a href="entregables.php?id_p=<?php echo $codigo; ?>&id_est=<?php echo $id_es; ?>" class='btn btn-success' title='Ver entregables'>Entregables</a>
-						<?php }?></td>
+							<?php }?>
+					
+					</td>
+
 					</tr>
 					<?php
 				}
