@@ -74,7 +74,7 @@
 					<th>codigo</th>
 					<th>presupuesto</th>
 					<th>Fecha agregado</th>
-					<th>Rol</th>
+					<th>Estado</th>
 					<th>Seguimientos</th>
                     </tr>
                   </thead>
@@ -112,9 +112,9 @@
 					<td><?php echo $count++; ?></td>
 						<td><a href="info_proyecto.php?cod=<?php echo $codigo; ?>"><?php echo $nombre; ?></a></td>
 						<td><?php echo $codigo; ?></td>
-						<td>$ <?php echo number_format($presupuesto);?></td>
+						<td>S/ <?php echo number_format($presupuesto);?></td>
 						<td ><?php echo $fecha; ?></td>
-						<td><?php echo $row['rol']; ?></td>
+						<td><?php echo $row['estado']; ?></td>
 						<td>
 							<?php if($row['rol']=='Inv Principal'){?>
 						<a href="entregables.php?id_p=<?php echo $codigo; ?>&id_est=<?php echo $id_es; ?>" class='btn btn-success' title='Ver entregables'>Entregables</a>
