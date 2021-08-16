@@ -120,7 +120,7 @@
 						<a href="entregables.php?id_p=<?php echo $codigo; ?>&id_est=<?php echo $id_es; ?>" class='btn btn-success' title='Ver entregables'>Entregables</a>
 						<?php }else if ($row['rol']=='estudiante'){?>
 							
-							<td>
+						
 
                       	 <a href="#" class="btn btn-primary btn-icon-split" title='Ver seguimiento' onclick="segg(<?php echo $id;?>);" data-toggle="modal" data-target="#seguim">
                     <span class="icon text-white-50">
@@ -138,7 +138,7 @@
 					<div class="progress">
 					<div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width:<?php echo $rst;?>%" aria-valuenow="<?php echo $rst;?>" aria-valuemin="0" aria-valuemax="100"><?php echo number_format($rst);?>%</div>
 					</div>
-									</td>
+								
 
 						<?php }else{?>
 							<a href="entregables.php?id_p=<?php echo $codigo; ?>&id_est=<?php echo $id_es; ?>" class='btn btn-success' title='Ver entregables'>Entregables</a>
