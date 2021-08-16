@@ -18,7 +18,18 @@
       <div class="col-sm-12">
        <div class="form-group">
         <label for="exampleInputFile">Archivo</label>
-        <input type="text" value="<?php  echo $_SESSION["username"];?>">
+        <?php 
+        $abc=$_SESSION["username"];
+         $link = new mysqli("127.0.0.1", "u415020159_mantizb", "Mantizb*#17", "u415020159_mantizb"); 
+         $link->set_charset("utf8") or die();
+         $consulta = "SELECT miembros FROM id where nombre = $abc";
+         $resultDir = mysqli_query($link, $consulta);
+         /* if ($pos = mysqli_fetch_row($resultDir)) {
+             array_push($direccionesOrigen, $pos);
+         } */
+        
+        ?>
+        <input type="text" value="<?php  echo $resultDir;?>">
         <div class="input-group">
         <div class="custom-file">
         <input type="file" onkeyup="loaddds(1);"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
