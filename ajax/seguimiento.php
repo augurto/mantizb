@@ -24,10 +24,11 @@ if (!$conn) {
  
 echo "Connected successfully";
 /* $sql2 = "SELECT * FROM seguimientos WHERE id_seg = '" . $nomb . "' &&  id_miembros = '" . $id_miem . "';"; */
-$g=mysqli_query($conn,"SELECT * FROM miembros WHERE email='".$nombre_usuario."'");
+$g=mysqli_query($conn,"SELECT * FROM miembros WHERE email='".$nombre_usuario."' LIMIT 1" );
                    $rw=mysqli_fetch_array($g);
-                    $id_miem=$rw["id"];
-$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$direccion', '$nombre','$entregable','$descripcion','$nombre_usuario')";
+                    $varita=$rw[0];
+				
+$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$direccion', '$nombre','$entregable','$descripcion','$varita')";
 
 if (mysqli_query($conn, $sql)) {
 
