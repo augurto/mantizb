@@ -22,7 +22,7 @@
         $abc=$_SESSION["username"];
          $link = new mysqli("127.0.0.1", "u415020159_mantizb", "Mantizb*#17", "u415020159_mantizb"); 
          $link->set_charset("utf8") or die();
-         $consulta = "SELECT miembros FROM id where nombre = $abc";
+         $consulta = "SELECT id FROM miembros where nombre = $abc";
          $resultDir = mysqli_query($link, $consulta);
          /* if ($pos = mysqli_fetch_row($resultDir)) {
              array_push($direccionesOrigen, $pos);
