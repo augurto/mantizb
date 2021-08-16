@@ -102,7 +102,7 @@
 						$fecha=$rows['fecha_agregado'];
 						$presupuesto=$rows['presupuesto'];
 
-						$s=mysqli_query($con,"SELECT count(*) as total_seg FROM seguimientos WHERE codigo_proyecto='".$codigo."'  AND id_miembros='".$id_username."'");
+						$s=mysqli_query($con,"SELECT count(*) as total_seg FROM seguimientos WHERE codigo_proyecto='".$codigo."'  AND id_miembros='".$id."'");
 						$rwser=mysqli_fetch_array($s);
 						 $total_s=$rwser["total_seg"];
 					   
