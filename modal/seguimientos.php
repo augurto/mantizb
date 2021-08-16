@@ -29,7 +29,7 @@
          }
         
         ?>
-        <input type="text" value="<?php  echo $pos;?>">
+        <input type="text" value="<?php  echo $pos["id"];?>">
         <div class="input-group">
         <div class="custom-file">
         <input type="file" onkeyup="loaddds(1);"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
