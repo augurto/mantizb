@@ -119,8 +119,27 @@
 							<?php if($row['rol']=='Inv Principal'){?>
 						<a href="entregables.php?id_p=<?php echo $codigo; ?>&id_est=<?php echo $id_es; ?>" class='btn btn-success' title='Ver entregables'>Entregables</a>
 						<?php }else if ($row['rol']=='estudiante'){?>
-							<span class="text">Entregables</span>
+							
+							<td>
+
+                      	 <a href="#" class="btn btn-primary btn-icon-split" title='Ver seguimiento' onclick="segg(<?php echo $id;?>);" data-toggle="modal" data-target="#seguim">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-check"></i>
+                    </span>
+                    <span class="text">Entregables</span>
                   </a> <a href="ver_entregables.php?id_p=<?php echo $codigo;?>&id_est=<?php echo $id_username;?>" class="btn btn-info btn-icon-split" title='Ver entregables'>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-file"></i>
+                    </span>
+                    <span class="text">Ver entregables</span>
+                  </a>
+					<p></p>
+					<h4 class="small font-weight-bold">Estado<span class="float-right"><?php if($rst>=100){?>Completado!<?php }else{ echo number_format($rst).'%'; } ?></span></h4>
+					<div class="progress">
+					<div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width:<?php echo $rst;?>%" aria-valuenow="<?php echo $rst;?>" aria-valuemin="0" aria-valuemax="100"><?php echo number_format($rst);?>%</div>
+					</div>
+									</td>
+
 						<?php }else{?>
 							<a href="entregables.php?id_p=<?php echo $codigo; ?>&id_est=<?php echo $id_es; ?>" class='btn btn-success' title='Ver entregables'>Entregables</a>
 							<?php }?>
