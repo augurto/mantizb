@@ -20,7 +20,7 @@ if (empty($_FILES["exampleInputFile"]["name"])) {
 
 
 			$descripcion=mysqli_real_escape_string($con,(strip_tags($_GET["descripcion"],ENT_QUOTES)));
-			$target_dir="../entregables/$cdd";
+			$target_dir="../entregables/".$cdd;
 				$image_name = basename($_FILES["exampleInputFile"]["name"]);
 				$target_file = $target_dir . $image_name;
 				$imageFileZise=$_FILES["exampleInputFile"]["size"];
