@@ -18,7 +18,7 @@
       <div class="col-sm-12">
        <div class="form-group">
         <label for="exampleInputFile">Archivo</label>
-        <input type="text" value="<?php  echo $_POST['id_est'];?>">
+        <input type="text" value="<?php  echo $_SESSION['id'];?>">
         <div class="input-group">
         <div class="custom-file">
         <input type="file" onkeyup="loaddds(1);"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
