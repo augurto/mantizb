@@ -17,7 +17,7 @@ if (empty($_FILES["exampleInputFile"]["name"])) {
 
 			$descripcion=mysqli_real_escape_string($con,(strip_tags($_GET["descripcion"],ENT_QUOTES)));
 			$target_dir="../entregables/";
-				$image_name = time()."_".basename($_FILES["exampleInputFile"]["name"]);
+				$image_name = basename($_FILES["exampleInputFile"]["name"]);
 				$target_file = $target_dir . $image_name;
 				$imageFileZise=$_FILES["exampleInputFile"]["size"];
 
