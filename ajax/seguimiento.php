@@ -25,7 +25,7 @@ if (empty($_FILES["exampleInputFile"]["name"])) {
                 $query_check_user_name = mysqli_query($con,$sql2);
 				$query_check_user=mysqli_num_rows($query_check_user_name);
                 if ($query_check_user == 20) {
-                    $errors[] = "Lo sentimos , ya se a entregado esta actividad.";
+                    $errors[] = "Lo sentimos , ya se a entregado esta actividad 19 veces.";
                 } else {
 		$sql="INSERT INTO seguimientos (codigo_proyecto, documento, id_seg, descripcion, id_miembros) VALUES ('$cdd', '$image_name', '$nomb','$descripcion','$id_miem')";
 		$query_new_insert = mysqli_query($con,$sql);
