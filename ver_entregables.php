@@ -115,7 +115,7 @@
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
               </a>
-                  <div  align="center"><img src="img/file.png" width="150px" height="auto"></div>
+                  <div  align="center"><img src="img/file.png" width="50px" height="auto"></div>
                   <div align="center"><a href="entregables/<?php echo  $documento; ?>" download="entregables/<?php echo  $documento; ?>"><i class="fa fa-download"></i> <?php echo $documento; ?></a></div>
                   <br>
                <?php echo $descripcion; ?>
