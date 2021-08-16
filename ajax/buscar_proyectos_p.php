@@ -101,6 +101,19 @@
 						$estado=$rows['rol'];
 						$fecha=$rows['fecha_agregado'];
 						$presupuesto=$rows['presupuesto'];
+
+						$s=mysqli_query($con,"SELECT count(*) as total_seg FROM seguimientos WHERE codigo_proyecto='".$codigo."'  AND id_miembros='".$id_username."'");
+						$rwser=mysqli_fetch_array($s);
+						 $total_s=$rwser["total_seg"];
+					   
+					   if($total_s!=0){
+						   $r=100/$total;
+						   $rst=$r*$total_s;
+					   }else{
+						   $r=0;
+						   $rst=$r*$total;
+					   }
+					   
 					
 					?>
 					
