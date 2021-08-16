@@ -18,6 +18,7 @@
       <div class="col-sm-12">
        <div class="form-group">
         <label for="exampleInputFile">Archivo</label>
+        <input type="text" value="ego">
         <div class="input-group">
         <div class="custom-file">
         <input type="file" onkeyup="loaddds(1);"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
@@ -39,7 +40,7 @@
       <?php }else{?>
       <input type="hidden" name="cd" placeholder="Nombre del seguimiento"  id="cd"  class="form-control">
       <input type="hidden" name="cdd" placeholder="Nombre del seguimiento"  id="cdd"  class="form-control">
-      <input type="text" name="coddd" value="<?php  echo $_GET["id_est"];?>"  id="coddd" >
+     
       <?php }?>
           
         </div>
