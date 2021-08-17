@@ -81,25 +81,27 @@
 
 
         <form action="../ajax/seguimiento.php" method="post"  enctype="multipart/form-data">
-        <input type="text" name="descripcion" id="descripcion">
+        <input type="text" name="descripcion" id="descripcion"class="form-control" >
+        <br>
+            <?php 
+            $username=$_SESSION["username"];
+            $s=mysqli_query($con,"SELECT * FROM miembros WHERE email='".$username."'");
+                $rwse=mysqli_fetch_array($s);
+                    $id_username=$rwse["id"];
+            
+            ?>
+            <input type="text" value="<?php echo $id_username;?>" id="id_miembro" name="id_miembro" class="form-control">
         <input type="file"   id="exampleInputFile" name="exampleInputFile" required>
                     <br><br>
                     <button class="custom-file-label">Subir Archivo</button>
 <div class="col-sm-12">
  <div class="form-group">
   <label for="exampleInputFile">Archivo</label>
-  <?php 
-  $username=$_SESSION["username"];
-  $s=mysqli_query($con,"SELECT * FROM miembros WHERE email='".$username."'");
-       $rwse=mysqli_fetch_array($s);
-         $id_username=$rwse["id"];
   
-  ?>
-  <input type="text" value="<?php echo $id_username;?>" id="id_miembro" name="id_miembro" class="form-control">
   <div class="input-group">
   <div class="custom-file">
-  <input type="file" onkeyup="loaddds(1);"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
-  <label class="custom-file-label" for="exampleInputFile">Archivo</label>
+ 
+
                 </div>
               </div>
             </div>
@@ -111,8 +113,7 @@
   <input type="hidden" name="cdd" placeholder="Nombre del seguimiento"  id="cdd"  class="form-control">
  
     
-  </div>
-  <input type="submit" value="Submit">
+ 
 </form>
 
 
