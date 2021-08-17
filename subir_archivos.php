@@ -115,7 +115,8 @@
 
                         ?>
                     <button >Subir Archivo</button>  
-                    <button  class="btn btn-info btn-icon-split">Subir Archivo</button>    
+                    <input  class="btn btn-info btn-icon-split" type="submit" value="Enviar este formulario" />
+                    <button >Subir Archivo</button>    
                    
 </form>
 
