@@ -44,6 +44,8 @@ session_start();
 				<div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Entregables</h6>
+			  <input type="text" value="ego">
+			  <input type="text" value="<?php echo $id_username; ?>">
             </div>
             <div class="card-body">
               <div class="table-responsive">
