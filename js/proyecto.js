@@ -74,7 +74,7 @@ data.append('exampleInputFile',file);
 
 	$.ajax({
 						/* url: "ajax/sube.php?cd="+cd+'&nom='+nom+'&descripcion='+descripcion+"&cdd="+cdd,  */       // Url to which the request is send
-						 url: "ajax/seguimiento.php?cd="+cd+'&nom='+nom+'&descripcion='+descripcion+"&cdd="+cdd,  
+						 url: "ajax/seguimiento.php?id_miembro="+id_miembro+'&nom='+nom+'&descripcion='+descripcion+"&cdd="+cdd,  
 						type: "POST",             // Type of request to be send, called as method
 						data: data, 			  // Data sent to server, a set of key/value pairs (i.e. form fields and values)
 						contentType: false,       // The content type used when sending data to the server.

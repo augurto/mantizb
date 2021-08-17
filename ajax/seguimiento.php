@@ -1,7 +1,7 @@
 <?php 
 $entregable=$_GET["nom"];
 
-$est=$_GET["cd"];
+$est=$_GET["id_miembro"];
 $descripcion=$_GET["descripcion"];
 
 $direccion=$_GET["cdd"]; /* codigo de proyecto */
