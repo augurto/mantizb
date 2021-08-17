@@ -37,7 +37,7 @@ echo "Connected successfully";
 /* $sql2 = "SELECT * FROM seguimientos WHERE id_seg = '" . $nomb . "' &&  id_miembros = '" . $id_miem . "';"; */
 
 				
-$sql = "INSERT INTO seeg (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','$id_miembro')";
+$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','$id_miembro')";
 
 if (mysqli_query($conn, $sql)) {
 
@@ -60,7 +60,7 @@ if(!file_exists($carpeta)){
 	}
 }
 /* header("Location: ver_entregables.php?var1=$direccion"); */
-header("Location: ver_entregables.php?id_p=$codigo_proyecto&id_est=$id_miembro");
+header("Location: ../ver_entregables.php?id_p=$codigo_proyecto&id_est=$id_miembro");
 exit;
 
 } else {
