@@ -10,7 +10,7 @@ $carpeta='../entregables/'.$direccion.'/'.$est;
 $nombre=$_FILES['exampleInputFile']['name'];
 $guardado=$_FILES['exampleInputFile']['tmp_name'];
 $nombre_usuario=$_SESSION["username"];
-$id_miembro=$_GET["id_miembro"];
+/* $id_miembro=$_GET["id_miembro"]; */
 
 
 
@@ -29,7 +29,7 @@ echo "Connected successfully";
 /* $sql2 = "SELECT * FROM seguimientos WHERE id_seg = '" . $nomb . "' &&  id_miembros = '" . $id_miem . "';"; */
 
 				
-$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$direccion', '$nombre','$entregable','$id_miembro','50')";
+$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$direccion', '$nombre','$entregable','$est','50')";
 
 if (mysqli_query($conn, $sql)) {
 
