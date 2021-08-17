@@ -1,5 +1,5 @@
 <?php 
-$entregable=$_GET["nom"];
+$entregable=$_GET["nomb"];
 
 $est=$_GET["id_miembro"];
 $descripcion=$_GET["descripcion"];
