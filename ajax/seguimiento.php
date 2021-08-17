@@ -11,6 +11,9 @@ $nombre=$_FILES['exampleInputFile']['name'];
 $guardado=$_FILES['exampleInputFile']['tmp_name'];
 $nombre_usuario=$_SESSION["username"];
 
+
+
+
 $servername = "localhost";
 $database = "u415020159_mantizb";
 $username = "u415020159_mantizb";

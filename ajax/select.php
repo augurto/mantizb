@@ -19,15 +19,3 @@ $rws=mysqli_fetch_array($p);
 											<?php
 										}
 									?>
-
-<option value="">--Seleccione el entregable2--</option>
-<?php
-										$ent2=mysqli_query($con,"select * from miembros where nombre='".$habita."'");
-										while ($rw=mysqli_fetch_array($ent2)){
-											$id2=$rw["id"];
-											$nombre2=$rw["nombre"];
-											?>
-											<option value="<?php echo $id2?>"><?php echo $nombre2?></option>
-											<?php
-										}
-									?>

@@ -18,7 +18,14 @@
       <div class="col-sm-12">
        <div class="form-group">
         <label for="exampleInputFile">Archivo</label>
-        <input type="text" value="<?php  echo $rws["id"];?>">
+        <?php 
+        $username=$_SESSION["username"];
+        $s=mysqli_query($con,"SELECT * FROM miembros WHERE email='".$username."'");
+             $rwse=mysqli_fetch_array($s);
+               $id_username=$rwse["id"];
+        
+        ?>
+        <input type="text" value="<?php echo $id_username;?>">
         <div class="input-group">
         <div class="custom-file">
         <input type="file" onkeyup="loaddds(1);"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
