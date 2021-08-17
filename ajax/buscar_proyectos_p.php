@@ -136,7 +136,7 @@
 							
 						
 
-                      	 <a href="#" class="btn btn-primary btn-icon-split" title='Ver seguimiento' onclick="segg(<?php echo $id;?>);" data-toggle="modal" data-target="#seguim">
+                      	 <a href="archivos.php?idd=<?php echo $id;?>" class="btn btn-primary btn-icon-split" title='Ver seguimiento' onclick="segg();" data-toggle="modal" data-target="#seguim">
                     <span class="icon text-white-50">
                       <i class="fas fa-check"></i>
                     </span>
