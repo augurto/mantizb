@@ -138,7 +138,7 @@
 
                       	 <!-- <a href="#" class="btn btn-primary btn-icon-split" title='Ver seguimiento' onclick="segg(<?php echo $id;?>);" data-toggle="modal" data-target="#seguim"> -->
 
-						   <a href="subir_archivos.php?id_p=<?php echo $codigo;?>&id_est=<?php echo $id_es;?>" class="btn btn-info btn-icon-split" title='Ver entregables'>
+						   <a href="subir_archivos.php?id_p=<?php echo $codigo;?>&id_est=<?php echo $id_es;?>&id_archivo=<?php echo $id_p;?>" class="btn btn-info btn-icon-split" title='Ver entregables'>
 
                     <span class="icon text-white-50">
                       <i class="fas fa-check"></i>
