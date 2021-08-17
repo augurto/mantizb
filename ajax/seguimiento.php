@@ -18,6 +18,8 @@ $id_entregable=mysqli_real_escape_string($conn,(strip_tags($_POST["id_entregable
 $descripcion=mysqli_real_escape_string($conn,(strip_tags($_POST["descripcion"],ENT_QUOTES)));
 $id_miembro=mysqli_real_escape_string($conn,(strip_tags($_POST["id_miembro"],ENT_QUOTES)));
 
+$nombre_entregable=mysqli_real_escape_string($conn,(strip_tags($_POST["nombre_entregable"],ENT_QUOTES)));
+
 $nombre_documento=$_FILES['documento']['name'];
 $guardado=$_FILES['documento']['tmp_name'];
 
@@ -26,7 +28,7 @@ $guardado=$_FILES['documento']['tmp_name'];
 
 
 $direccion=$_GET["id_p2"]; /* codigo de proyecto */
-$carpeta='../entregables/'.$codigo_proyecto.'/'.$id_entregable;
+$carpeta='../entregables/'.$codigo_proyecto.'/'.$nombre_entregable;
 /* $carpeta='archivos/proyectos/'.$direccion; */
 
 

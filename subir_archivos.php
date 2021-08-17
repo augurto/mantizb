@@ -87,12 +87,16 @@
             $username=$_SESSION["username"];
             $s=mysqli_query($con,"SELECT * FROM miembros WHERE email='".$username."'");
                 $rwse=mysqli_fetch_array($s);
-                    $id_username=$rwse["id"];
+                $id_username=$rwse["id"];
+                $nombre_entregable=$rwse["nombre"];
             
             ?>
             <input type="text" value="<?php echo $id_username;?>" id="id_miembro" name="id_miembro" class="form-control">
             <br>
             <input type="text" value="<?php echo $id_p;?>" id="codigo_proyecto" name="codigo_proyecto" class="form-control">
+            <br>
+            <br>
+            <input type="text" value="<?php echo $nombre_entregable;?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
             <br>
         <input type="file"   id="documento" name="documento" required>
                     <br><br>
