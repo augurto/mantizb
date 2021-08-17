@@ -15,6 +15,8 @@
                     <textarea class="form-control" placeholder="Descripcion del proyecto" name="descripcion" id="descripcion"></textarea>
                   </div>
           </div>
+      <form action="../ajax/seguimiento222.php" method="get">
+
       <div class="col-sm-12">
        <div class="form-group">
         <label for="exampleInputFile">Archivo</label>
@@ -51,6 +53,7 @@
       <?php }?>
           
         </div>
+      </form>
       </form>
        </div>
        <div class='outer_div11'></div><!-- Carga los datos ajax -->
