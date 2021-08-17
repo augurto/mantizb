@@ -13,10 +13,10 @@ if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
 }
  
-$codigo_proyecto=mysqli_real_escape_string($conn,(strip_tags($_GET["codigo_proyecto"],ENT_QUOTES)));
-$id_entregable=mysqli_real_escape_string($conn,(strip_tags($_GET["id_entregable"],ENT_QUOTES)));
-$descripcion=mysqli_real_escape_string($conn,(strip_tags($_GET["descripcion"],ENT_QUOTES)));
-$id_miembro=mysqli_real_escape_string($conn,(strip_tags($_GET["id_miembro"],ENT_QUOTES)));
+$codigo_proyecto=mysqli_real_escape_string($conn,(strip_tags($_POST["codigo_proyecto"],ENT_QUOTES)));
+$id_entregable=mysqli_real_escape_string($conn,(strip_tags($_POST["id_entregable"],ENT_QUOTES)));
+$descripcion=mysqli_real_escape_string($conn,(strip_tags($_POST["descripcion"],ENT_QUOTES)));
+$id_miembro=mysqli_real_escape_string($conn,(strip_tags($_POST["id_miembro"],ENT_QUOTES)));
 
 $nombre_documento=$_FILES['documento']['name'];
 $guardado=$_FILES['documento']['tmp_name'];
