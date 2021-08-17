@@ -114,7 +114,7 @@
                         }
 
                         ?>
-                    <button class="btn btn-secondary">Subir Archivo</button>    
+                    <button >Subir Archivo</button>    
  
 </form>
 
