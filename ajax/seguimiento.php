@@ -4,7 +4,7 @@ $entregable=$_GET["nom"];
 $est=$_GET["id_miembro"];
 $descripcion=$_GET["descripcion"];
 
-$direccion=$_GET["cdd"]; /* codigo de proyecto */
+$direccion=$_GET["id_p"]; /* codigo de proyecto */
 $carpeta='../entregables/'.$direccion.'/'.$est;
 /* $carpeta='archivos/proyectos/'.$direccion; */
 $nombre=$_FILES['exampleInputFile']['name'];

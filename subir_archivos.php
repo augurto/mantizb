@@ -92,6 +92,8 @@
             ?>
             <input type="text" value="<?php echo $id_username;?>" id="id_miembro" name="id_miembro" class="form-control">
             <br>
+            <input type="text" value="<?php echo $id_p;?>" id="id_p" name="id_p" class="form-control">
+            <br>
         <input type="file"   id="exampleInputFile" name="exampleInputFile" required>
                     <br><br>
 
@@ -114,9 +116,9 @@
                         }
 
                         ?>
-                    <button >Subir Archivo</button>  
+                    <center>
                     <input  class="btn btn-info btn-icon-split" type="submit" value="Enviar este formulario" />
-                    <button >Subir Archivo</button>    
+                    </center>
                    
 </form>
 
