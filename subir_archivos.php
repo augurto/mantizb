@@ -91,9 +91,9 @@
                 $nombre_entregable=$rwse["nombre"];
             
             ?>
-            <input type="text" value="<?php echo $id_username;?>" id="id_miembro" name="id_miembro" class="form-control">
+            <input type="hidden" value="<?php echo $id_username;?>" id="id_miembro" name="id_miembro" class="form-control">
             <br>
-            <input type="text" value="<?php echo $id_p;?>" id="codigo_proyecto" name="codigo_proyecto" class="form-control">
+            <input type="hidden" value="<?php echo $id_p;?>" id="codigo_proyecto" name="codigo_proyecto" class="form-control">
             <br>
             <?php 
             $s21=mysqli_query($con,"SELECT * FROM entregables WHERE codigo_proyecto='".$id_p."'");
@@ -102,9 +102,9 @@
             
         
         ?>
-            ?>
+            
             <br>
-            <input type="text" value="<?php echo $nombre_entregable;?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
+            <input type="hidden" value="<?php echo $nombre_entregable;?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
             <br>
         <input type="file"   id="documento" name="documento" required>
                     <br><br>
