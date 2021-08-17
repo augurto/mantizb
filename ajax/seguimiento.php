@@ -1,14 +1,18 @@
 <?php 
-$entregable=$_GET["nomb"];
+$codigo_proyecto=$_GET["codigo_proyecto"];
+$nombre_documento=$_FILES['documento']['name'];
+$guardado=$_FILES['documento']['tmp_name'];
+$id_entregable=$_GET["id_entregable"];
+$descripcion=$_GET["descripcion"];
+$id_miembro=$_GET["id_miembro"];
 
 $est=$_GET["id_miembro"];
-$descripcion=$_GET["descripcion"];
 
-$direccion=$_GET["id_p"]; /* codigo de proyecto */
-$carpeta='../entregables/'.$direccion.'/'.$est;
+
+$direccion=$_GET["id_p2"]; /* codigo de proyecto */
+$carpeta='../entregables/'.$codigo_proyecto.'/'.$id_entregable;
 /* $carpeta='archivos/proyectos/'.$direccion; */
-$nombre=$_FILES['exampleInputFile']['name'];
-$guardado=$_FILES['exampleInputFile']['tmp_name'];
+
 $nombre_usuario=$_SESSION["username"];
 /* $id_miembro=$_GET["id_miembro"]; */
 
@@ -29,14 +33,14 @@ echo "Connected successfully";
 /* $sql2 = "SELECT * FROM seguimientos WHERE id_seg = '" . $nomb . "' &&  id_miembros = '" . $id_miem . "';"; */
 
 				
-$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$direccion', '$nombre','$entregable','$est','50')";
+$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','$id_miembro')";
 
 if (mysqli_query($conn, $sql)) {
 
 if(!file_exists($carpeta)){
 	mkdir($carpeta,0777,true);
 	if(file_exists($carpeta)){
-		if(move_uploaded_file($guardado, $carpeta.'/'.$nombre)){
+		if(move_uploaded_file($guardado, $carpeta.'/'.$nombre_documento)){
 			echo "Archivo guardado con exito";
 		}else{
 			echo "Archivo no se pudo guardar";
@@ -44,7 +48,7 @@ if(!file_exists($carpeta)){
 
 	}
 }else{
-	if(move_uploaded_file($guardado, $carpeta.'/'.$nombre)){
+	if(move_uploaded_file($guardado, $carpeta.'/'.$nombre_documento)){
 	
         echo "Archivo guardado con exito";
 	}else{
@@ -52,7 +56,7 @@ if(!file_exists($carpeta)){
 	}
 }
 /* header("Location: ver_entregables.php?var1=$direccion"); */
-header("Location: ver_entregables.php?id_p=$direccion&id_est=$id_miem");
+header("Location: ver_entregables.php?id_p=$nombre_documento&id_est=$id_miembro");
 exit;
 
 } else {

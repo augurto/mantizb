@@ -92,9 +92,9 @@
             ?>
             <input type="text" value="<?php echo $id_username;?>" id="id_miembro" name="id_miembro" class="form-control">
             <br>
-            <input type="text" value="<?php echo $id_p;?>" id="id_p" name="id_p" class="form-control">
+            <input type="text" value="<?php echo $id_p;?>" id="codigo_proyecto" name="codigo_proyecto" class="form-control">
             <br>
-        <input type="file"   id="exampleInputFile" name="exampleInputFile" required>
+        <input type="file"   id="documento" name="documento" required>
                     <br><br>
 
                   <!--   otro modelo de select
@@ -104,14 +104,14 @@
                     </select> -->
                             <br>
 
-                    <select class="form-control" name="nomb" id="nomb" required="">
+                    <select class="form-control" name="id_entregable" id="id_entregable" required="">
                         <option disabled="disabled" value="" selected>Seleccionar entregable...</option>
                         <?php 
 
                         $sss=mysqli_query($con,"SELECT * FROM entregables where codigo_proyecto=$id_p");
                                 while($f=mysqli_fetch_assoc($sss)){    
 
-                                    echo '<option value="'.$f['codigo_proyecto'].'">'.$f['nombre'].'</option>';
+                                    echo '<option value="'.$f['id'].'">'.$f['nombre'].'</option>';
 
                         }
 
