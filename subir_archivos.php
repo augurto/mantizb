@@ -81,7 +81,7 @@
 
 
         <form action="../ajax/seguimiento.php" method="post"  enctype="multipart/form-data">
-        <input type="text" name="descripcion" id="descripcion"class="form-control" >
+        <input type="text" name="descripcion" id="descripcion"class="form-control"  placeholder="Descripcion">
         <br>
             <?php 
             $username=$_SESSION["username"];
@@ -91,12 +91,26 @@
             
             ?>
             <input type="text" value="<?php echo $id_username;?>" id="id_miembro" name="id_miembro" class="form-control">
+            <br>
         <input type="file"   id="exampleInputFile" name="exampleInputFile" required>
                     <br><br>
-                    <button class="custom-file-label">Subir Archivo</button>
+                
+                    <select class="custom-select" name="SelectBanco" id="SelectBanco" required="">
+                        <option disabled="disabled" value="" selected>Elegir...</option>
+                        <?php 
+
+                        $sss=mysqli_query($con,"SELECT * FROM entregables ");
+                                while($f=mysqli_fetch_assoc($sss)){    
+
+                                    echo '<option value="'.$f['codigo_proyecto'].'">'.$f['nombre'].'</option>';
+
+                        }
+
+                        ?>
+                    </select>
 <div class="col-sm-12">
  <div class="form-group">
-  <label for="exampleInputFile">Archivo</label>
+  
   
   <div class="input-group">
   <div class="custom-file">
@@ -109,8 +123,8 @@
   <div class="col-sm-12">
   <select name="nomb"  id="nomb" onkeyup="select();"  class="form-control" required>
   </select>
-  <input type="hidden" name="cd" placeholder="Nombre del seguimiento"  id="cd"  class="form-control">
-  <input type="hidden" name="cdd" placeholder="Nombre del seguimiento"  id="cdd"  class="form-control">
+  <input type="text" name="cd" placeholder="Nombre del seguimiento"  id="cd"  class="form-control">
+  <input type="text" name="cdd" placeholder="Nombre del seguimiento"  id="cdd"  class="form-control">
  
     
  
