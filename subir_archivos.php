@@ -95,6 +95,14 @@
             <br>
             <input type="text" value="<?php echo $id_p;?>" id="codigo_proyecto" name="codigo_proyecto" class="form-control">
             <br>
+            <?php 
+            $s21=mysqli_query($con,"SELECT * FROM entregables WHERE codigo_proyecto='".$id_p."'");
+            $rwse=mysqli_fetch_array($s21);
+            $nombre_entregable=$rwse["nombre"];
+            
+        
+        ?>
+            ?>
             <br>
             <input type="text" value="<?php echo $nombre_entregable;?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
             <br>
