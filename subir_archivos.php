@@ -80,8 +80,11 @@
         <div class="container-fluid">
 
 
-        <form action="../ajax/seguimiento222.php" method="get">
+        <form action="../ajax/seguimiento.php" method="post"  enctype="multipart/form-data">
 
+        <input type="file"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
+                    <br><br>
+                    <button>Subir Archivo</button>
 <div class="col-sm-12">
  <div class="form-group">
   <label for="exampleInputFile">Archivo</label>
