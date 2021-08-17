@@ -151,7 +151,7 @@
                     <span class="text">Ver entregables</span>
                   </a>
 					<p></p>
-					<h4 class="small font-weight-bold">Estado<span class="float-right"><?php if($rst>=100){?>Completado!<?php }else{ echo number_format($rst).'%'; } ?></span></h4>
+					<h4 class="small font-weight-bold">Estado<span class="float-right"><?php if($rst>=100){?>Completado!!<?php }else{ echo number_format($rst).'%'; } ?></span></h4>
 					<div class="progress">
 					<div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width:<?php echo $rst;?>%" aria-valuenow="<?php echo $rst;?>" aria-valuemin="0" aria-valuemax="100"><?php echo number_format($rst);?>%</div>
 					</div>
