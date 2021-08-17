@@ -108,6 +108,21 @@
 
                         ?>
                     </select>
+                            <br>
+
+                    <select class="form-control" name="SelectBanco" id="SelectBanco" required="">
+                        <option disabled="disabled" value="" selected>Elegir...</option>
+                        <?php 
+
+                        $sss=mysqli_query($con,"SELECT * FROM entregables where codigo_proyecto=$id_p");
+                                while($f=mysqli_fetch_assoc($sss)){    
+
+                                    echo '<option value="'.$f['codigo_proyecto'].'">'.$f['nombre'].'</option>';
+
+                        }
+
+                        ?>
+                    </select>
 <div class="col-sm-12">
  <div class="form-group">
   
