@@ -25,7 +25,7 @@
                $id_username=$rwse["id"];
         
         ?>
-        <input type="text" value="<?php echo $id_username;?>">
+        <input type="text" value="<?php echo $id_username;?>" id="id_miembro" name="id_miembro" class="form-control">
         <div class="input-group">
         <div class="custom-file">
         <input type="file" onkeyup="loaddds(1);"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
