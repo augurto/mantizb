@@ -10,7 +10,7 @@ $carpeta='../entregables/'.$direccion.'/'.$est;
 $nombre=$_FILES['exampleInputFile']['name'];
 $guardado=$_FILES['exampleInputFile']['tmp_name'];
 $nombre_usuario=$_SESSION["username"];
-
+$id_miembro=$_GET["id_miembro"];
 
 
 
@@ -27,11 +27,9 @@ if (!$conn) {
  
 echo "Connected successfully";
 /* $sql2 = "SELECT * FROM seguimientos WHERE id_seg = '" . $nomb . "' &&  id_miembros = '" . $id_miem . "';"; */
-$g=mysqli_query($conn,"SELECT * FROM miembros WHERE email='".$nombre_usuario."' LIMIT 1" );
-                   $rw=mysqli_fetch_array($g);
-                    $varita=$rw[0];
+
 				
-$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$direccion', '$nombre','$entregable','$varita','49')";
+$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$direccion', '$nombre','$entregable','$id_miembro','50')";
 
 if (mysqli_query($conn, $sql)) {
 
