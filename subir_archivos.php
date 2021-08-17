@@ -94,24 +94,16 @@
             <br>
         <input type="file"   id="exampleInputFile" name="exampleInputFile" required>
                     <br><br>
-                
+
+                  <!--   otro modelo de select
                     <select class="custom-select" name="SelectBanco" id="SelectBanco" required="">
                         <option disabled="disabled" value="" selected>Elegir...</option>
-                        <?php 
-
-                        $sss=mysqli_query($con,"SELECT * FROM entregables ");
-                                while($f=mysqli_fetch_assoc($sss)){    
-
-                                    echo '<option value="'.$f['codigo_proyecto'].'">'.$f['nombre'].'</option>';
-
-                        }
-
-                        ?>
-                    </select>
+                       solo le falta el php incluido
+                    </select> -->
                             <br>
 
-                    <select class="form-control" name="SelectBanco" id="SelectBanco" required="">
-                        <option disabled="disabled" value="" selected>Elegir...</option>
+                    <select class="form-control" name="nomb" id="nomb" required="">
+                        <option disabled="disabled" value="" selected>Seleccionar entregable...</option>
                         <?php 
 
                         $sss=mysqli_query($con,"SELECT * FROM entregables where codigo_proyecto=$id_p");
@@ -122,26 +114,7 @@
                         }
 
                         ?>
-                    </select>
-<div class="col-sm-12">
- <div class="form-group">
-  
-  
-  <div class="input-group">
-  <div class="custom-file">
- 
-
-                </div>
-              </div>
-            </div>
-        </div>
-  <div class="col-sm-12">
-  <select name="nomb"  id="nomb" onkeyup="select();"  class="form-control" required>
-  </select>
-  <input type="text" name="cd" placeholder="Nombre del seguimiento"  id="cd"  class="form-control">
-  <input type="text" name="cdd" placeholder="Nombre del seguimiento"  id="cdd"  class="form-control">
- 
-    
+                    <button class="btn btn-primary">Subir Archivo</button>    
  
 </form>
 
