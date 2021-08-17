@@ -82,7 +82,7 @@
 
         <form action="../ajax/seguimiento.php" method="post"  enctype="multipart/form-data">
 
-        <input type="file"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
+        <input type="file"   id="exampleInputFile" name="exampleInputFile" required>
                     <br><br>
                     <button>Subir Archivo</button>
 <div class="col-sm-12">
