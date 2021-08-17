@@ -81,10 +81,10 @@
 
 
         <form action="../ajax/seguimiento.php" method="post"  enctype="multipart/form-data">
-
+        <input type="text" name="descripcion" id="descripcion">
         <input type="file"   id="exampleInputFile" name="exampleInputFile" required>
                     <br><br>
-                    <button>Subir Archivo</button>
+                    <button class="custom-file-label">Subir Archivo</button>
 <div class="col-sm-12">
  <div class="form-group">
   <label for="exampleInputFile">Archivo</label>
