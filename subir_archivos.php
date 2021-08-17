@@ -114,59 +114,13 @@
                         }
 
                         ?>
-                    <button >Subir Archivo</button>    
- 
+                    <button >Subir Archivo</button>  
+                    <button  class="btn btn-info btn-icon-split">Subir Archivo</button>    
+                   
 </form>
 
 
 
- <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800"><b><?php echo $nombre; ?> </b></h1>
-          </div>
-
-          <!-- DataTales Example -->
-          <div class="row">
-          <?php $sql="SELECT * FROM  seguimientos WHERE codigo_proyecto='$id_p' AND id_miembros='$est'";
-    $query = mysqli_query($con, $sql);
-        while ($row=mysqli_fetch_array($query)){
-           $id=$row['id'];
-            $id_seg=$row['id_seg'];
-            $descripcion=$row['descripcion'];
-             $documento=$row['documento'];
-
-            $gd=mysqli_query($con,"SELECT * FROM entregables WHERE  id='".$id_seg."' AND codigo_proyecto='".$id_p."'");
-            $rwd=mysqli_fetch_array($gd);
-            $nom=$rwd["nombre"];
-              $id_ent=$rwd["id"];
-
-            $t=mysqli_query($con,"SELECT count(*) as t FROM comments WHERE codigo_proyecto='".$id_p."' AND id_seguimiento='".$id."' AND id_entregable='".$id_ent."'");
-            $rwdt=mysqli_fetch_array($t);
-            $ts=$rwdt["t"];
-
-    ?>
-          <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom; ?></h6>
-                 
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <a href="#" data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
-                <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
-                <!-- Counter - Messages -->
-              </a>
-                  <div  align="center"><img src="img/file.png" width="25px" height="auto"></div>
-                  <div align="center"><a href="entregables/<?php echo  $documento; ?>" download="entregables/<?php echo  $documento; ?>"><i class="fa fa-download"></i> <?php echo $documento; ?></a></div>
-                  <br>
-               <?php echo $descripcion; ?>
-                </div>
-              </div>
-            </div>
-
-          <?php } ?>
-        </div>
 
         </div>
         <!-- /.container-fluid -->
