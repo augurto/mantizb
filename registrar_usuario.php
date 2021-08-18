@@ -30,7 +30,7 @@ $query_check_user_name = mysqli_query($conexion,$sql5);
 
                 if ($query_check_user == 1) {
                     $errors[] = "Lo sentimos usuario ya registrado.";
-                    echo "<center><strong><h4>Usuario ya registrado<BR></strong></h4></center>";
+                    echo "<center><strong><h4>Error XD<BR></strong></h4><h4>Usuario ya registrado<BR></strong></h4></center>";
                 } else {
                   # code...
                   $insertarUno=$conexion->query("INSERT INTO usuarios  (username , password, rol,codigo_proyecto, pass2)  VALUES ('$usuario', '$sha1','Inv Principal','$usuario', '$pass')");
@@ -89,7 +89,7 @@ $query_check_user_name = mysqli_query($conexion,$sql5);
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row" style="background-color: #f0f8ffa8;">
-              <div class="col-lg-6 d-none d-lg-block"><!-- <img src="img/logo.png" width="470px" height="520px">  insertar imagen o logo --></div>
+            <div class="col-lg-6 d-none d-lg-block"><img src="img/mantiz.jpg" width="470px" height="520px"></div>
               <div class="col-lg-6">
                 <br>
                 <div class="p-5">
