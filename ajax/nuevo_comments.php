@@ -15,12 +15,13 @@ session_start();
                    $id_ent = mysqli_real_escape_string($con,(strip_tags($_POST["id_ent"],ENT_QUOTES)));
                     $id_seg = mysqli_real_escape_string($con,(strip_tags($_POST["id_seg"],ENT_QUOTES)));
                     $comentario = mysqli_real_escape_string($con,(strip_tags($_POST["comentario"],ENT_QUOTES)));
+					$link = mysqli_real_escape_string($con,(strip_tags($_POST["link"],ENT_QUOTES)));
                  $id_user = $_SESSION['id_user'];
                   $rol = $_SESSION['prol'];
                 // crypt the user's password with PHP 5.5's password_hash() function, results in a 60 character
                 // hash string. the PASSWORD_DEFAULT constant is defined by the PHP 5.5, or if you are using
                 // PHP 5.3/5.4, by the password hashing compatibility library
-       $sql = "INSERT INTO comments (codigo_proyecto, id_seguimiento, id_entregable, comentario, id_user, rol) VALUES ('$id_p', '$id_seg','$id_ent','$comentario','$id_user','$rol');";
+       $sql = "INSERT INTO comments (codigo_proyecto, id_seguimiento, id_entregable, comentario, id_user, rol, link) VALUES ('$id_p', '$id_seg','$id_ent','$comentario','$id_user','$rol','$link');";
                     $query_new_user_insert = mysqli_query($con,$sql);
                     if ($query_new_user_insert) {
                         $messages[] = "Publicado con exito.";

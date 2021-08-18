@@ -25,6 +25,7 @@
             <h5 class="mb-30 padding-top-1x">Deja tu comentario</h5>
               <div class="form-group">
                 <textarea class="form-control form-control-rounded" id="comentario" name="comentario" rows="3" placeholder="Escribe tu comentario..." required=""></textarea>
+                <input type="text" class="form-control" placeholder="Pegar link" id="link" name="link" placeholder="Pegue el link">
                 <input class="form-control" type="hidden" value="<?php echo $_GET['id_p']; ?>" id="idd_proyecto"  name="idd_proyecto">
                   <input class="form-control" type="hidden" value="<?php echo $_GET['id_est']; ?>" id="id_est"  name="id_est">
                     <input class="form-control" type="hidden" value="" id="id_seg"  name="id_seg">
