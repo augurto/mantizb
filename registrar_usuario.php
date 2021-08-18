@@ -30,6 +30,7 @@ $query_check_user_name = mysqli_query($conexion,$sql5);
 
                 if ($query_check_user == 1) {
                     $errors[] = "Lo sentimos usuario ya registrado.";
+                    echo "<center><strong><h4>Usuario ya registrado<BR></strong></h4></center>";
                 } else {
                   # code...
                   $insertarUno=$conexion->query("INSERT INTO usuarios  (username , password, rol,codigo_proyecto, pass2)  VALUES ('$usuario', '$sha1','Inv Principal','$usuario', '$pass')");
