@@ -119,7 +119,7 @@
                   <div  align="center"><img src="img/file.png" width="50px" height="auto"></div>
                   <div align="center"><a href="entregables/<?php echo  $id_p  ; ?>/<?php echo  $documento; ?>" download="entregables/<?php echo  $id_p  ; ?>/<?php echo  $documento; ?>"><i class="fa fa-download"></i> <?php echo $documento; ?></a></div>
 
-                  <div align="center"><a href="<?php echo  $link  ; ?>/<?php echo  $link; ?>" download="<?php echo  $link  ; ?>/<?php echo  $link; ?>" target="_blank"><i class="fa fa-cloud-download" aria-hidden="true"></i> <?php echo $link; ?></a></div>
+                  <div align="center"><a href="<?php echo  $link  ; ?>/<?php echo  $link; ?>" download="<?php echo  $link  ; ?>/<?php echo  $link; ?>" target="_blank"><i class="fa fa-cloud-download" ></i>URL:  <?php echo $link; ?></a></div>
 
                   
                   
