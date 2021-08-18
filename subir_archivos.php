@@ -97,7 +97,7 @@
             
                   
             
-        <input type="file"   id="documento" name="documento" required>
+        <input type="file"   id="documento" name="documento" >
                     <br><br>
 
                   <!--   otro modelo de select
@@ -119,7 +119,9 @@
                         }
                         
                         ?>
-                        <input type="text" value="<?php echo $f['nombre'];?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
+                        <input type="hidden" value="<?php echo $f['nombre'];?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
+
+                        <input type="text" class="form-control" placeholder="Pegue el link de google Drive" id="link" name="link">
                     <center>
                     <input  class="btn btn-info btn-icon-split" type="submit" value="Enviar este formulario" />
                     </center>

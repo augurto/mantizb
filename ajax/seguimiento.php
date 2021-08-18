@@ -17,6 +17,7 @@ $codigo_proyecto=mysqli_real_escape_string($conn,(strip_tags($_POST["codigo_proy
 $id_entregable=mysqli_real_escape_string($conn,(strip_tags($_POST["id_entregable"],ENT_QUOTES)));
 $descripcion=mysqli_real_escape_string($conn,(strip_tags($_POST["descripcion"],ENT_QUOTES)));
 $id_miembro=mysqli_real_escape_string($conn,(strip_tags($_POST["id_miembro"],ENT_QUOTES)));
+$link=mysqli_real_escape_string($conn,(strip_tags($_POST["link"],ENT_QUOTES)));
 
 $nombre_entregable=mysqli_real_escape_string($conn,(strip_tags($_POST["nombre_entregable"],ENT_QUOTES)));
 
@@ -39,7 +40,7 @@ echo "Connected successfully";
 /* $sql2 = "SELECT * FROM seguimientos WHERE id_seg = '" . $nomb . "' &&  id_miembros = '" . $id_miem . "';"; */
 
 				
-$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros) VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','$id_miembro')";
+$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros,link) VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','$id_miembro','$link')";
 
 if (mysqli_query($conn, $sql)) {
 
