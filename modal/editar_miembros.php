@@ -34,7 +34,7 @@
 				<label for="mod_telefono" class="col-sm-3 control-label">Rol</label>
 				<div class="col-sm-12">
 				<select class="form-control" name="mod_rol" id="mod_rol">
-                      <option value="Estudiante" selected>Estudiante</option>
+                      <option value="Estudiante" selected>Colaborador</option>
                       <option value="Investigador">Investigador</option>
                     </select>
 				</div>

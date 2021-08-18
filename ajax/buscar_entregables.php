@@ -44,7 +44,7 @@ session_start();
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th>Estudiante</th>
+                      <th>Colaborador</th>
                       <th>Acciones</th>
                        </tr>
                   </thead>
