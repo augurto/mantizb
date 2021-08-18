@@ -105,7 +105,7 @@ session_start();
 						<td><?php echo $nombre; ?></td>
 						<td><?php echo $programas; ?></td>
 						<td ><?php echo $fecha; ?></td>
-					  <?php if($_SESSION['prol']=='administrador'){?>
+					  <?php if($_SESSION['prol']=='administrador'  || $_SESSION['prol']=="Inv Principal"){?>
 					  	<td ><span class="pull-right">
 					<a href="#" class='btn btn-success' title='Editar grupo' onclick="obtener_datos(<?php echo $id;?>);" data-toggle="modal" data-target="#myModal2"><i class="fa fa-edit"></i></a>
 					<a href="#" class='btn btn-success' title='Eliminar grupo' onclick="eliminar('<?php echo $id;?>');"><i class="fa fa-trash"></i></a>
