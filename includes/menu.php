@@ -35,13 +35,13 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="index.php">Mesa de trabajo</a>
-              <?php if($_SESSION['prol']=='administrador'){?>
+              <?php if($_SESSION['prol']=='administrador'  || $_SESSION['prol']=="Inv Principal" || $_SESSION['prol']=="Coinvestigador" || $_SESSION['prol']=="estudiante"){?>
             <a class="collapse-item" href="calendario.php">Calendario</a>
           <?php }?>
           </div>
         </div>
       </li>
-
+      
       <!-- Nav Item - Utilities Collapse Menu -->
        <?php if($_SESSION['prol']=="Inv Principal"  || $_SESSION['prol']=="Coinvestigador" || $_SESSION['prol']=="administrador"){?>
       <li class="nav-item <?php echo $segmento;?>">
