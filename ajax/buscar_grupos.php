@@ -80,7 +80,7 @@ session_start();
                     <th>Nombre del grupo</th>
                     <th>Nombre del programa</th>
                     <th>Fecha de creacion</th>
-					  <?php if($_SESSION['prol']=='administrador'){?><th>Acciones</th><?php } ?>
+					  <?php if($_SESSION['prol']=='administrador'  || $_SESSION['prol']=="Inv Principal"){?><th>Acciones</th><?php } ?>
                     </tr>
                   </thead>
                   <tbody>
