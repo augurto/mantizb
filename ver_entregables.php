@@ -90,7 +90,8 @@
            $id=$row['id'];
             $id_seg=$row['id_seg'];
             $descripcion=$row['descripcion'];
-             $documento=$row['documento'];
+            $documento=$row['documento'];
+            $link=$row['link'];
 
             $gd=mysqli_query($con,"SELECT * FROM entregables WHERE  id='".$id_seg."' AND codigo_proyecto='".$id_p."'");
             $rwd=mysqli_fetch_array($gd);
@@ -117,6 +118,12 @@
               </a>
                   <div  align="center"><img src="img/file.png" width="50px" height="auto"></div>
                   <div align="center"><a href="entregables/<?php echo  $id_p  ; ?>/<?php echo  $documento; ?>" download="entregables/<?php echo  $id_p  ; ?>/<?php echo  $documento; ?>"><i class="fa fa-download"></i> <?php echo $documento; ?></a></div>
+
+                  <div align="center"><a href="entregables/<?php echo  $id_p  ; ?>/<?php echo  $documento; ?>" download="entregables/<?php echo  $id_p  ; ?>/<?php echo  $documento; ?>"><i class="fa fa-download"></i> <?php echo $documento; ?></a></div>
+
+                  <div  align="center"><a href="<?php echo  $link; ?>">Ir al link</a> </div>
+                  
+
                   <br>
                <?php echo $descripcion; ?>
                 </div>
