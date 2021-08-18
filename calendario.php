@@ -3,7 +3,7 @@
         header("location: login.php");
     exit;
   }
-  if ($_SESSION['prol']=="administrador"){
+  if ($_SESSION['prol']=="administrador" || $_SESSION['prol']=="Inv Principal"|| $_SESSION['prol']=="Coinvestigador"){
       
 
   }else{
