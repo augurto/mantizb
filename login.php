@@ -35,7 +35,7 @@
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row" style="background-color: #f0f8ffa8;">
-              <div class="col-lg-6 d-none d-lg-block"><!-- <img src="img/logo.png" width="470px" height="520px">  insertar imagen o logo --></div>
+              <div class="col-lg-6 d-none d-lg-block"><img src="img/mantiz.jpg" width="470px" height="520px"></div>
               <div class="col-lg-6">
                 <br>
                 <div class="p-5">
