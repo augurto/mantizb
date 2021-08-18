@@ -66,7 +66,7 @@
 			  <table class="table">
 				<tr  class="info">
 					<th>#</th>
-					<th>Nombre del estudiante</th>
+					<th>Nombre del Colaborador</th>
 					<th>Accion</th>
 					
 				</tr>
