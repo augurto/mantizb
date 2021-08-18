@@ -99,6 +99,7 @@ session_start();
 						$id=$row['id'];
 						$id_user=$row['id_user'];
 						$comentario=$row['comentario'];
+                        $link=$row['link'];
 						$rol=$row['rol'];
         
         
@@ -118,7 +119,9 @@ session_start();
 			<div class="comment">
 				<div class="comment-author-ava"><img src="img/<?php echo $img; ?>" alt="Avatar" style="width: 50px;"></div>
               <div class="comment-body" style="<?php echo $var; ?>">
-                <p class="comment-text" style="font-size: 13px;"><?php echo $comentario; ?></p>
+              <p class="comment-text" style="font-size: 13px;"><?php echo $comentario; ?></p>
+              <a href="<?php echo  $link  ; ?>/<?php echo  $link; ?>" download="<?php echo  $link  ; ?>/<?php echo  $link; ?>" target="_blank"><i class="fa fa-cloud-download" ></i>  <?php echo $link; ?></a>
+           <!--    <p class="comment-text" style="font-size: 13px;"><?php echo $link; ?></p> -->
                 <div class="comment-footer"><span class="comment-meta" style="text-transform: capitalize;font-size: 13px;"><?php echo $rol.' ->'.$username; ?></span></div>
               </div>
             </div>
