@@ -36,7 +36,7 @@ $rand=generate_string($permitted_chars, 7);
 				$query_check_user=mysqli_num_rows($query_check_user_name);
 
                 if ($query_check_user == 1) {
-                    $errors[] = "Lo sentimos , la cedula o el email ya está en uso.";
+                    $errors[] = "Lo sentimos , dni o el email ya está en uso.";
                 } else {
 		$sql="INSERT INTO miembros (nombre, cedula, email, rol, grupo, rand, estado, rol2) VALUES ('$nombre', '$cedula','$email','$rol', '$grupo','$cedula', '$estado','$rol2')";
 		$query_new_insert = mysqli_query($con,$sql);

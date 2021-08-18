@@ -26,6 +26,12 @@ $grupo=$_POST['grupo']; */
 
 // SE EJECUTA LA PRIMER INSERCIÓN A LA TABLA NO. 1 
 $insertarUno=$conexion->query("INSERT INTO usuarios  (username , password, rol,codigo_proyecto, pass2)  VALUES ('$usuario', '$sha1','Inv Principal','$usuario', '$pass')");
+$query_check_user_name = mysqli_query($conexion,$insertarUno);
+				$query_check_user=mysqli_num_rows($query_check_user_name);
+
+                if ($query_check_user == 1) {
+                    $errors[] = "Lo sentimos usuario ya registrado.";
+                } 
 if ($insertarUno==true)// SI LA QUERY ANTERIOR SE EJECUTA CON EXITO, SE EJECUTA LA INSERCIÓN A LA TABLA 2
 {
 	$insertarDos=$conexion->query("INSERT INTO miembros  (nombre ,email, grupo, rand, rol,rol2, estado) VALUES ('$usuario','$usuario','51', '$pass','Investigador','$usuario', 'activo')");
