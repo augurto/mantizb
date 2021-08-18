@@ -70,7 +70,7 @@ include("modal/cambiar_password.php");
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800"><b>Mesa de trabajo</b></h1>
-            <?php if($_SESSION['prol']=='administrador'){?>
+            <?php if($_SESSION['prol']=='administrador' || $_SESSION['prol']=="Inv Principal" || $_SESSION['prol']=="Coinvestigador"){?>
             <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"  data-toggle="modal" data-target="#NuevoProyecto"><i class="fas fa-folder fa-sm text-white-50"></i> Nuevo proyecto</a>
           <?php } ?>
           </div>
