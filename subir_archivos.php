@@ -94,7 +94,7 @@
             <input type="hidden" value="<?php echo $id_username;?>" id="id_miembro" name="id_miembro" class="form-control">
             
             <input type="hidden" value="<?php echo $id_p;?>" id="codigo_proyecto" name="codigo_proyecto" class="form-control">
-            
+            <input type="text" value="<?php echo $username;?>" id="usuario_seguimiento" name="usuario_seguimiento" class="form-control">
                   
             
         <input type="file"   id="documento" name="documento" >

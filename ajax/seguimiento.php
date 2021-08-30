@@ -18,12 +18,12 @@ $id_entregable=mysqli_real_escape_string($conn,(strip_tags($_POST["id_entregable
 $descripcion=mysqli_real_escape_string($conn,(strip_tags($_POST["descripcion"],ENT_QUOTES)));
 $id_miembro=mysqli_real_escape_string($conn,(strip_tags($_POST["id_miembro"],ENT_QUOTES)));
 $link=mysqli_real_escape_string($conn,(strip_tags($_POST["link"],ENT_QUOTES)));
-
 $nombre_entregable=mysqli_real_escape_string($conn,(strip_tags($_POST["nombre_entregable"],ENT_QUOTES)));
+$usuario_seguimiento=mysqli_real_escape_string($conn,(strip_tags($_POST["usuario_seguimiento"],ENT_QUOTES)));
 
 $nombre_documento=$_FILES['documento']['name'];
 $guardado=$_FILES['documento']['tmp_name'];
-$usuario_seguimiento = $_SESSION["username"];
+
 
 
 
