@@ -23,7 +23,7 @@ $nombre_entregable=mysqli_real_escape_string($conn,(strip_tags($_POST["nombre_en
 
 $nombre_documento=$_FILES['documento']['name'];
 $guardado=$_FILES['documento']['tmp_name'];
-
+$usuario_seguimiento = $_SESSION["username"];
 
 
 
@@ -40,7 +40,7 @@ echo "Connected successfully";
 /* $sql2 = "SELECT * FROM seguimientos WHERE id_seg = '" . $nomb . "' &&  id_miembros = '" . $id_miem . "';"; */
 
 				
-$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros,link) VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','$id_miembro','$link')";
+$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros,link,usuario) VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','$id_miembro','$link','$usuario_seguimiento')";
 
 if (mysqli_query($conn, $sql)) {
 
