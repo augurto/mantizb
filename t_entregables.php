@@ -84,7 +84,7 @@
 
           <!-- DataTales Example -->
           <div class="row">
-          <?php $sql="SELECT * FROM  seguimientos WHERE codigo_proyecto='$id_p' AND id_miembros='$est'";
+          <?php $sql="SELECT * FROM  seguimientos WHERE codigo_proyecto='$id_p' /* AND id_miembros='$est' */";
     $query = mysqli_query($con, $sql);
         while ($row=mysqli_fetch_array($query)){
            $id=$row['id'];
