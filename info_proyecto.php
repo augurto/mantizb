@@ -93,6 +93,14 @@ require_once ("./config/db.php");//Contiene las variables de configuracion para 
             <h1 class="h3 mb-0 text-gray-800"><?php  echo $nombre;?></h1>
           </div>
 
+          <div class="col-lg-12" >
+          <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample1">
+
+
+          </div>
+
+
+
           <div class="row">
 
             <!-- Earnings (Monthly) Card Example -->
