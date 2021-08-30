@@ -22,7 +22,7 @@
 
       $est='0';
        $id_p=$_GET['id_p'];
-     $sql=mysqli_query($con,"SELECT * FROM miembros WHERE id='".$est."'");
+     $sql=mysqli_query($con,"SELECT * FROM miembros /* WHERE id='".$est."' */");
       $rws=mysqli_fetch_array($sql);
       $nombre=$rws["nombre"];
 
