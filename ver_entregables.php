@@ -128,7 +128,7 @@
                   <br>
                <?php echo $descripcion; ?>
                <br>
-               <?php echo $usuario_seguimiento; ?>
+               <?php echo "Usuario : " .$usuario_seguimiento; ?>
                 </div>
               </div>
             </div>
