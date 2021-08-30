@@ -40,7 +40,7 @@
           $c = mysqli_real_escape_string($con,(strip_tags($_REQUEST['c'], ENT_QUOTES)));
 		 $aColumns = array('codigo_proyecto');//Columnas de busqueda
 		 $sTable = "usuarios";
-		 $sWhere = "Where username='".$c."' group by codigo_proyecto order by id desc";
+		 $sWhere = "Where username='".$c."'  AND rol='Estudiante'   group by codigo_proyecto order by id desc";
 		include 'pagination.php'; //include pagination file
 		//pagination variables
 		$page = (isset($_REQUEST['page']) && !empty($_REQUEST['page']))?$_REQUEST['page']:1;
