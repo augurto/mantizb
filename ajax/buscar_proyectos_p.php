@@ -124,7 +124,7 @@
 					<input type="hidden" value="<?php echo $codigo;?>" id="cod<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $presupuesto;?>" id="presupuesto<?php echo $id;?>">
 					<td><?php echo $count++; ?></td>
-						<td><a href="info_proyecto.php?cod=<?php echo $codigo; ?>"><?php echo $nombre; ?></a></td>
+						<td><a href="t_entregables.php?id_p=<?php echo $codigo; ?>&id_est=<?php echo $id_es; ?>"><?php echo $nombre; ?></a></td>
 						<td><?php echo $codigo; ?></td>
 						<td>S/ <?php echo number_format($presupuesto);?></td>
 						<td ><?php echo $fecha; ?></td>
