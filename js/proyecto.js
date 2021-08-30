@@ -223,8 +223,8 @@ function eliminar (id)
 function eliminar_est (id)
 		{
 				swal({
-  title: "Realmente deseas eliminar el estudiante?",
-  text: "Una vez eliminado, no volveras a ver el estudiante",
+  title: "Realmente deseas eliminar el Colaborador?",
+  text: "Una vez eliminado, no volveras a ver el Colaborador",
   icon: "warning",
   buttons: true,
   dangerMode: true,
@@ -232,7 +232,7 @@ function eliminar_est (id)
 .then((willDelete) => {
 
   if (willDelete) {
-    swal("Estudiante eliminado exitosamente", {
+    swal("Colaborador eliminado exitosamente", {
       icon: "success",
     });
         $.ajax({

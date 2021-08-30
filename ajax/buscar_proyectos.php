@@ -13,6 +13,7 @@
 	$action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
 	if (isset($_GET['id'])){
 		$idd=$_GET['id'];
+    $carpeta='../entregables/'.$idd;
 			if ($delete1=mysqli_query($con,"DELETE FROM proyecto WHERE codigo='".$idd."'")){
 				$delete2=mysqli_query($con,"DELETE FROM cronograma WHERE codigo_proyecto='".$idd."'");
 				$delete3=mysqli_query($con,"DELETE FROM programa_proyecto WHERE codigo_proyecto='".$idd."'");
@@ -21,6 +22,17 @@
 				$delete6=mysqli_query($con,"DELETE FROM grupo_proyecto WHERE codigo_proyecto='".$idd."'");
         $delete7=mysqli_query($con,"DELETE FROM usuarios WHERE codigo_proyecto='".$idd."'");
         $delete8=mysqli_query($con,"DELETE FROM comments WHERE codigo_proyecto='".$idd."'");
+        function rmDir_rf($carpeta)
+    {
+      foreach(glob($carpeta . "/*") as $archivos_carpeta){             
+        if (is_dir($archivos_carpeta)){
+          rmDir_rf($archivos_carpeta);
+        } else {
+        unlink($archivos_carpeta);
+        }
+      }
+      rmdir($carpeta);
+     }
 			?>
 			<div class="alert alert-success alert-dismissible" role="alert">
 			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
