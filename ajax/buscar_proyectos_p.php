@@ -85,7 +85,7 @@
 						$id=$row['id'];
 						$codigo=$row['codigo_proyecto'];
 						
-							$sql1="SELECT * FROM  proyecto where codigo='".$codigo."'";
+							$sql1="SELECT * FROM  proyecto where codigo='".$codigo."'  AND rol='Coinvestigador' ";
 							$query1 = mysqli_query($con, $sql1);
 							$rows=mysqli_fetch_array($query1);
 
@@ -102,7 +102,7 @@
 						$fecha=$rows['fecha_agregado'];
 						$presupuesto=$rows['presupuesto'];
 
-						$s=mysqli_query($con,"SELECT count(*) as total_seg FROM seguimientos WHERE codigo_proyecto='".$codigo."'  AND id_miembros='".$id."' AND rol='Coinvestigador'  ");
+						$s=mysqli_query($con,"SELECT count(*) as total_seg FROM seguimientos WHERE codigo_proyecto='".$codigo."'  AND id_miembros='".$id."' ");
 						$rwser=mysqli_fetch_array($s);
 						 $total_s=$rwser["total_seg"];
 					   
