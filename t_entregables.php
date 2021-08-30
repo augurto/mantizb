@@ -20,11 +20,11 @@
    $segmento=""; 
    $reportes="";  
 
-  /*     $est=$_GET['id_est']; */
+      $est='0';
        $id_p=$_GET['id_p'];
-     /* $sql=mysqli_query($con,"SELECT * FROM miembros WHERE id='".$est."'");
+     $sql=mysqli_query($con,"SELECT * FROM miembros WHERE id='".$est."'");
       $rws=mysqli_fetch_array($sql);
-      $nombre=$rws["nombre"]; */
+      $nombre=$rws["nombre"];
 
       ?><!DOCTYPE html>
 <html lang="en">
@@ -79,7 +79,7 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
  <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <!--     <h1 class="h3 mb-0 text-gray-800"><b><?php echo $nombre; ?> </b></h1> -->
+            <h1 class="h3 mb-0 text-gray-800"><b><?php echo "Entregables"; ?> </b></h1>
           </div>
 
           <!-- DataTales Example -->
