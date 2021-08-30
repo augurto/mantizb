@@ -85,7 +85,7 @@
 						$id=$row['id'];
 						$codigo=$row['codigo_proyecto'];
 						
-							$sql1="SELECT * FROM  proyecto where codigo='".$codigo."'  AND rol='Estudiante' ";
+							$sql1="SELECT * FROM  proyecto where codigo='".$codigo."'   ";
 							$query1 = mysqli_query($con, $sql1);
 							$rows=mysqli_fetch_array($query1);
 
