@@ -20,11 +20,11 @@
    $segmento=""; 
    $reportes="";  
 
-      $est=$_GET['id_est'];
+  /*     $est=$_GET['id_est']; */
        $id_p=$_GET['id_p'];
-     $sql=mysqli_query($con,"SELECT * FROM miembros WHERE id='".$est."'");
+     /* $sql=mysqli_query($con,"SELECT * FROM miembros WHERE id='".$est."'");
       $rws=mysqli_fetch_array($sql);
-      $nombre=$rws["nombre"];
+      $nombre=$rws["nombre"]; */
 
       ?><!DOCTYPE html>
 <html lang="en">
