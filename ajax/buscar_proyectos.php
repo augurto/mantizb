@@ -207,7 +207,7 @@
                   </a>
 				<span class="pull-right">
 					<a href="#" class='btn btn-primary' data-toggle="modal" data-target="#editProyecto" title='Editar proyecto'  onclick="obtener_datos(<?php echo $id;?>);"><i class="fa fa-edit"></i></a>
-						<a href="#" class='btn btn-primary' title='Borrar proyecto' onclick="eliminar('<?php echo $codigo_;?>');"><i class="fa fa-trash"></i></a> 
+						<a href="#" class='btn btn-primary' title='Borrar proyectoooo' onclick="eliminar('<?php echo $codigo_;?>');"><i class="fa fa-trash"></i></a> 
 					</span>
 					<p></p>
 				</td>
