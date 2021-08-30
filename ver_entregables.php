@@ -92,6 +92,7 @@
             $descripcion=$row['descripcion'];
             $documento=$row['documento'];
             $link=$row['link'];
+            $usuario_seguimiento=$row['usuario'];
 
             $gd=mysqli_query($con,"SELECT * FROM entregables WHERE  id='".$id_seg."' AND codigo_proyecto='".$id_p."'");
             $rwd=mysqli_fetch_array($gd);
@@ -126,6 +127,8 @@
 
                   <br>
                <?php echo $descripcion; ?>
+               <br>
+               <?php echo $usuario_seguimiento; ?>
                 </div>
               </div>
             </div>
