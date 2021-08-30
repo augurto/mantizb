@@ -148,7 +148,7 @@
                       <th>Presupuesto</th>
                       <th>Fecha</th>
                       <th>Estado</th>
-                      <th>Entregables</th>
+                      <th>Accion</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -199,12 +199,12 @@
                   </a></td>
                       <td>
 
-                      	 <a href="entregables.php?id_p=<?php echo $codigo_; ?>" class="btn btn-primary btn-icon-split">
+                      	 <!-- <a href="entregables.php?id_p=<?php echo $codigo_; ?>" class="btn btn-primary btn-icon-split">
                     <span class="icon text-white-50">
                       <i class="fas fa-check"></i>
                     </span>
                     <span class="text">Entregables</span>
-                  </a>
+                  </a> -->
 				<span class="pull-right">
 					<a href="#" class='btn btn-primary' data-toggle="modal" data-target="#editProyecto" title='Editar proyecto'  onclick="obtener_datos(<?php echo $id;?>);"><i class="fa fa-edit"></i></a>
 						<a href="#" class='btn btn-primary' title='Borrar proyectoooo' onclick="eliminar('<?php echo $codigo_;?>');"><i class="fa fa-trash"></i></a> 
