@@ -95,6 +95,7 @@ require_once ("./config/db.php");//Contiene las variables de configuracion para 
 
           <div class="col-lg-12" >
           <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample1">
+          <h6 class="m-0 font-weight-bold text-primary">Entregables</h6>
 
 
           </div>
