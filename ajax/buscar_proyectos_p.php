@@ -144,7 +144,7 @@
                       <i class="fas fa-check"></i>
                     </span>
                     <span class="text">Entregables</span>
-                  </a> <a href="ver_entregables.php?id_p=<?php echo $codigo;?>&id_est=<?php echo $id_es;?>" class="btn btn-info btn-icon-split" title='Ver entregables'>
+                  </a> <a href="ver_entregables.php?id_p=<?php echo $codigo;?>&id_est=<?php echo $id_es;?>" class="btn btn-info btn-icon-split" title='Agregar entregables'>
                     <span class="icon text-white-50">
                       <i class="fas fa-file"></i>
                     </span>
