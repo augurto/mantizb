@@ -60,6 +60,7 @@
        include("modal/cambiar_password.php");
        include("modal/comments.php");
        include("modal/entregable.php");
+       include("modal/subir_archivo.php");
        ?>
   <!-- Page Wrapper -->
   <div id="wrapper">
