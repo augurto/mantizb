@@ -50,7 +50,7 @@
               </div>
           </div>
                 <div class="row">
-              <div class="col-lg-6" id="inv_g" style="display: block;" >
+              <div class="col-lg-6" id="inv_g" >
                 <div class="form-group">
                 
          <input type="hidden" class="form-control" name="c" id="c">  
@@ -77,7 +77,7 @@
                  <button type="button" class="btn btn-success btn-sm" id="a_inv">Guardar</button>
                   </div>
               </div>
-              <div class="col-lg-6" id="est_g" style="display: block;">
+              <div class="col-lg-6" id="est_g" >
                 <div class="resultados3" id="resultados3"></div>
                 <div class="form-group">
                    
