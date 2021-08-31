@@ -40,7 +40,7 @@
 					$sql2="INSERT INTO  usuarios (username, password, rol,rol2, codigo_proyecto) VALUES ('$email', '$sha', '$rol','$rol', '$c')";
 		$query_new_insert2 = mysqli_query($con,$sql2);
 				}
-				$messages[] = "Ingresado satisfactoriamente...0";
+				$messages[] = "Ingresado satisfactoriamente...";
 			} else{
 				$errors []= "Lo siento algo ha salido mal intenta nuevamente.".mysqli_error($con);
 			}
