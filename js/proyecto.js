@@ -256,13 +256,12 @@ function eliminar_est (id)
 	function loa(){
 		var cod=$('#codigo').val();
 		if(cod==""){
-			
-			document.getElementById("inv_g").style.display="block";
-			document.getElementById("est_g").style.display="block";
-
-		}else{
 			document.getElementById("inv_g").style.display="none";
 			document.getElementById("est_g").style.display="none";
+
+		}else{
+			document.getElementById("inv_g").style.display="block";
+			document.getElementById("est_g").style.display="block";
 				
 
 		}
