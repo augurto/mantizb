@@ -20,7 +20,9 @@
 		
 						if ($query_check_user == 1) {
 							$errors[] = "ya el colaborador está asociado como Investigador.";
-						}
+						} else {
+							# code...
+						
 						
 
 
@@ -42,6 +44,7 @@
 				$errors []= "Lo siento algo ha salido mal intenta nuevamente.".mysqli_error($con);
 			}
 		}
+	} /* corchete del else */
 } else {
 			$errors []= "Error desconocido.";
 		}
