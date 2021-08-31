@@ -59,6 +59,7 @@
        include("modal/editar_programas.php");
        include("modal/cambiar_password.php");
        include("modal/comments.php");
+       include("modal/entregable.php");
        ?>
   <!-- Page Wrapper -->
   <div id="wrapper">
