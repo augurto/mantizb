@@ -28,7 +28,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"><span class="fa fa-qrcode"></span></span>
                       </div>
-                      <input type="number" class="form-control" id="codigo"  name="codigo" onkeyup="loa();" placeholder="Codigo" required>
+                     <!--  <input type="number" class="form-control" id="codigo"  name="codigo" onkeyup="loa();" placeholder="Codigo" required> -->
 
                       <?php $rs = mysqli_query($con, "SELECT MAX(codigo) AS id FROM proyecto");
                       if ($row = mysqli_fetch_row($rs)) {
