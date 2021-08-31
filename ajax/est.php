@@ -13,6 +13,17 @@
                       $nombre=$rw["nombre"];
                        $email=$rw["email"];
                         $rand=$rw["rand"];
+
+		$sql3 = "SELECT * FROM investigadores_proyecto WHERE investigador = '" . $estudiante . "' and codigo_proyecto='".$ce."';";
+				$query_check_user_name = mysqli_query($con,$sql3);
+				$query_check_user=mysqli_num_rows($query_check_user_name);
+		
+						if ($query_check_user == 1) {
+							$errors[] = "ya el colaborador está asociado como Investigador.";
+						}
+						
+
+
 		$sql2 = "SELECT * FROM estudiantes_proyecto WHERE estudiante = '" . $estudiante . "' and codigo_proyecto='".$ce."';";
                 $query_check_user_name = mysqli_query($con,$sql2);
 				$query_check_user=mysqli_num_rows($query_check_user_name);
@@ -63,5 +74,5 @@
 				</div>
 				<?php
 			}
-
+		
 ?>
