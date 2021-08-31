@@ -82,7 +82,7 @@
             <h1 class="h3 mb-0 text-gray-800"><b><?php echo $nombre; ?> </b></h1>
             <a href="subir_archivos.php" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"  ><i class="fas fa-folder fa-sm text-white-50"></i> Subir Archivos</a>
 
-            <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"  data-toggle="modal" data-target="#AgregarEntregable"><i class="fas fa-folder fa-sm text-white-50"></i> Entregable</a>
+            <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#AgregarEntregable"><i class="fas fa-user fa-sm text-white-50"></i> Entregables</a>
           </div>
 
           <!-- DataTales Example -->

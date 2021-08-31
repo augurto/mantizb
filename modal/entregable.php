@@ -8,7 +8,7 @@
     <div class="modal-dialog modal-cm" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><i class='fa fa-file'></i> Nuevo programa</h5>
+          <h5 class="modal-title" id="exampleModalLabel"><i class='fa fa-file'></i> Nuevo Entregable</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
@@ -16,7 +16,7 @@
         <div class="modal-body">
 			<form class="form-horizontal" method="post" id="guardar_programa" name="guardar_programa">
 			<div id="resultados_ajax"></div>
-			 	<label>Nombre del programa</label>
+			 	<label>Nombre del ENtregable</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
@@ -28,7 +28,7 @@
 
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			<button type="submit" class="btn btn-primary" id="guardar_datos">Guardar datos</button>
+			<button type="submit" class="btn btn-primary" id="guardar_datos">Guardar entregable</button>
 		  </div>
 		  </form>
 		    </div>
