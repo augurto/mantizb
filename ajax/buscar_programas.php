@@ -76,7 +76,7 @@ session_start();
                     <th>ID</th>
                     <th>Nombre del programa</th>
                     <th>Estado</th>
-                       <?php if($_SESSION['prol']=='administrador'){?>
+                       <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>
 					<th>Acciones</th>
 				<?php }?>
                     </tr>
@@ -108,7 +108,7 @@ session_start();
                     </span>
                     <span class="text"><?php echo $estado; ?></span>
                   </a></td>
-					   <?php if($_SESSION['prol']=='administrador'){?>	
+					   <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>	
 					<td ><span class="pull-right">
 					<a href="#" class='btn btn-success' title='Editar programa' onclick="obtener_datos('<?php echo $id;?>');" data-toggle="modal" data-target="#myModal2"><i class="fa fa-edit"></i></a>
 						<a href="#" class='btn btn-success' title='Editar proyecto' onclick="eliminar('<?php echo $id;?>');"><i class="fa fa-trash"></i></a> 
