@@ -16,7 +16,7 @@
                         $rand=$rw["rand"];
 
 
-		$sql3 = "SELECT * FROM estudiantes_proyecto WHERE estudiante = '" . $investigador . "' and codigo_proyecto='".$ce."';";
+		$sql3 = "SELECT * FROM estudiantes_proyecto WHERE estudiante = '" . $investigador . "' and codigo_proyecto='".$c."';";
 						$query_check_user_name = mysqli_query($con,$sql3);
 						$query_check_user=mysqli_num_rows($query_check_user_name);
 				
