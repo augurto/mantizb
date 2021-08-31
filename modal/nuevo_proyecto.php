@@ -18,7 +18,7 @@
                          <span class="fa fa-user"></span>
                         </span>
                       </div>
-                      <input type="text" class="form-control" name="nombre" id="nombre"  placeholder="Nombre del proyecto" required>
+                      <input type="text" class="form-control" name="nombre" id="nombre" onkeyup="loa();" autofocus placeholder="Nombre del proyecto" required>
                     </div>
                     <!-- /input-group -->
                   </div>
@@ -45,7 +45,7 @@
                 <div class="row">
                 <div class="col-lg-12">
                 <div class="form-group">
-                    <textarea class="form-control" placeholder="Descripcion del proyecto" onkeyup="loa();" name="descripcion"></textarea>
+                    <textarea class="form-control" placeholder="Descripcion del proyecto"  name="descripcion"></textarea>
                   </div>
               </div>
           </div>
