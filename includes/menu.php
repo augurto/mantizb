@@ -53,7 +53,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
              <a class="collapse-item" href="programas.php">Programas</a>
              <a class="collapse-item" href="grupos.php">Grupos</a>
-            <a class="collapse-item" href="miembros.php">Miembros</a>
+           <!--  <a class="collapse-item" href="miembros.php">Miembros</a> -->
           </div>
         </div>
       </li>
