@@ -19,7 +19,7 @@
 				$query_check_user=mysqli_num_rows($query_check_user_name);
 		
 						if ($query_check_user == 1) {
-							$errors[] = "ya el colaborador está asociado como Investigador.";
+							$errors[] = "el colaborador está asociado como Investigador.";
 						} else {
 							# code...
 						

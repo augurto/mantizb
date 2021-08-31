@@ -14,6 +14,17 @@
                       $nombre=$rw["nombre"];
                         $email=$rw["email"];
                         $rand=$rw["rand"];
+
+
+		$sql3 = "SELECT * FROM estudiantes_proyecto WHERE estudiante = '" . $investigador . "' and codigo_proyecto='".$ce."';";
+						$query_check_user_name = mysqli_query($con,$sql3);
+						$query_check_user=mysqli_num_rows($query_check_user_name);
+				
+								if ($query_check_user == 1) {
+									$errors[] = "el investigador está asociado como Colaborador.";
+								} else {
+									# code...
+								
 		$sql2 = "SELECT * FROM investigadores_proyecto WHERE investigador = '" . $investigador . "' and codigo_proyecto='".$c."';";
                 $query_check_user_name = mysqli_query($con,$sql2);
 				$query_check_user=mysqli_num_rows($query_check_user_name);
@@ -34,6 +45,7 @@
 				$errors []= "Lo siento algo ha salido mal intenta nuevamente.".mysqli_error($con);
 			}
 		}
+	} /* corchete del else */
 		} else {
 			$errors []= "Error desconocido.";
 		}
