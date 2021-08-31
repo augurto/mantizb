@@ -28,14 +28,14 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"><span class="fa fa-qrcode"></span></span>
                       </div>
-                     <!--  <input type="number" class="form-control" id="codigo"  name="codigo" onkeyup="loa();" placeholder="Codigo" required> -->
+                      <input type="number" class="form-control" id="codigo"  name="codigo" onkeyup="loa();" placeholder="Codigo" required>
 
                       <?php $rs = mysqli_query($con, "SELECT MAX(codigo) AS id FROM proyecto");
                       if ($row = mysqli_fetch_row($rs)) {
                       $codigo_proyecto = trim($row[0]);
                       } ?>
 
-                      <input type="number" class="form-control" id="codigo"  name="codigo" onkeyup="loa();"  value="<?php echo ++$codigo_proyecto ?>">
+                     <!--  <input type="number" class="form-control" id="codigo"  name="codigo" value="<?php echo ++$codigo_proyecto ?>"> -->
                     </div>
                     <!-- /input-group -->
                   </div>
@@ -50,7 +50,7 @@
               </div>
           </div>
                 <div class="row">
-              <div class="col-lg-6" id="inv_g" >
+              <div class="col-lg-6" id="inv_g" style="display: none;" >
                 <div class="form-group">
                 
          <input type="hidden" class="form-control" name="c" id="c">  
@@ -77,7 +77,7 @@
                  <button type="button" class="btn btn-success btn-sm" id="a_inv">Guardar</button>
                   </div>
               </div>
-              <div class="col-lg-6" id="est_g" >
+              <div class="col-lg-6" id="est_g" style="display: none;">
                 <div class="resultados3" id="resultados3"></div>
                 <div class="form-group">
                    
