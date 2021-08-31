@@ -35,7 +35,7 @@
                       $codigo_proyecto = trim($row[0]);
                       } ?>
 
-                      <input type="text" value="<?php echo $codigo_proyecto ?>">
+                      <input type="text" value="<?php echo ++$codigo_proyecto ?>">
                     </div>
                     <!-- /input-group -->
                   </div>
