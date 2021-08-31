@@ -272,12 +272,12 @@ function eliminar_est (id)
 	}
 $('#inv_g').click(function(){
  loadd(1);
- 	$('#codigo').attr("disabled", true);
+ 	$('#codigo').attr("disabled", false);
  	
 })
 $('#est_g').click(function(){
  loadd(1);
- 	$('#codigo').attr("disabled", true);
+ 	$('#codigo').attr("disabled", false);
 
 })
 
