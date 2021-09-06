@@ -28,7 +28,7 @@
                 <br>
                 <input type="text" class="form-control" placeholder="Pegar link" id="link" name="link" placeholder="Pegue el link">
                 <input class="form-control" type="hidden" value="<?php echo $_GET['id_p']; ?>" id="idd_proyecto"  name="idd_proyecto">
-                  <input class="form-control" type="hidden" value="<?php echo $_GET['id_est']; ?>" id="id_est"  name="id_est">
+                  <input class="form-control" type="hidden" value="<?php echo $_GET['id_est']; ?>" id="id_est"  name="id_est"> <!-- este no se muestra no hay la variable -->
                     <input class="form-control" type="hidden" value="" id="id_seg"  name="id_seg">
                     <input class="form-control" type="hidden" value="" id="ident"  name="id_ent">
 
