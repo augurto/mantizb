@@ -109,10 +109,10 @@
               </tr>
               <tbody>
                 <?php
-                $sql_entregable="SELECT * FROM seguimientos WHERE codigo_proyecto='$id_p'  id desc";
+                $sql_entregable="SELECT * FROM entregables WHERE codigo_proyecto='$id_p'  /* id asc */";
                 $query_entregable = mysqli_query($con, $sql_entregable);   
                 $count=1; 
-                $listar_entregables= mysqli_query($con,"SELECT * FROM entregables WHERE codigo_proyecto='".$id_p."'");
+                /* $listar_entregables= mysqli_query($con,"SELECT * FROM entregables WHERE codigo_proyecto='".$id_p."'"); */
                 while($array_lista=mysqli_fetch_array($query_entregable)){
                   $nombre_entregable=$array_lista["nombre"];
                 }
