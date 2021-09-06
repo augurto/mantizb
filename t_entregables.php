@@ -106,6 +106,7 @@
                 <th>N°</th>
                 <th>Nombre</th>
                 <th>Entregables</th>
+                <th>Fecha</th>
               </tr>
               <tbody>
                 <?php
@@ -116,6 +117,7 @@
                
                 while($array_lista=mysqli_fetch_array($query_entregable)){
                   $nombre_entregable=$array_lista['nombre'];
+                  $fecha_entrega=$array_lista['fecha_entrega'];
                 }
                 
                 
@@ -126,6 +128,7 @@
                   
                   <td><?php echo $count++; ?></td>
                   <td><?php echo $nombre_entregable; ?></td>
+                  <td><?php echo $fecha_entrega; ?></td>
                 </tr>
               </tbody>
             </thead>
