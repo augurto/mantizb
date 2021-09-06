@@ -21,7 +21,7 @@
          <div class="form-group">
         <label for="mod_codigo" class="col-sm-3 control-label">Codigo</label>
         <div class="col-sm-12">
-          <input type="text" class="form-control" id="mod_codigo" name="mod_codigo">
+          <input type="text" class="form-control" id="mod_codigo" name="mod_codigo" readonly>
         </div>
         </div>
          <div class="form-group">
