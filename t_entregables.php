@@ -106,6 +106,19 @@
                 <th>Nombre</th>
                 <th>Entregables</th>
               </tr>
+              <tbody>
+                <?php
+                /* $count=1;  */
+                $listar_entregables= mysqli_query($con,"SELECT * FROM entregables WHERE codigo_proyecto='".$id_p."'");
+                $array_lista=mysqli_fetch_array($listar_entregables);
+                $nombre_entregable=$array_lista["nombre"];
+                
+                ?>
+                <!-- listando el array de los entregables -->
+                <tr>
+                  <td><?php echo $nombre_entregable ?></td>
+                </tr>
+              </tbody>
             </thead>
           </table>
           <!-- DataTales Example -->
