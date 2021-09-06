@@ -14,7 +14,7 @@
           </button>
         </div> 
         <div class="modal-body">
-			<form class="form-horizontal" method="post" id="guardar_programa" name="guardar_programa">
+			<form action="../ajax/agregar_entregable.php" class="form-horizontal" method="post" id="guardar_programa" name="guardar_programa">
 			<div id="resultados_ajax"></div>
 			 	<label>Nombre del ENtregable</label>
 			  <div class="input-group mb-3">
@@ -22,15 +22,16 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" value="<?php echo $id_p;?>">
-                  <input type="text" class="form-control" name="programa" placeholder="Nombre del entregable" required>
+                  <input type="text" value="<?php echo $id_p;?>" id="codigo_proyecto" name="codigo_proyecto">
+                  <input type="text" class="form-control" id="nombre_entregable" name="nombre_entregable" placeholder="Nombre del entregable" required>
                   <input type="date" name="fecha" id="fecha">
+                  <input type="text" value="<?php echo $username;?>" id="usuario_seguimiento" name="usuario_seguimiento" class="form-control">
                 </div>
             </div>
 
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			<button type="submit" class="btn btn-primary" id="guardar_datos">Guardar entregable</button>
+			<button type="submit" class="btn btn-primary" id="guardar_datos">Agregar entregable</button>
 		  </div>
 		  </form>
 		    </div>
