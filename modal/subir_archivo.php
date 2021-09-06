@@ -1,5 +1,14 @@
 <div class="modal fade" id="SubirArchivo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<form action="../ajax/seguimiento.php" method="post"  enctype="multipart/form-data">
+    <div class="modal-dialog  modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><i class='fa fa-user'></i> Entregables</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div> 
+        <div class="modal-body">
+        <form action="../ajax/seguimiento.php" method="post"  enctype="multipart/form-data">
         <input type="text" name="descripcion" id="descripcion"class="form-control"  placeholder="Descripcion">
         <br>
             <?php 
@@ -46,4 +55,8 @@
                     </center>
                    
 </form>
+       </div>
+       <div class='outer_div11'></div><!-- Carga los datos ajax -->
+    </div>
+  </div>
 </div>
