@@ -110,7 +110,7 @@
               </tr>
               <tbody>
                 <?php
-                $sql_entregable="SELECT * FROM entregables WHERE codigo_proyecto='$id_p'  /* id asc */";
+                $sql_entregable="SELECT * FROM entregables WHERE codigo_proyecto='".$id_p."'  ";
                 $query_entregable = mysqli_query($con, $sql_entregable);   
                 $count=1; 
                 /* $listar_entregables= mysqli_query($con,"SELECT * FROM entregables WHERE codigo_proyecto='".$id_p."'"); */
