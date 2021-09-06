@@ -113,8 +113,9 @@
                 $query_entregable = mysqli_query($con, $sql_entregable);   
                 $count=1; 
                 /* $listar_entregables= mysqli_query($con,"SELECT * FROM entregables WHERE codigo_proyecto='".$id_p."'"); */
+               
                 while($array_lista=mysqli_fetch_array($query_entregable)){
-                  $nombre_entregable=$array_lista["nombre"];
+                  $nombre_entregable=$array_lista['nombre'];
                 }
                 
                 
@@ -122,6 +123,7 @@
                 ?>
                 <!-- listando el array de los entregables -->
                 <tr>
+                  <td><?php echo $count++; ?></td>
                   <td><?php echo $count++; ?></td>
                   <td><?php echo $nombre_entregable; ?></td>
                 </tr>
