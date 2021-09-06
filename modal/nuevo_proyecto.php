@@ -35,7 +35,7 @@
                       $codigo_proyecto = trim($row[0]);
                       } ?>
 
-                      <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>">
+                      <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>" readonly>
                     </div>
                     <!-- /input-group -->
                   </div>
