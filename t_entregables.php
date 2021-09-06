@@ -108,17 +108,17 @@
                 <th>Entregables</th>
                 <th>Fecha</th>
               </tr>
+            </thead>
               <tbody>
                 <?php
-                $sql_entregable="SELECT * FROM entregables   ";
+                $sql_entregable="SELECT * FROM entregables WHERE codigo_proyecto='".$id_p."'  ";
                 $query_entregable = mysqli_query($con, $sql_entregable);   
                 $count=1; 
                 /* $listar_entregables= mysqli_query($con,"SELECT * FROM entregables WHERE codigo_proyecto='".$id_p."'"); */
-               
-                while($array_lista=mysqli_fetch_array($query_entregable)){
+                 while($array_lista=mysqli_fetch_array($query_entregable)){
                   $nombre_entregable=$array_lista['nombre'];
                   $fecha_entrega=$array_lista['fecha_entrega'];
-                }
+          
                 
                 
                 
@@ -130,9 +130,39 @@
                   <td><?php echo $nombre_entregable; ?></td>
                   <td><?php echo $fecha_entrega; ?></td>
                 </tr>
+         
               </tbody>
-            </thead>
+
+              
           </table>
+          <div>
+               
+          <table class="table table-bordered order-table ">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Price</th>
+            
+          </tr>
+        </thead>
+        <?php  if ($resultado = mysqli_query($con, $sql_entregable)) { ?>
+        <?php foreach ($resultado as $value){ ?>
+            <tr>
+              <td><?= $value['id']; ?></td>
+              <td><?= $value['nombre']; ?></td>
+              <td><?= $value['fecha_entrega']; ?></td>
+             
+            </tr>
+        <?php } ?>
+        <?php mysqli_free_result($resultado); ?>
+        <?php }else{ ?>
+        <tr>
+          <td colspan="3">No data</td>
+        </tr>
+      <?php } ?>
+      </table>   
+          </div>
           <!-- DataTales Example -->
           <div class="row">
           <?php $sql="SELECT * FROM  seguimientos WHERE codigo_proyecto='$id_p' /* AND id_miembros='$est' */";
