@@ -104,7 +104,7 @@
                     <select class="custom-select" name="SelectBanco" id="SelectBanco" required="">
                         <option disabled="disabled" value="" selected>Elegir...</option>
                        solo le falta el php incluido
-                    </select> -->
+                    </select> mostrando los netregables de cada proyecto -->
                             <br>
 
                     <select class="form-control" name="id_entregable" id="id_entregable" required="">
