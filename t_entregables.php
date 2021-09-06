@@ -26,6 +26,8 @@
       $rws=mysqli_fetch_array($sql);
       $nombre=$rws["nombre_proyecto"];
 
+      
+
       ?><!DOCTYPE html>
 <html lang="en">
 

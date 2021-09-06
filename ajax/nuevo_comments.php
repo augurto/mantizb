@@ -5,7 +5,7 @@ session_start();
 		}elseif (empty($_POST['idd_proyecto'])) {
           $errors[] = "ID vacía";
         } elseif (!empty($_POST['comentario'])
-     && !empty($_POST['id_ent'])  && !empty($_POST['id_est'])) {
+     && !empty($_POST['id_ent'])  /* && !empty($_POST['id_est']) */) {
             require_once ("../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 			require_once ("../config/conexion.php");//Contiene funcion que conecta a la base de datos
 			
