@@ -63,7 +63,7 @@ if(!file_exists($carpeta)){
 	}
 }
 /* header("Location: ver_entregables.php?var1=$direccion"); */
-header("Location: ../ver_entregables.php?id_p=$codigo_proyecto&id_est=$id_miembro");
+header("Location: ../t_entregables.php?id_p=$codigo_proyecto");
 exit;
 
 } else {
