@@ -122,8 +122,8 @@
                 ?>
                 <!-- listando el array de los entregables -->
                 <tr>
-                  <td><?php echo $count++ ?></td>
-                  <td><?php echo $nombre_entregable ?></td>
+                  <td><?php echo $count++; ?></td>
+                  <td><?php echo $nombre_entregable; ?></td>
                 </tr>
               </tbody>
             </thead>
