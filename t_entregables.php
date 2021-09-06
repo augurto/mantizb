@@ -110,34 +110,9 @@
               </tr>
             </thead>
               <tbody>
-              <?php $sql11="SELECT * FROM  seguimientos WHERE codigo_proyecto='$id_p' /* AND id_miembros='$est' */";
-              $query11 = mysqli_query($con, $sql11);
-              while ($row=mysqli_fetch_array($query)){
-                $id=$row['id'];
-                 $id_seg=$row['id_seg'];
-                 $descripcion=$row['descripcion'];
-                 $documento=$row['documento'];
-                 $link=$row['link'];
-                 $usuario_seguimiento=$row['usuario'];
-     
-                 $gd=mysqli_query($con,"SELECT * FROM entregables WHERE  id='".$id_seg."' AND codigo_proyecto='".$id_p."'");
-                 $rwd=mysqli_fetch_array($gd);
-                 $nom=$rwd["nombre"];
-                   $id_ent=$rwd["id"];
-     
-                 $t=mysqli_query($con,"SELECT count(*) as t FROM comments WHERE codigo_proyecto='".$id_p."' AND id_seguimiento='".$id."' AND id_entregable='".$id_ent."'");
-                 $rwdt=mysqli_fetch_array($t);
-                 $ts=$rwdt["t"];
-     
-         ?>
-         <tr>
-
-         <td><?php $id_seg ?></td>
-         <td><?php $usuario_seguimiento ?></td>
-
-         </tr>
+                
               </tbody>
-              <?php } ?>
+              
               
           </table>
           <!-- DataTales Example -->
