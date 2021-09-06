@@ -22,10 +22,10 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" value="<?php echo $id_p;?>" id="codigo_proyecto" name="codigo_proyecto">
+                  <input type="hidden" value="<?php echo $id_p;?>" id="codigo_proyecto" name="codigo_proyecto">
                   <input type="text" class="form-control" id="nombre_entregable" name="nombre_entregable" placeholder="Nombre del entregable" required>
                   <input type="date" name="fecha" id="fecha">
-                  <input type="text" value="<?php echo $username;?>" id="usuario_seguimiento" name="usuario_seguimiento" class="form-control">
+                  <input type="hidden" value="<?php echo $username;?>" id="usuario_seguimiento" name="usuario_seguimiento" class="form-control">
                 </div>
             </div>
 
