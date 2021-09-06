@@ -1,49 +1,49 @@
 <div class="modal fade" id="SubirArchivo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog  modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><i class='fa fa-user'></i> Entregables</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div> 
-        <div class="modal-body">
-        <form class="form-horizontal" name="seg" id="seg" method="post"> <?php if($_SESSION['prol']=="administrador" || $_SESSION['prol']=="Inv Principal"){?>
-      <div id="resultados_ajax11"></div>
-                <div class="col-lg-12">
-                <div class="form-group">
-                    <textarea class="form-control" placeholder="Descripcion del proyecto" name="descripcion" id="descripcion"></textarea>
-                  </div>
-          </div>
-      <div class="col-sm-12">
-       <div class="form-group">
-        <label for="exampleInputFile">Documento</label>
-        <div class="input-group">
-        <div class="custom-file">
-        <input type="file" onkeyup="loaddds(1);"  class="custom-file-input" id="exampleInputFile" name="exampleInputFile" required>
-        <label class="custom-file-label" for="exampleInputFile">Documento</label>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-        <div class="col-sm-12">
-        <select name="nomb"  id="nomb" onkeyup="select();"  class="form-control" required>
-        </select>
-        <input type="hidden" name="cd" placeholder="Nombre del seguimiento"  id="cd"  class="form-control">
-        <input type="hidden" name="cdd" placeholder="Nombre del seguimiento"  id="cdd"  class="form-control">
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-primary" id="seg" name="seg">Guardar datos</button>
-      <?php }else{?>
-      <input type="hidden" name="cd" placeholder="Nombre del seguimiento"  id="cd"  class="form-control">
-      <input type="hidden" name="cdd" placeholder="Nombre del seguimiento"  id="cdd"  class="form-control">
-      <?php }?>
-          
-        </div>
-      </form>
-       </div>
-       <div class='outer_div11'></div><!-- Carga los datos ajax -->
-    </div>
-  </div>
+<form action="../ajax/seguimiento.php" method="post"  enctype="multipart/form-data">
+        <input type="text" name="descripcion" id="descripcion"class="form-control"  placeholder="Descripcion">
+        <br>
+            <?php 
+            $username=$_SESSION["username"];
+            $s=mysqli_query($con,"SELECT * FROM miembros WHERE email='".$username."'");
+                $rwse=mysqli_fetch_array($s);
+                $id_username=$rwse["id"];
+                $nombre_entregable=$rwse["nombre"];
+            
+            ?>
+            <input type="hidden" value="<?php echo $id_username;?>" id="id_miembro" name="id_miembro" class="form-control">
+            
+            <input type="hidden" value="<?php echo $id_p;?>" id="codigo_proyecto" name="codigo_proyecto" class="form-control">
+            <input type="hidden" value="<?php echo $username;?>" id="usuario_seguimiento" name="usuario_seguimiento" class="form-control">
+                  
+            
+        <input type="file"   id="documento" name="documento" >
+                    <br><br>
+
+                  <!--   otro modelo de select
+                    <select class="custom-select" name="SelectBanco" id="SelectBanco" required="">
+                        <option disabled="disabled" value="" selected>Elegir...</option>
+                       solo le falta el php incluido
+                    </select> mostrando los netregables de cada proyecto -->
+                            <br>
+
+                    <select class="form-control" name="id_entregable" id="id_entregable" required="">
+                        <option disabled="disabled" value="" selected>Seleccionar entregable...</option>
+                        <?php 
+
+                        $sss=mysqli_query($con,"SELECT * FROM entregables where codigo_proyecto=$id_p");
+                                while($f=mysqli_fetch_assoc($sss)){    
+
+                                    echo '<option value="'.$f['id'].'">'.$f['nombre'].'</option>';
+
+                        }
+                        
+                        ?>
+                        <input type="hidden" value="<?php echo $f['nombre'];?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
+
+                        <input type="text" class="form-control" placeholder="Pegue el link de google Drive" id="link" name="link">
+                    <center>
+                    <input  class="btn btn-info btn-icon-split" type="submit" value="Enviar este formulario" />
+                    </center>
+                   
+</form>
 </div>
