@@ -99,6 +99,15 @@
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#AgregarEntregable"><i class="fas fa-user fa-sm text-white-50"></i> Entregables</a>
           </div>
+
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Entregables</th>
+              </tr>
+            </thead>
+          </table>
           <!-- DataTales Example -->
           <div class="row">
           <?php $sql="SELECT * FROM  seguimientos WHERE codigo_proyecto='$id_p' /* AND id_miembros='$est' */";
