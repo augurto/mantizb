@@ -134,9 +134,10 @@
 
          <td><?php $id_seg ?></td>
          <td><?php $usuario_seguimiento ?></td>
+
          </tr>
               </tbody>
-              
+              <?php } ?>
               
           </table>
           <!-- DataTales Example -->
