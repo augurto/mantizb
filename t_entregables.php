@@ -130,39 +130,11 @@
                   <td><?php echo $nombre_entregable; ?></td>
                   <td><?php echo $fecha_entrega; ?></td>
                 </tr>
-         
+                <?php} ?>
               </tbody>
-
+              
               
           </table>
-          <div>
-               
-          <table class="table table-bordered order-table ">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Product</th>
-            <th>Price</th>
-            
-          </tr>
-        </thead>
-        <?php  if ($resultado = mysqli_query($con, $sql_entregable)) { ?>
-        <?php foreach ($resultado as $value){ ?>
-            <tr>
-              <td><?= $value['id']; ?></td>
-              <td><?= $value['nombre']; ?></td>
-              <td><?= $value['fecha_entrega']; ?></td>
-             
-            </tr>
-        <?php } ?>
-        <?php mysqli_free_result($resultado); ?>
-        <?php }else{ ?>
-        <tr>
-          <td colspan="3">No data</td>
-        </tr>
-      <?php } ?>
-      </table>   
-          </div>
           <!-- DataTales Example -->
           <div class="row">
           <?php $sql="SELECT * FROM  seguimientos WHERE codigo_proyecto='$id_p' /* AND id_miembros='$est' */";
