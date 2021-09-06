@@ -18,7 +18,7 @@
 			<div id="resultados_ajax"></div>
 			 	<label>Nombre del ENtregable</label>
 			  <div class="input-group mb-3">
-
+              <?php $username=$_SESSION["username"]; ?>
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
