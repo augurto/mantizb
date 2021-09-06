@@ -109,9 +109,11 @@
               </tr>
               <tbody>
                 <?php
+                $sql_entregable="SELECT * FROM  proyecto order by id desc";
+                $query_entregable = mysqli_query($con, $sql_entregable);   
                 $count=1; 
                 $listar_entregables= mysqli_query($con,"SELECT * FROM entregables WHERE codigo_proyecto='".$id_p."'");
-                while($array_lista=mysqli_fetch_array($listar_entregables)){
+                while($array_lista=mysqli_fetch_array($query_entregable)){
                   $nombre_entregable=$array_lista["nombre"];
                 }
                 
