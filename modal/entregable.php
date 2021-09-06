@@ -22,7 +22,8 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" class="form-control" name="programa" placeholder="Nombre del entregable">
+                  <input type="text" value="<?php echo $id_p;?>">
+                  <input type="text" class="form-control" name="programa" placeholder="Nombre del entregable" required>
                   <input type="date" name="fecha" id="fecha">
                 </div>
             </div>

@@ -89,16 +89,16 @@
 
           <div>
 
-          <a href="#" class="btn btn-primary btn-icon-split" title='Entregables' onclick="segg(<?php echo $id_p;?>);" data-toggle="modal" data-target="#SubirArchivo">
+          <a href="#" class="btn btn-primary btn-icon-split" title='Entregables' onclick="segg(<?php echo $id_p;?>);" data-toggle="modal" data-target="#AgregarEntregable">
                     <span class="icon text-white-50">
                       <i class="fas fa-check"></i>
                     </span>
                     <span class="text">Entregables</span>
                   </a> 
           </div>
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+         <!--  <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#AgregarEntregable"><i class="fas fa-user fa-sm text-white-50"></i> Entregables</a>
-          </div>
+          </div> -->
 
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
