@@ -130,7 +130,7 @@
                   <td><?php echo $nombre_entregable; ?></td>
                   <td><?php echo $fecha_entrega; ?></td>
                 </tr>
-                <?php} ?>
+               
               </tbody>
               
               
