@@ -101,7 +101,37 @@
          <!--  <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#AgregarEntregable"><i class="fas fa-user fa-sm text-white-50"></i> Entregables</a>
           </div> -->
+          <div>
+          <?php
+                // 1) Conexión
+                if ($conexión = mysql_connect("localhost", "u415020159_mantizb", "Mantizb*#17")){
+                echo "<p>MySQL le ha dado permiso a PHP para ejecutar consultas con ese usuario</p>";
 
+                // 2) Preparar la orden SQL
+                $consulta= "SELECT*FROM entregables";
+
+                // 3) Ejecutar la orden y obtener datos
+                mysql_select_db("u415020159_mantizb");
+                $datos= mysql_query ($consulta);
+
+                // 4) Ir Imprimiendo las filas resultantes
+                while ($fila =mysql_fetch_array($datos)){
+                echo "<p">;
+                echo $fila ["id"];
+                echo "-"; // un separador
+                echo $fila["codigo_proyecto"];
+                echo "-"; // un separador
+                echo $fila ["nombre"];
+                echo "-"; // un separador
+                echo $fila["fecha_entrega"];
+                echo "</p>";
+                }
+
+                }else{
+                echo "<p> MySQL no conoce ese usuario y password</p>";
+                }
+                ?>
+          </div>
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
               <tr>
