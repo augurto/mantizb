@@ -121,7 +121,7 @@
               <?php foreach ($link2->query("SELECT * from entregables where codigo_proyecto = '$id_p'") as $rowww){
                 $id_entregable=$rowww['id'];
                 // aca puedes hacer la consulta e iterarla con each. ?> 
-                <?php foreach ($link2->query("SELECT * from seguimientos where codigo_proyecto = '$id_p' and $id_seg ='$id_entregable'  " ) as $wooor){ // aca puedes hacer la consulta e iterarla con each. ?> 
+                <?php foreach ($link2->query("SELECT * from seguimientos where codigo_proyecto = '$id_p' and id_seg ='$id_entregable'  " ) as $wooor){ // aca puedes hacer la consulta e iterarla con each. ?> 
               <tr>
               <td><?php echo $rowww['id'] // aca te faltaba poner los echo para que se muestre el valor de la variable.  ?></td>
                 <td><?php echo $rowww['codigo_proyecto'] ?></td>
