@@ -118,9 +118,11 @@
               </tr>
             </thead>
               <tbody>
-              <?php foreach ($link2->query("SELECT * from entregables where codigo_proyecto = '$id_p'") as $rowww){ // aca puedes hacer la consulta e iterarla con each. 
+              <?php foreach ($link2->query("SELECT * from entregables where codigo_proyecto = '$id_p'") as $rowww){
+                 $nombre_entregable = $rowww['nombre']; 
+                // aca puedes hacer la consulta e iterarla con each. 
          //      visualizar archivos por entregables
-             $sql="SELECT * FROM  seguimientos WHERE codigo_proyecto='$id_p'  /* AND id_miembros='$est' */";
+             $sql="SELECT * FROM  seguimientos WHERE codigo_proyecto='$id_p' and nombre = '$nombre_entregable' /* AND id_miembros='$est' */";
                   $query = mysqli_query($con, $sql);
                       while ($row=mysqli_fetch_array($query)){
                         $id=$row['id'];
