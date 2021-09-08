@@ -101,7 +101,35 @@
          <!--  <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#AgregarEntregable"><i class="fas fa-user fa-sm text-white-50"></i> Entregables</a>
           </div> -->
-         
+         <div>
+
+                    <?php
+            // Te recomiendo utilizar esta conección, la que utilizas ya no es la recomendada. 
+            $link2 = new PDO('mysql:host=localhost;dbname=u415020159_mantizb', 'u415020159_mantizb', 'Mantizb*#17'); // el campo vaciío es para la password. 
+
+            ?>
+
+            <table class="table table-striped">
+                
+                <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>NOMBRE</th>
+                  <th>APELLIDO</th>
+                  
+                </tr>
+                </thead>
+            <?php foreach ($link2->query('SELECT * from registros') as $rowww){ // aca puedes hacer la consulta e iterarla con each. ?> 
+            <tr>
+              <td><?php echo $rowww['id'] // aca te faltaba poner los echo para que se muestre el valor de la variable.  ?></td>
+                <td><?php echo $rowww['codigo_proyecto'] ?></td>
+                <td><?php echo $rowww['nombre'] ?></td>
+            </tr>
+            <?php
+              }
+            ?>
+            </table>
+         </div>
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
               <tr>
