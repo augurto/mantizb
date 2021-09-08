@@ -106,13 +106,13 @@
                $connection = mysql_connect('localhost', 'u415020159_mantizb', 'Mantizb*#17'); //The Blank string is the password
                mysql_select_db('u415020159_mantizb');
                
-               $query = "SELECT * FROM entregables"; //You don't need a ; like you do in SQL
-               $result = mysql_query($query);
+               $query21 = "SELECT * FROM entregables"; //You don't need a ; like you do in SQL
+               $result21 = mysql_query($query21);
                
                echo "<table>"; // start a table tag in the HTML
                
-               while($row = mysql_fetch_array($result)){   //Creates a loop to loop through results
-               echo "<tr><td>" . $row['codigo_proyecto'] . "</td><td>" . $row['name'] . "</td></tr>";  //$row['index'] the index here is a field name
+               while($row21 = mysql_fetch_array($result21)){   //Creates a loop to loop through results
+               echo "<tr><td>" . $row21['codigo_proyecto'] . "</td><td>" . $row21['name'] . "</td></tr>";  //$row['index'] the index here is a field name
                }
                
                echo "</table>"; //Close the table in HTML
