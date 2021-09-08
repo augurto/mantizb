@@ -152,7 +152,7 @@
                 <td><?php echo $rowww['fecha_entrega'] ?></td>
                 <td><?php echo $wooor['documento']?></td>
                 <!-- aca se listara cada entregable -->
-                <td> <th>
+                <td> <tr>
                 <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
@@ -184,7 +184,7 @@
 
           <?php } ?>
 
-                  </th>
+                  </tr>
                 </td>
             </tr>
               </tbody>
