@@ -101,25 +101,7 @@
          <!--  <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#AgregarEntregable"><i class="fas fa-user fa-sm text-white-50"></i> Entregables</a>
           </div> -->
-          <div>
-          <?php
-               $connection = mysql_connect('localhost', 'u415020159_mantizb', 'Mantizb*#17'); //The Blank string is the password
-               mysql_select_db('u415020159_mantizb');
-               
-               $query21 = "SELECT * FROM entregables"; //You don't need a ; like you do in SQL
-               $result21 = mysql_query($query21);
-               
-               echo "<table>"; // start a table tag in the HTML
-               
-               while($row21 = mysql_fetch_array($result21)){   //Creates a loop to loop through results
-               echo "<tr><td>" . $row21['codigo_proyecto'] . "</td><td>" . $row21['name'] . "</td></tr>";  //$row['index'] the index here is a field name
-               }
-               
-               echo "</table>"; //Close the table in HTML
-               
-               mysql_close(); //Make sure to close out the database connection
-                ?>
-          </div>
+         
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
               <tr>
