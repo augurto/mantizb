@@ -114,8 +114,8 @@
                 <th>Nombre</th>
                 <th>Entregables</th>
                 <th>Fecha</th>
+                <th>Nombre entregable</th>
                 <th>Acciones</th>
-                <th>ver entregables</th>
               </tr>
             </thead>
               <tbody>
@@ -132,7 +132,13 @@
                 <td><?php echo $rowww['fecha_entrega'] ?></td>
                 <td><?php echo $wooor['documento']?></td>
                 <!-- aca se listara cada entregable -->
-                
+                <td><div class="container-fluid">
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800"><b><?php echo $nombre; ?> </b></h1>
+            <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#SubirArchivo"  ><i class="fas fa-folder fa-sm text-white-50"></i> Subir Archivos</a>
+
+            
+          </div></td>
                
             </tr>
               </tbody>
