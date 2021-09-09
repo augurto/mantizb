@@ -102,51 +102,8 @@
           <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#AgregarEntregable"><i class="fas fa-user fa-sm text-white-50"></i> Entregables</a>
           </div> -->
      
-          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-          <?php
-            // Te recomiendo utilizar esta conección, la que utilizas ya no es la recomendada. 
-            $link2 = new PDO('mysql:host=localhost;dbname=u415020159_mantizb', 'u415020159_mantizb', 'Mantizb*#17'); // el campo vaciío es para la password. 
+         <!-- aca va listar_entregables_tabla.php -->
 
-            ?>
-            <thead>
-              <tr>
-                <th>N°</th>
-                <th>Nombre</th>
-                <th>Entregables</th>
-                <th>Fecha</th>
-                <th>Nombre entregable</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-              <tbody>
-              <?php foreach ($link2->query("SELECT * from entregables where codigo_proyecto = '$id_p'") as $rowww){
-                $id_entregable=$rowww['id'];
-                // aca puedes hacer la consulta e iterarla con each. ?> 
-                <?php foreach ($link2->query("SELECT * from seguimientos where codigo_proyecto = '$id_p' and id_seg ='$id_entregable'  " ) as $wooor) // aca puedes hacer la consulta e iterarla con each. ?> 
-
-            
-              <tr>
-              <td><?php echo $rowww['id'] // aca te faltaba poner los echo para que se muestre el valor de la variable.  ?></td>
-                <td><?php echo $rowww['codigo_proyecto'] ?></td>
-                <td><?php echo $rowww['nombre'] ?></td>
-                <td><?php echo $rowww['fecha_entrega'] ?></td>
-                <td><?php echo $wooor['documento']?></td>
-                <!-- aca se listara cada entregable -->
-                <td><div class="container-fluid">
- <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            
-            <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#SubirArchivo"  ><i class="fas fa-folder fa-sm text-white-50"></i> Subir Archivos</a>
-
-            
-          </div></td>
-               
-            </tr>
-              </tbody>
-              <?php
-              }
-            ?>
-              
-          </table>
           <!-- DataTales Example -->
           <div class="row">
           <?php $sql="SELECT * FROM  seguimientos WHERE codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by id_seg asc";
@@ -178,11 +135,21 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                  <a href="#" data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+                <a href="#" data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
               </a>
-                  <div  align="center"><img src="img/file.png" width="50px" height="auto"></div>
+              <a href="#" data-toggle="modal" data-target="#borrar" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+                <?php echo $ts; ?><i class="fas fa-trash"></i>
+                <!-- Counter - Messages -->
+              </a>
+
+              <a href="#" data-toggle="modal" data-target="#aprobar" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+                <?php echo $ts; ?><i class="fas fa-clipboard-check"></i>
+                <!-- Counter - Messages -->
+              </a>
+
+                  <div  align="center"><img src="img/file.png" width="20px" height="auto"></div>
                   <div align="center"><a href="entregables/<?php echo  $id_p  ; ?>/<?php echo  $documento; ?>" download="entregables/<?php echo  $id_p  ; ?>/<?php echo  $documento; ?>"><i class="fa fa-download"></i> <?php echo $documento; ?></a></div>
 
                   <div align="center"><p>URL: </p> <a href="<?php echo  $link  ; ?>/<?php echo  $link; ?>" download="<?php echo  $link  ; ?>/<?php echo  $link; ?>" target="_blank"><i class="fa fa-cloud-download" ></i>  <?php echo $link; ?></a></div>
