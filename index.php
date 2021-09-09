@@ -133,10 +133,14 @@ include("modal/cambiar_password.php");
         <input type="hidden" id="cx" value="<?php echo $_SESSION['username'];?>">
         <div class='outer_divx'></div><!-- Carga los datos ajax -->
       <?php } ?>
-        <?php if($_SESSION['prol']=="estudiante"){ ?>
+
+
+        <?php if($_SESSION['prol']=="estudianteeeeeee"){ ?>
         <input type="hidden" id="cs" value="<?php echo $_SESSION["id_user"];?>">
         <div class='outer_divs'></div><!-- Carga los datos ajax -->
       <?php } ?>
+
+
        <?php if($_SESSION['prol']=="Coinvestigador"){ ?>
         <input type="hidden" id="cx" value="<?php echo $_SESSION['username'];?>">
         <div class='outer_divx'></div><!-- Carga los datos ajax -->
