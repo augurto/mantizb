@@ -126,10 +126,10 @@ include("modal/cambiar_password.php");
         <?php } ?>
 
            <div id="resultados"></div><!-- Carga los datos ajax -->
-           <?php if($_SESSION['prol']=="administrador" || $_SESSION['prol']=="Inv Principal" || $_SESSION['prol']=="Coinvestigador"){?>
+           <?php if($_SESSION['prol']=="administrador" || $_SESSION['prol']=="Inv Principal" || $_SESSION['prol']=="Coinvestigador" || $_SESSION['prol']=="estudiante"){?>
         <div class='outer_div'></div><!-- Carga los datos ajax -->
       <?php }?>
-      <?php if($_SESSION['prol']=="Inv Principal"){ ?>
+      <?php if($_SESSION['prol']=="Inv Principallllllllll"){ ?>
         <input type="hidden" id="cx" value="<?php echo $_SESSION['username'];?>">
         <div class='outer_divx'></div><!-- Carga los datos ajax -->
       <?php } ?>
