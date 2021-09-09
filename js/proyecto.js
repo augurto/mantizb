@@ -256,8 +256,8 @@ function eliminar_est (id)
 	function loa(){
 		var cod=$('#codigo').val();
 		if(cod==""){
-			document.getElementById("inv_g").style.display="none";
-			document.getElementById("est_g").style.display="none";
+			document.getElementById("inv_g").style.display="true";
+			document.getElementById("est_g").style.display="true";
 
 		}else{
 			document.getElementById("inv_g").style.display="block";
