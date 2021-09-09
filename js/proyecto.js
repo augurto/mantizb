@@ -152,11 +152,54 @@ function loads(page){
 				}
 			})
 		}
-function eliminar (id)
+
+
+/* function eliminar (id)
 		{
 				swal({
-  title: "Realmente deseas eliminar el proyecto?",
-  text: "Una vez eliminado, no volveras a ver el proyecto",
+  title: "Estas seguro que deseas eliminar el proyecto?",
+  text: "Segurooooo",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+
+  if (willDelete) {
+    swal("Proyecto eliminado exitosamente", {
+      icon: "success",
+    });
+        $.ajax({
+        type: "GET",
+        url: "./ajax/buscar_proyectos.php",
+        data: "id="+id,
+		 beforeSend: function(objeto){
+			$("#resultados").html("Mensaje: Cargando...");
+		  },
+        success: function(datos){
+		$("#resultados").html(datos);
+		load(1);
+		grafica();
+		}
+			});
+  } else {
+  
+  }
+});
+		} */
+
+
+
+function eliminar_uno (id) {
+	//Ingresamos un mensaje a mostrar
+	var mensaje = confirm("¿Realmente quieres borrar el proyecto?");
+	//Detectamos si el usuario acepto el mensaje
+	if (mensaje) {
+		function eliminar (id)
+		{
+				swal({
+  title: "Estas seguro que deseas eliminar el proyecto?",
+  text: "Segurooooo",
   icon: "warning",
   buttons: true,
   dangerMode: true,
@@ -185,6 +228,13 @@ function eliminar (id)
   }
 });
 		}
+
+	}
+	//Detectamos si el usuario denegó el mensaje
+	else {
+	alert("No se elimino el proyecto");
+	}
+	}
 
 		function eliminar_inv (id)
 		{
