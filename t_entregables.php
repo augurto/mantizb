@@ -144,7 +144,7 @@
                 <!-- Counter - Messages -->
               </a>
 
-              <a href="#" data-toggle="modal" data-target="#aprobar" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+              <a href="#" data-toggle="modal" data-target="#borrar" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
                 <?php echo $ts; ?><i class="fas fa-clipboard-check"></i>
                 <!-- Counter - Messages -->
               </a>
