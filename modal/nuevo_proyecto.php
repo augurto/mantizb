@@ -45,7 +45,7 @@
                 <div class="row">
                 <div class="col-lg-12">
                 <div class="form-group">
-                    <textarea class="form-control" placeholder="Descripcion del proyecto"  name="descripcion"></textarea>
+                    <textarea class="form-control" placeholder="Descripcion del proyecto"   name="descripcion"></textarea>
                   </div>
               </div>
           </div>
