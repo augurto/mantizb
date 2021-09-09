@@ -18,7 +18,7 @@
                          <span class="fa fa-user"></span>
                         </span>
                       </div>
-                      <input type="text" class="form-control" name="nombre" id="nombre" onkeyup="loa();" placeholder="Nombre del proyecto" required>
+                      <input type="text" class="form-control" name="nombre" id="nombre"  placeholder="Nombre del proyecto" required>
                     </div>
                     <!-- /input-group -->
                   </div>
