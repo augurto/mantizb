@@ -41,8 +41,8 @@
 
 <body id="page-top">
 <?php 
-      include("modal/agregar_programas.php");
-       include("modal/editar_programas.php");
+      include("modal/agregar_obra.php");
+       include("modal/editar_obra.php");
        include("modal/cambiar_password.php");
        ?>
   <!-- Page Wrapper -->
