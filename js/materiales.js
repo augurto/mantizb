@@ -6,7 +6,7 @@ function load(page){
     var q= $("#q").val();
     $("#loader").fadeIn('slow');
     $.ajax({
-        url:'./ajax/buscar_programas.php?action=ajax&page='+page+'&q='+q,
+        url:'./ajax/buscar_materiales.php?action=ajax&page='+page+'&q='+q,
          beforeSend: function(objeto){
          $('#loader').html('<img src="./img/ajax-loader.gif"> Cargando...');
       },
@@ -80,7 +80,7 @@ $('#actualizar_datos').attr("disabled", true);
 var parametros = $(this).serialize();
 $.ajax({
     type: "POST",
-    url: "ajax/editar_programa.php",
+    url: "ajax/editar_material.php",
     data: parametros,
      beforeSend: function(objeto){
         $("#resultados_ajax3").html("Mensaje: Cargando...");
