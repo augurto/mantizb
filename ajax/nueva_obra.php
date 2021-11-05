@@ -1,7 +1,7 @@
 <?php
-	if (empty($_POST['programa'])) {
+	if (empty($_POST['obra'])) {
            $errors[] = "Nombre vacío";
-        } else if (!empty($_POST['programa'])){
+        } else if (!empty($_POST['obra'])){
 		/* Connect To Database*/
 		require_once ("../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 		require_once ("../config/conexion.php");//Contiene funcion que conecta a la base de datos
