@@ -73,7 +73,7 @@ session_start();
                 <table class="table table-bordered" id="dataTable"  cellspacing="0">
                   <thead>
                     <tr>
-                    <th>ID</th>
+                    <th>Id</th>
                     <th>Nombre del programa</th>
                     <th>Estado</th>
                        <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>
