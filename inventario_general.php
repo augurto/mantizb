@@ -73,7 +73,7 @@
           <!-- DataTales Example -->
           
            <div id="resultados2"></div>
-            <div class="outer_div" id="outer_div"></div>
+            <div class="outer_div2" id="outer_div2"></div>
           
           
 

@@ -11,7 +11,7 @@ function load(page){
          $('#loader').html('<img src="./img/ajax-loader.gif"> Cargando...');
       },
         success:function(data){
-            $("#outer_div").html(data).fadeIn('slow');
+            $("#outer_div2").html(data).fadeIn('slow');
             $('#loader').html('');
             
         }
