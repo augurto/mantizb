@@ -62,7 +62,7 @@
       
       <!-- Divider -->
       <li class="nav-item <?php echo $inventario_general;?>">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed2" href="#" data-toggle="collapse" data-target="#collapseUtilities2" aria-expanded="true" aria-controls="collapseUtilities2">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Inventario General</span>
         </a>
