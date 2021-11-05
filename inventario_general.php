@@ -74,6 +74,7 @@
           
            <div id="resultados2"></div>
            <div class="outer_div2" id="outer_div2"></div>
+           <div id="resultados2"></div>
            <div class="outer_div2" id="outer_div2"></div>
           
           
