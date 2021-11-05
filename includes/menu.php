@@ -53,31 +53,13 @@
           <div class="bg-white py-2 collapse-inner rounded">
              <a class="collapse-item" href="programas.php">Programas</a>
              <a class="collapse-item" href="grupos.php">Grupos</a>
-             <a class="collapse-item" href="grupos.php">Obras</a>
-             <a class="collapse-item" href="grupos.php">Materiales</a>
-           <!--  <a class="collapse-item" href="miembros.php">Miembros</a> -->
-          </div>
-        </div>
-      </li>
-      
-      <!-- Divider -->
-      <li class="nav-item <?php echo $inventario_general;?>">
-        <a class="nav-link collapsed2" href="#" data-toggle="collapse" data-target="#collapseUtilities2" aria-expanded="true" aria-controls="collapseUtilities2">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Inventario General</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-             <a class="collapse-item" href="grupos.php">Obras</a>
-             <a class="collapse-item" href="grupos.php">Materiales</a>
-             <a class="collapse-item" href="grupos.php">Ver Reporte</a>
            <!--  <a class="collapse-item" href="miembros.php">Miembros</a> -->
           </div>
         </div>
       </li>
       <!-- Divider -->
       <hr class="sidebar-divider">
-        
+
       <!-- Heading -->
       <div class="sidebar-heading">
         Componentes
@@ -86,6 +68,21 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1" aria-expanded="true" aria-controls="collapsePages1">
           <i class="fas fa-fw fa-folder"></i>
           <span>Graficas</span>
+        </a>
+        <div id="collapsePages1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="pastel.php">Pastel</a>
+            <a class="collapse-item" href="barra.php">Barra</a>
+            <a class="collapse-item" href="barra_horizontal.php">Barra Horizontal</a>
+             <a class="collapse-item" href="barra_triangular.php">Barra Triangular</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1" aria-expanded="true" aria-controls="collapsePages1">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Inventario General</span>
         </a>
         <div id="collapsePages1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
