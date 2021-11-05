@@ -80,11 +80,11 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1" aria-expanded="true" aria-controls="collapsePages1">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse2" data-target="#collapsePages2" aria-expanded="true" aria-controls="collapsePages2">
           <i class="fas fa-fw fa-folder"></i>
           <span>Inventario General</span>
         </a>
-        <div id="collapsePages1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapsePages2" class="collapse2" aria-labelledby="headingPages2" data-parent="#accordionSidebar2">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="pastel.php">Pastel</a>
             <a class="collapse-item" href="barra.php">Barra</a>
