@@ -74,6 +74,7 @@
           
            <div id="resultados2"></div>
            <div class="outer_div2" id="outer_div2"></div>
+           <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#nuevoPrograma"><i class="fas fa-user fa-sm text-white-50"></i> Nuevo Material</a>
            <div id="resultados2"></div>
            <div class="outer_div2" id="outer_div2"></div>
           
