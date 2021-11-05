@@ -42,6 +42,7 @@
 <body id="page-top">
 <?php 
       include("modal/agregar_obra.php");
+      include("modal/agregar_material.php");
        include("modal/editar_obra.php");
        include("modal/cambiar_password.php");
        ?>
@@ -75,8 +76,8 @@
            <div id="resultados2"></div>
            <div class="outer_div2" id="outer_div2"></div>
            <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#nuevoPrograma"><i class="fas fa-user fa-sm text-white-50"></i> Nuevo Material</a>
-           <div id="resultados2"></div>
-           <div class="outer_div2" id="outer_div2"></div>
+           <div id="resultados3"></div>
+           <div class="outer_div3" id="outer_div3"></div>
           
           
 
@@ -106,7 +107,8 @@
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="js/obra.js"></script>
+  <script src="js/obra.js"></script>
+  <script src="js/materiales.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
