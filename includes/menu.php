@@ -42,7 +42,7 @@
         </div>
       </li>
       <li class="nav-item ">
-      <a class="nav-link collapsed" href="inventario_general.php" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+      <a class="nav-link collapsed" href="inventario_general.php" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
           <i class="fas fa-fw fa-folder"></i>
           <span>Inventario General</span>
       </a>
