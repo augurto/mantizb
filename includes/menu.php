@@ -84,7 +84,7 @@
           <i class="fas fa-fw fa-folder"></i>
           <span>Inventario General</span>
         </a>
-        <div id="collapsePages2" class="collapse2" aria-labelledby="headingPages2" data-parent="#accordionSidebar2">
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="pastel.php">Pastel</a>
             <a class="collapse-item" href="barra.php">Barra</a>
