@@ -78,21 +78,6 @@
           </div>
         </div>
       </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse2" data-target="#collapsePages2" aria-expanded="true" aria-controls="collapsePages2">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Inventario General</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="pastel.php">Pastel</a>
-            <a class="collapse-item" href="barra.php">Barra</a>
-            <a class="collapse-item" href="barra_horizontal.php">Barra Horizontal</a>
-             <a class="collapse-item" href="barra_triangular.php">Barra Triangular</a>
-          </div>
-        </div>
-      </li>
 <?php } ?>
 
       <!-- Divider -->
