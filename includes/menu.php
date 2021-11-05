@@ -41,12 +41,12 @@
           </div>
         </div>
       </li>
-      
+      <li class="nav-item ">
       <a class="nav-link collapsed" href="inventario_general.php" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-folder"></i>
           <span>Inventario General</span>
       </a>
-
+      </li>            
       <!-- Nav Item - Utilities Collapse Menu -->
        <?php if($_SESSION['prol']=="Inv Principal"  || $_SESSION['prol']=="Coinvestigador" || $_SESSION['prol']=="administrador"){?>
       <li class="nav-item <?php echo $segmento;?>">
