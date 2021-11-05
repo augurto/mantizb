@@ -60,6 +60,24 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
 
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <?php if($_SESSION['prol']=="Inv Principal"  || $_SESSION['prol']=="Coinvestigador" || $_SESSION['prol']=="administrador"){?>
+      <li class="nav-item <?php echo $segmento;?>">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Inventario General</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+             <a class="collapse-item" href="programas.php">Obra</a>
+             <a class="collapse-item" href="grupos.php">Materiales</a>
+           <!--  <a class="collapse-item" href="miembros.php">Miembros</a> -->
+          </div>
+        </div>
+      </li>
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
       <!-- Heading -->
       <div class="sidebar-heading">
         Componentes
