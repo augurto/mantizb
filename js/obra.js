@@ -21,8 +21,8 @@ function load(page){
 function eliminar (id)
 {
         swal({
-title: "Realmente deseas eliminar el programa?",
-text: "Una vez eliminado, no volveras a ver el programa",
+title: "Realmente deseas eliminar la obra?",
+text: "Una vez eliminado, no volveras a ver la obra",
 icon: "warning",
 buttons: true,
 dangerMode: true,
@@ -30,7 +30,7 @@ dangerMode: true,
 .then((willDelete) => {
 
 if (willDelete) {
-swal("Programa eliminado exitosamente", {
+swal("Obra eliminada exitosamente", {
 icon: "success",
 });
 $.ajax({
@@ -38,10 +38,10 @@ type: "GET",
 url: "./ajax/buscar_obra.php",
 data: "id="+id,
  beforeSend: function(objeto){
-    $("#resultados").html("Mensaje: Cargando...");
+    $("#resultados2").html("Mensaje: Cargando...");
   },
 success: function(datos){
-$("#resultados").html(datos);
+$("#resultados2").html(datos);
 load(1);
 }
     });
@@ -80,7 +80,7 @@ $('#actualizar_datos').attr("disabled", true);
 var parametros = $(this).serialize();
 $.ajax({
     type: "POST",
-    url: "ajax/editar_programa.php",
+    url: "ajax/editar_obra.php",
     data: parametros,
      beforeSend: function(objeto){
         $("#resultados_ajax2").html("Mensaje: Cargando...");
