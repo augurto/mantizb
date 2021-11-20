@@ -56,7 +56,7 @@
                $row= mysqli_fetch_array($count_query);
                $numrows = $row['numrows'];
                $total_pages = ceil($numrows/$per_page);
-               $reload = './miembros.php';
+               $reload = './inventario_general.php';
                //main query to fetch the data
                $sql="SELECT * FROM  $sTable $sWhere LIMIT $offset,$per_page";
                $query = mysqli_query($con, $sql);
@@ -66,7 +66,7 @@
                    ?>
                    <div class="card shadow mb-4">
                    <div class="card-header py-3">
-                     <h6 class="m-0 font-weight-bold text-primary">Programas</h6>
+                     <h6 class="m-0 font-weight-bold text-primary">Materiales</h6>
                    </div>
                    <div class="card-body">
                      <div class="table-responsive">

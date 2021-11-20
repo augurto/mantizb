@@ -76,6 +76,12 @@
            <div id="resultados2"></div>
            <div class="outer_div2" id="outer_div2"></div>
                 <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#nuevoPrograma"><i class="fas fa-user fa-sm text-white-50"></i> Nuevo Material</a>
+                <a href="#" class="btn btn-primary btn-icon-split" title='Ver seguimiento' onclick="segg(<?php echo $id;?>);" data-toggle="modal" data-target="#seguim">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-check"></i>
+                    </span>
+                    <span class="text">Modaaaal1</span>
+                  </a>
            <div id="resultados3"></div>
            <div class="outer_div3" id="outer_div3"></div>
           
