@@ -89,7 +89,7 @@ session_start();
                    			$rows=mysqli_fetch_array($ge);
 
 							$id=$rows['id'];
-						$nombre=$rows['nombre_obra'];
+						$nombre_obra=$rows['nombre_obra'];
 						/*  $codigo=$rows['fecha_agregada']; */
 						$estado=$rows['estado'];
 						/* $fecha=$rows['fecha_agregado'];
@@ -126,7 +126,7 @@ session_start();
 					<input type="hidden" value="<?php echo $codigo;?>" id="cod<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $presupuesto;?>" id="presupuesto<?php echo $id;?>">
 					<td><?php echo $count++; ?></td>
-						<td><a href="info_proyecto.php?cod=<?php echo $codigo; ?>"><?php echo $nombre; ?></a></td>
+						<td><a href="info_proyecto.php?cod=<?php echo $id; ?>"><?php echo $nombre_obra; ?></a></td>
 						<td>
 
                       	 <a href="#" class="btn btn-primary btn-icon-split" title='Ver seguimiento' onclick="segg(<?php echo $id;?>);" data-toggle="modal" data-target="#seguim">
