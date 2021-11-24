@@ -127,7 +127,7 @@ session_start();
 					<input type="hidden" value="<?php echo $presupuesto;?>" id="presupuesto<?php echo $id;?>">
 					
 					<td><?php echo $count++; ?></td>
-						<td><a href="info_proyecto.php?cod=<?php echo $id; ?>"><?php echo $obra; ?></a></td>
+						<td><a href="info_proyecto.php?cod=<?php echo $ids; ?>"><?php echo $obra; ?></a></td>
 						<td>
 
                       	 <a href="#" class="btn btn-primary btn-icon-split" title='Ver seguimiento' onclick="segg(<?php echo $id;?>);" data-toggle="modal" data-target="#seguim">
