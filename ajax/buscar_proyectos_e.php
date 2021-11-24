@@ -104,7 +104,7 @@ session_start();
                    		$rwse=mysqli_fetch_array($s);
                    		 $id_username=$rwse["id"];
 
-							$s=mysqli_query($con,"SELECT count(*) as total_seg FROM seguimientos WHERE codigo_proyecto='".$codigo."'  AND id_miembros='".$id_username."'");
+							$s=mysqli_query($con,"SELECT count(*) as total_seg FROM obra ");
                    		$rwser=mysqli_fetch_array($s);
                    		 $total_s=$rwser["total_seg"];
           				
@@ -133,7 +133,7 @@ session_start();
                     <span class="icon text-white-50">
                       <i class="fas fa-check"></i>
                     </span>
-                    <span class="text">Entregables</span>
+                    <span class="text">Entregableesesesess</span>
                   </a> <a href="ver_entregables.php?id_p=<?php echo $codigo;?>&id_est=<?php echo $id_username;?>" class="btn btn-info btn-icon-split" title='Ver entregables'>
                     <span class="icon text-white-50">
                       <i class="fas fa-file"></i>
