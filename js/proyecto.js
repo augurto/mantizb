@@ -299,7 +299,7 @@ function select_material(cod){
 			var cd=$('#cd').val();
 					$("#loader").fadeIn('slow');
 					$.ajax({
-						url:'./ajax/select_materiales.php',
+						url:'./ajax/select_materiales.php?cd='+cd,
 						 beforeSend: function(objeto){
 					  },
 						success:function(data){
