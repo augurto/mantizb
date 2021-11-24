@@ -82,7 +82,7 @@ session_start();
 				$count=1;
 				while ($row=mysqli_fetch_array($query)){
 						$ids=$row['id'];
-						$codigo=$row['codigo_proyecto'];
+						/* $codigo=$row['codigo_proyecto']; */
 						
 
 							$ge=mysqli_query($con,"SELECT * FROM obras");
