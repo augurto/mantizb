@@ -73,7 +73,7 @@ session_start();
                   <thead>
                     <tr>
                     <th>ID</th>
-                    <th>Nombre del proyecto</th>
+                    <th>Nombre de la Obra</th>
 					<th>Seguimientos</th>
                     </tr>
                   </thead>
@@ -94,7 +94,7 @@ session_start();
 						$estado=$rows['estado'];
 						/* $fecha=$rows['fecha_agregado'];
 						$presupuesto=$rows['presupuesto']; */
-							$g=mysqli_query($con,"SELECT count(*) as total, id FROM entregables WHERE codigo_proyecto='".$codigo."'");
+							$g=mysqli_query($con,"SELECT count(*) as total, id FROM obras ");
                    		$rw=mysqli_fetch_array($g);
                    		$total=$rw["total"];
                    		 $id_en=$rw["id"];
