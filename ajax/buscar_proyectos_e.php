@@ -41,7 +41,7 @@ session_start();
          $q = mysqli_real_escape_string($con,(strip_tags($_REQUEST['q'], ENT_QUOTES)));
           $idc = mysqli_real_escape_string($con,(strip_tags($_REQUEST['idc'], ENT_QUOTES)));
 		 $aColumns = array('codigo_proyecto');//Columnas de busqueda
-		 $sTable = "usuarios";
+		 $sTable = "obras";
 		 $sWhere = "Where username='".$username."'";
 		include 'pagination.php'; //include pagination file
 		//pagination variables
@@ -125,6 +125,7 @@ session_start();
 						<input type="hidden" value="<?php echo $estado;?>" id="estado<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $codigo;?>" id="cod<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $presupuesto;?>" id="presupuesto<?php echo $id;?>">
+					
 					<td><?php echo $count++; ?></td>
 						<td><a href="info_proyecto.php?cod=<?php echo $id; ?>"><?php echo $nombre_obra; ?></a></td>
 						<td>
