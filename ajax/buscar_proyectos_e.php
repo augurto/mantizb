@@ -65,7 +65,7 @@ session_start();
 			?>
 			<div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Proyectos</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Obras</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -90,7 +90,7 @@ session_start();
 
 							$id=$rows['id'];
 						$nombre=$rows['nombre_obra'];
-						 $codigo=$rows['fecha_agregada'];
+						/*  $codigo=$rows['fecha_agregada']; */
 						$estado=$rows['estado'];
 						/* $fecha=$rows['fecha_agregado'];
 						$presupuesto=$rows['presupuesto']; */
