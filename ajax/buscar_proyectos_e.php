@@ -85,15 +85,15 @@ session_start();
 						$codigo=$row['codigo_proyecto'];
 						
 
-							$ge=mysqli_query($con,"SELECT * FROM proyecto WHERE codigo='".$codigo."'");
+							$ge=mysqli_query($con,"SELECT * FROM obra");
                    			$rows=mysqli_fetch_array($ge);
 
 							$id=$rows['id'];
-						$nombre=$rows['nombre_proyecto'];
-						 $codigo=$rows['codigo'];
+						$nombre=$rows['nombre_obra'];
+						 $codigo=$rows['fecha_agregada'];
 						$estado=$rows['estado'];
-						$fecha=$rows['fecha_agregado'];
-						$presupuesto=$rows['presupuesto'];
+						/* $fecha=$rows['fecha_agregado'];
+						$presupuesto=$rows['presupuesto']; */
 							$g=mysqli_query($con,"SELECT count(*) as total, id FROM entregables WHERE codigo_proyecto='".$codigo."'");
                    		$rw=mysqli_fetch_array($g);
                    		$total=$rw["total"];
