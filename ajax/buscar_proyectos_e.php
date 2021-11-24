@@ -94,9 +94,9 @@ session_start();
 						$estado=$rows['estado'];
 						/* $fecha=$rows['fecha_agregado'];
 						$presupuesto=$rows['presupuesto']; */
-							$g=mysqli_query($con,"SELECT count(*) as total, nombre_obra FROM obras ");
+					/* 		$g=mysqli_query($con,"SELECT count(*) as total, nombre_obra FROM obras ");
                    		$rw=mysqli_fetch_array($g);
-                   		$total=$rw["total"];
+                   		$total=$rw["total"]; */
                    		 /* $id_en=$rw["id"]; */
 
 
@@ -104,7 +104,7 @@ session_start();
                    		$rwse=mysqli_fetch_array($s);
                    		 $id_username=$rwse["id"];
 
-							$s=mysqli_query($con,"SELECT count(*) as total_seg FROM obras ");
+					/* 		$s=mysqli_query($con,"SELECT count(*) as total_seg FROM obras ");
                    		$rwser=mysqli_fetch_array($s);
                    		 $total_s=$rwser["total_seg"];
           				
@@ -114,9 +114,9 @@ session_start();
           				}else{
           					$r=0;
           					$rst=$r*$total;
-          				}
+          				} */
           				
-					
+					$rst=90;
 					?>
 					
 				
