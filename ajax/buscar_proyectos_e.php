@@ -104,7 +104,7 @@ session_start();
                    		$rwse=mysqli_fetch_array($s);
                    		 $id_username=$rwse["id"];
 
-							$s=mysqli_query($con,"SELECT count(*) as total_seg FROM obra ");
+							$s=mysqli_query($con,"SELECT count(*) as total_seg FROM obras ");
                    		$rwser=mysqli_fetch_array($s);
                    		 $total_s=$rwser["total_seg"];
           				
