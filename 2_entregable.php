@@ -41,6 +41,7 @@
 <?php
 include('modal/editar_proyecto.php');
 include('modal/seguimientos.php');
+include('modal/seguimiento_obra.php');
 include('modal/nuevo_proyecto.php');
 include("modal/cambiar_password.php");
  ?>
