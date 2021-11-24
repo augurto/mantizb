@@ -18,7 +18,7 @@
                     <input type="text" class="form-control" name="material" id="material">
                     <label for="exampleInputFile">Usuario</label>
                     <input type="text" class="form-control" name="usuario" id="usuario" value="<?php echo $username;?>">
-                    <select name="cve" id="opc"> <?
+                    <select  class="form-control" name="material" id="material"> <?
                         $busca = "Select * From materiales";
                         $lista = mysqli_query($con,$busca);
                         While($fila=mysqli_fetch_assoc($lista)){
