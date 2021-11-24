@@ -80,7 +80,9 @@ session_start();
                   <tbody>
 				<?php
 				$count=1;
-				while ($row=mysqli_fetch_array($query)){
+				$sql_obra="SELECT *FROM obras";
+				$result=mysqli_query($con_obra,$sql_obra);
+				while ($row=mysqli_fetch_array($result)){
 						$ids=$row['id'];
 						$obra=$row['nombre_obra'];
 						
