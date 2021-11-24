@@ -295,6 +295,20 @@ function select(cod){
 			})
 		}
 
+function select_material(cod){
+			var cd=$('#cd').val();
+					$("#loader").fadeIn('slow');
+					$.ajax({
+						url:'./ajax/select_materiales.php',
+						 beforeSend: function(objeto){
+					  },
+						success:function(data){
+							$("#nomb").html(data).fadeIn('slow');
+							
+						}
+					})
+				}
+
 
 	function obtener_datos(id){
 			var nombre = $("#nombre"+id).val();

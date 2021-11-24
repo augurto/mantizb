@@ -18,29 +18,7 @@
                     <input type="text" class="form-control" name="material" id="material">
                     <label for="exampleInputFile">Usuario</label>
                     <input type="text" class="form-control" name="usuario" id="usuario" value="<?php echo $username;?>">
-                    <div class="row-fluid">
-      <select class="selectpicker" data-show-subtext="true" data-live-search="true">
-
-<?php
-// simple conexion a la base de datos
-function connect(){
-	return new mysqli("localhost","u415020159_mantizb","Mantizb*#17","u415020159_mantizb");
-}
-
-$con = connect();
-if (!$con->set_charset("utf8")) {//asignamos la codificación comprobando que no falle
-       die("Error cargando el conjunto de caracteres utf8");
-}
-$consulta = "SELECT * FROM materiales";
-$resultado = mysqli_query($con , $consulta);
-$contador=0;
-
-while($misdatos = mysqli_fetch_assoc($resultado)){ $contador++;?>
-<option data-subtext="<?php echo $misdatos["nombre_material"]; ?>"><?php echo $misdatos["unidad"]; ?></option>
-<?php }?>          
-</select>
-
-    </div>
+                    
                   </div>
           </div>
       <form action="../ajax/agregar_material.php" method="get">
@@ -65,7 +43,7 @@ while($misdatos = mysqli_fetch_assoc($resultado)){ $contador++;?>
                   </div>
               </div>
         <div class="col-sm-12">
-        <select name="nomb"  id="nomb" onkeyup="select();"  class="form-control" required>
+        <select name="nomb"  id="nomb" onkeyup="select_material();"  class="form-control" required>
         </select>
         <input type="hidden" name="cd" placeholder="Nombre del seguimiento"  id="cd"  class="form-control">
         <input type="hidden" name="cdd" placeholder="Nombre del seguimiento"  id="cdd"  class="form-control">
