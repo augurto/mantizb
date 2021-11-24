@@ -81,7 +81,7 @@ session_start();
 				<?php
 				$count=1;
 				while ($row=mysqli_fetch_array($query)){
-						$ids=$row['id'];
+						/* $ids=$row['id']; */
 						/* $codigo=$row['codigo_proyecto']; */
 						
 
