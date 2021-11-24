@@ -81,7 +81,7 @@ session_start();
 				<?php
 				$count=1;
 				$sql_obra="SELECT *FROM obras";
-				$result=mysqli_query($con_obra,$sql_obra);
+				$result=mysqli_query($con,$sql_obra);
 				while ($row=mysqli_fetch_array($result)){
 						$ids=$row['id'];
 						$obra=$row['nombre_obra'];
