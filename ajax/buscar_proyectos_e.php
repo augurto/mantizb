@@ -42,7 +42,7 @@ session_start();
           $idc = mysqli_real_escape_string($con,(strip_tags($_REQUEST['idc'], ENT_QUOTES)));
 		 $aColumns = array('codigo_proyecto');//Columnas de busqueda
 		 $sTable = "obras";
-		 $sWhere = "Where username='".$username."'";
+		 /* $sWhere = "Where username='".$username."'"; */
 		include 'pagination.php'; //include pagination file
 		//pagination variables
 		$page = (isset($_REQUEST['page']) && !empty($_REQUEST['page']))?$_REQUEST['page']:1;
@@ -50,13 +50,13 @@ session_start();
 		$adjacents  = 4; //gap between pages after number of adjacents
 		$offset = ($page - 1) * $per_page;
 		//Count the total number of row in your table*/
-		$count_query   = mysqli_query($con, "SELECT count(*) AS numrows FROM $sTable  $sWhere");
+		$count_query   = mysqli_query($con, "SELECT count(*) AS numrows FROM $sTable  ");
 		$row= mysqli_fetch_array($count_query);
 		$numrows = $row['numrows'];
 		$total_pages = ceil($numrows/$per_page);
 		$reload = './miembros.php';
 		//main query to fetch the data
-		$sql="SELECT * FROM  $sTable $sWhere";
+		$sql="SELECT * FROM  $sTable ";
 		$query = mysqli_query($con, $sql);
 		//loop through fetched data
 	
