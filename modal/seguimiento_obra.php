@@ -13,11 +13,11 @@
                 <div class="col-lg-12">
                 <div class="form-group">
                 <label for="exampleInputFile">Obra</label>
-                    <input type="text" class="form-control" name="obra" id="obra">
+                    <input type="text" class="form-control" name="obra" id="obra" value="<?php echo $obra;?>">
                     <label for="exampleInputFile">Material</label>
-                    <input type="text" class="form-control" name="material" id="material">
-                    <label for="exampleInputFile">Usuario</label>
-                    <input type="text" class="form-control" name="usuario" id="usuario" value="<?php echo $username;?>">
+                    
+                  
+                    <input type="text" class="form-control" name="usuario" id="usuario" value="<?php echo $username;?>" readonly>
                     <select  class="form-control" name="material" id="material"> <?
                         $busca = "Select * From materiales";
                         $lista = mysqli_query($con,$busca);
