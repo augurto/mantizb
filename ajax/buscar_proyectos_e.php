@@ -94,10 +94,10 @@ session_start();
 						$estado=$rows['estado'];
 						/* $fecha=$rows['fecha_agregado'];
 						$presupuesto=$rows['presupuesto']; */
-							$g=mysqli_query($con,"SELECT count(*) as total, id FROM obras ");
+							$g=mysqli_query($con,"SELECT count(*) as total, nombre_obra FROM obras ");
                    		$rw=mysqli_fetch_array($g);
                    		$total=$rw["total"];
-                   		 $id_en=$rw["id"];
+                   		 /* $id_en=$rw["id"]; */
 
 
                    		 $s=mysqli_query($con,"SELECT * FROM miembros WHERE email='".$username."'");
