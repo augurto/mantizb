@@ -132,7 +132,7 @@ session_start();
 						<td><a href="info_proyecto.php?cod=<?php echo $ids; ?>"><?php echo $obra; ?></a></td>
 						<td>
 
-                      	 <a href="#" class="btn btn-primary btn-icon-split" title='Ver seguimiento' onclick="segg(<?php echo $obra;?>);" data-toggle="modal" data-target="#seguim_obra">
+                      	 <a href="#" class="btn btn-primary btn-icon-split" title='Ver seguimiento' onclick="segg(<?php echo $nombre_obra;?>);" data-toggle="modal" data-target="#seguim_obra">
                     <span class="icon text-white-50">
                       <i class="fas fa-check"></i>
                     </span>
