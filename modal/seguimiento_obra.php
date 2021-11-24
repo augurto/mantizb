@@ -12,10 +12,15 @@
       <div></div>
                 <div class="col-lg-12">
                 <div class="form-group">
-                    <textarea class="form-control" placeholder="Nombre del Material" name="descripcion" id="descripcion"></textarea>
+                <label for="exampleInputFile">Obra</label>
+                    <input type="text" class="form-control" name="obra" id="obra">
+                    <label for="exampleInputFile">Material</label>
+                    <input type="text" class="form-control" name="material" id="material">
+                    <label for="exampleInputFile">Usuario</label>
+                    <input type="text" class="form-control" name="usuario" id="usuario">
                   </div>
           </div>
-      <form action="../ajax/seguimiento222.php" method="get">
+      <form action="../ajax/agregar_material.php" method="get">
 
       <div class="col-sm-12">
        <div class="form-group">
