@@ -85,7 +85,7 @@ session_start();
 						$codigo=$row['codigo_proyecto'];
 						
 
-							$ge=mysqli_query($con,"SELECT * FROM obra");
+							$ge=mysqli_query($con,"SELECT * FROM obras");
                    			$rows=mysqli_fetch_array($ge);
 
 							$id=$rows['id'];
