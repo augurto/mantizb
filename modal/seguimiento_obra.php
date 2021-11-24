@@ -13,7 +13,7 @@
                 <div class="col-lg-12">
                 <div class="form-group">
                 <label for="exampleInputFile">Obra</label>
-                    <input type="text" class="form-control" name="obra" id="obra" value="<?php echo $nombre_obra;?>">
+                    <input type="text" class="form-control" name="obra" id="obra" value="<?php echo $id;?>">
                     <label for="exampleInputFile">Material</label>
                     
                   
