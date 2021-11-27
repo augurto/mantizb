@@ -99,7 +99,7 @@
                         $query2 = mysqli_query($con, $sql_obra2);
                        while ($row=mysqli_fetch_array($query2)){
                                $id=$row['id'];
-                               $programa=$row['m.nombre_material'];
+                               $programa=$row['nombre_material'];
                                    $cantidad=$row['cantidad'];
                                
                                    if ($estado=='activo'){$label_class='warning '; $ico='info';}
