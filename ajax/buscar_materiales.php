@@ -74,7 +74,7 @@
                          <thead>
                            <tr>
                            <th>Id</th>
-                           <th>Nombre del programa</th>
+                           <th>Nombre de la Obra</th>
                            <th>Estado</th>
                               <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>
                            <th>Acciones</th>
@@ -90,8 +90,8 @@
                                    $estado=$row['estado'];
                                
                                    if ($estado=='activo'){$label_class='warning '; $ico='info';}
-                                   elseif ($estado=='terminado'){$label_class='warning '; $ico='exclamation-triangle';}
-                               else{$text_estado="inactivo";$label_class='danger'; $ico='exclamation-triangle';}
+                                   elseif ($estado=='terminado'){$label_class='primary'; $ico='check';}
+                                   else{$text_estado="inactivo";$label_class='danger'; $ico='exclamation-triangle';}
                               
                                $fecha=$row['fecha_agregada'];
                                
