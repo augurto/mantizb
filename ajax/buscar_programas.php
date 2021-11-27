@@ -16,7 +16,7 @@ session_start();
 			  <strong>Aviso!</strong> Datos eliminados exitosamente.
 			</div>
 			<?php 
-		}elseif ($delete1=mysqli_query($con,"DELETE FROM obras WHERE id='".$idd."'")){
+		}elseif ($delete2=mysqli_query($con,"DELETE FROM obras WHERE id='".$idd."'")){
 			?>
 			<div class="alert alert-success alert-dismissible" role="alert">
 			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>

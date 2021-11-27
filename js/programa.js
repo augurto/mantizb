@@ -21,7 +21,7 @@
 		function eliminar (id)
 		{
 				swal({
-  title: "Realmente deseas eliminar el programa?",
+  title: "Realmente deseas eliminar la Obra?",
   text: "Una vez eliminado, no volveras a ver el programa",
   icon: "warning",
   buttons: true,
