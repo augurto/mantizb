@@ -22,7 +22,7 @@
         $delete7=mysqli_query($con,"DELETE FROM usuarios WHERE codigo_proyecto='".$idd."'");
         $delete8=mysqli_query($con,"DELETE FROM comments WHERE codigo_proyecto='".$idd."'");
         $delete9=mysqli_query($con,"DELETE FROM entregables WHERE codigo_proyecto='".$idd."'");
-        $delete10=mysqli_query($con,"DELETE FROM obras WHERE id='".$idd."'");
+        $delete10=mysqli_query($con,"DELETE FROM obras WHERE codigo_proyecto='".$idd."'");
 			?>
 			<div class="alert alert-success alert-dismissible" role="alert">
 			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
