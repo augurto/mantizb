@@ -40,7 +40,7 @@
 <body id="page-top">
 <?php
 include('modal/editar_proyecto.php');
-include('modal/seguimientos.php');
+/* include('modal/seguimientos.php'); */
 include('modal/seguimiento_obra.php');
 include('modal/nuevo_proyecto.php');
 include("modal/cambiar_password.php");
@@ -78,11 +78,11 @@ include("modal/agregar_obra.php");
         <div class="container-fluid">
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800"><b>Mesa de trabajo</b></h1>
-            <?php if($_SESSION['prol']=='administrador'){?>
-            <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"  data-toggle="modal" data-target="#NuevoProyecto"><i class="fas fa-folder fa-sm text-white-50"></i> Nuevo proyecto</a>
-          <?php } ?>
-          </div>
+                <h1 class="h3 mb-0 text-gray-800"><b>Inventario General </b></h1>
+                  <?php if($_SESSION['prol']=='administrador'   || $_SESSION['prol']=="Inv Principal"){?>
+                    <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#nuevoPrograma"><i class="fas fa-user fa-sm text-white-50"></i> Nueva Obra</a>
+                  <?php } ?>
+            </div>
  <?php if($_SESSION['prol']=="administrador"){?>
           <!-- Content Row -->
           <div class="row">
