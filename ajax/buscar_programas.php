@@ -9,11 +9,18 @@ session_start();
 	$action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
 	if (isset($_GET['id'])){
 		$idd=intval($_GET['id']);
-			if ($delete1=mysqli_query($con,"DELETE FROM programas WHERE id='".$idd."'")){
+		if ($delete1=mysqli_query($con,"DELETE FROM programas WHERE id='".$idd."'")){
 			?>
 			<div class="alert alert-success alert-dismissible" role="alert">
 			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			  <strong>Aviso!</strong> Datos eliminados exitosamente.
+			</div>
+			<?php 
+		}elseif ($delete1=mysqli_query($con,"DELETE FROM obras WHERE id='".$idd."'")){
+			?>
+			<div class="alert alert-success alert-dismissible" role="alert">
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  <strong>Aviso!</strong> Obra eliminada exitosamente.
 			</div>
 			<?php 
 		}else {
