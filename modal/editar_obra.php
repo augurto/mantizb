@@ -24,6 +24,7 @@
           <select name="mod_estado"  id="mod_estado"  class="form-control">
           <option value="activo">Activo</option>
           <option value="inactivo">Inactivo</option>
+          <option value="Terminado">Terminado</option>
           </select>
         </div>
         </div>
