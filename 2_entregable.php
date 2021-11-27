@@ -44,6 +44,7 @@ include('modal/seguimientos.php');
 include('modal/seguimiento_obra.php');
 include('modal/nuevo_proyecto.php');
 include("modal/cambiar_password.php");
+include("modal/agregar_obra.php");
  ?>
   <!-- Page Wrapper -->
   <div id="wrapper">
