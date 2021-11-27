@@ -41,7 +41,7 @@
                 $q = mysqli_real_escape_string($con,(strip_tags($_REQUEST['q'], ENT_QUOTES)));
                 $aColumns = array('id_obra');//Columnas de busqueda
                 $sTable = "materiales_obra";
-                $sWhere = "$_GET.['id'].";
+                $sWhere = "";
                 $id_obra=$_GET['id'] ;
                if ( $_GET['q'] != "" )
                {
