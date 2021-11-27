@@ -31,8 +31,8 @@
            }
            if($action == 'ajax'){
                 $q = mysqli_real_escape_string($con,(strip_tags($_REQUEST['q'], ENT_QUOTES)));
-                $aColumns = array('programa');//Columnas de busqueda
-                $sTable = "programas";
+                $aColumns = array('nombre_obra');//Columnas de busqueda
+                $sTable = "obras";
                 $sWhere = "";
                if ( $_GET['q'] != "" )
                {
@@ -58,7 +58,7 @@
                $total_pages = ceil($numrows/$per_page);
                $reload = './inventario_general.php';
                //main query to fetch the data
-               $sql="SELECT * FROM  $sTable $sWhere LIMIT $offset,$per_page";
+               $sql="SELECT * FROM  $sTable LIMIT $offset,$per_page";
                $query = mysqli_query($con, $sql);
                //loop through fetched data
                if ($numrows>0){
