@@ -67,7 +67,7 @@
                $total_pages = ceil($numrows/$per_page);
                $reload = './inventario_general.php';
                //main query to fetch the data
-               $sql="SELECT * FROM  $sTable /* where id_obra =$id_obra */ LIMIT $offset,$per_page";
+               $sql="SELECT * FROM  $sTable where id_obra =$id_obra LIMIT $offset,$per_page";
                $query = mysqli_query($con, $sql);
                //loop through fetched data
                if ($numrows>0){
