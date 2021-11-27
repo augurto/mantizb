@@ -95,7 +95,7 @@
                     <span class="icon text-white-50">
                       <i class="fas fa-check"></i>
                     </span>
-                    <span class="text">Entregables</span>
+                    <span class="text"> Agregar Entregables</span>
                   </a> 
           </div>
          <!--  <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -124,13 +124,14 @@
             $t=mysqli_query($con,"SELECT count(*) as t FROM comments WHERE codigo_proyecto='".$id_p."' AND id_seguimiento='".$id."' AND id_entregable='".$id_ent."'");
             $rwdt=mysqli_fetch_array($t);
             $ts=$rwdt["t"];
+            $estado=$rwdt["estado"];
 
     ?>
           <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom; ?></h6>
+                  <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - ".$estado; ?></h6>
                  
                 </div>
                 <!-- Card Body -->
@@ -144,12 +145,9 @@
                 <!-- Counter - Messages -->
               </a>
 
-              <a href="#" data-toggle="modal" data-target="#borrar" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
-                <?php echo $ts; ?><i class="fas fa-clipboard-check"></i>
-                <!-- Counter - Messages -->
-              </a>
+              
 
-                  <div  align="center"><img src="img/file.png" width="20px" height="auto"></div>
+                  <div  align="center"><img src="img/file.png" width="00px" height="auto"></div>
                   <div align="center"><a href="entregables/<?php echo  $id_p  ; ?>/<?php echo  $documento; ?>" download="entregables/<?php echo  $id_p  ; ?>/<?php echo  $documento; ?>"><i class="fa fa-download"></i> <?php echo $documento; ?></a></div>
 
                   <div align="center"><p>URL: </p> <a href="<?php echo  $link  ; ?>/<?php echo  $link; ?>" download="<?php echo  $link  ; ?>/<?php echo  $link; ?>" target="_blank"><i class="fa fa-cloud-download" ></i>  <?php echo $link; ?></a></div>
