@@ -41,7 +41,7 @@
                 $q = mysqli_real_escape_string($con,(strip_tags($_REQUEST['q'], ENT_QUOTES)));
                 $aColumns = array('id_obra');//Columnas de busqueda
                 $sTable = "materiales_obra";
-                $sWhere = "";
+                $sWhere = "$_GET.['id'].";
                 $id_obra=$_GET['id'] ;
                if ( $_GET['q'] != "" )
                {
@@ -67,9 +67,15 @@
                $total_pages = ceil($numrows/$per_page);
                $reload = './inventario_general.php';
                //main query to fetch the data
-               $sql="SELECT * FROM  $sTable where  id_obra='".$id_obra."' LIMIT $offset,$per_page";
+               $sql="SELECT * FROM  $sTable $sWhere LIMIT $offset,$per_page";
                $sql_obra="SELECT * FROM materiales_obra where id_obra like '".$_GET['id']."'";
-               $query = mysqli_query($con, $sql_obra);
+
+               $sql_obra2="SELECT ma.id, ma.id_material, ma.cantidad, ma.id_obra, m.nombre_material FROM materiales_obra ma  
+                       inner join materiales m on m.id=ma.id_material /* where ma.id_obra = 4 */";
+               $query2 = mysqli_query($con, $sql_obra2);
+
+
+               $query = mysqli_query($con, $sql);
                //loop through fetched data
                if ($numrows>0){
                    
@@ -94,10 +100,8 @@
                          <tbody>
                        <?php
                        $count=1;
-                       $sql_obra2="SELECT ma.id, ma.id_material, ma.cantidad, ma.id_obra, m.nombre_material FROM materiales_obra ma  
-                       inner join materiales m on m.id=ma.id_material /* where ma.id_obra = 4 */";
-                        $query2 = mysqli_query($con, $sql_obra2);
-                       while ($row=mysqli_fetch_array($query2)){
+                       
+                       while ($row=mysqli_fetch_array($query)){
                                $id=$row['id'];
                                $programa=$row['nombre_material'];
                                    $cantidad=$row['cantidad'];
