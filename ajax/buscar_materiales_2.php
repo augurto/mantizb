@@ -84,7 +84,7 @@
                          <thead>
                            <tr>
                            <th>Id</th>
-                           <th>Nombre de la Obra</th>
+                           <th>Nombre del Material</th>
                            <th>Cantidad</th>
                               <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>
                            <th>Acciones...</th>
@@ -95,7 +95,7 @@
                        <?php
                        $count=1;
                        $sql_obra2="SELECT ma.id, ma.id_material, ma.cantidad, ma.id_obra, m.nombre_material FROM materiales_obra ma  
-                       inner join materiales m on m.id=ma.id_material where ma.id_obra = 4";
+                       inner join materiales m on m.id=ma.id_material /* where ma.id_obra = 4 */";
                         $query2 = mysqli_query($con, $sql_obra2);
                        while ($row=mysqli_fetch_array($query2)){
                                $id=$row['id'];
