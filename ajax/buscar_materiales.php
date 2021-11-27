@@ -90,7 +90,7 @@
                                    $estado=$row['estado'];
                                
                                    if ($estado=='activo'){$label_class='warning '; $ico='info';}
-                                   elseif ($estado=='terminado'){$label_class='primary '; $ico='info';}
+                                   elseif ($estado=='terminado'){$label_class='warning '; $ico='exclamation-triangle';}
                                else{$text_estado="inactivo";$label_class='danger'; $ico='exclamation-triangle';}
                               
                                $fecha=$row['fecha_agregada'];
