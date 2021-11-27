@@ -71,12 +71,12 @@
                $reload = './inventario_general.php';
                //main query to fetch the data
                $sql="SELECT * FROM  $sTable $sWhere LIMIT $offset,$per_page";
-               $sql_obra="SELECT * FROM materiales_obra where id_obra like '".$_GET['id']."'";
+               $sql_obra="SELECT * FROM materiales_obra where id_obra='".$idd."' ";
 
                
 
 
-               $query = mysqli_query($con, $sql);
+               $query = mysqli_query($con, $sql_obra);
                //loop through fetched data
                if ($numrows>0){
                    
@@ -121,7 +121,7 @@
                            <tr><input type="hidden" value="<?php echo $programa;?>" id="programa<?php echo $id;?>">
                            <input type="hidden" value="<?php echo $estado;?>" id="estado<?php echo $id;?>">
                                <td><?php echo $count++;?></td>
-                               <td><?php echo $programa; ?></td>
+                               <td><?php echo $programa.$idd; ?></td>
                                <!-- <td><a href="#" class="btn btn-<?php echo $label_class;?> btn-icon-split">
                            <span class="icon text-white-50">
                              <i class="fas fa-<?php echo $ico; ?>"></i>
