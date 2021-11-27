@@ -37,6 +37,9 @@
                
                
            }
+           $sql_obra2="SELECT ma.id, ma.id_material, ma.cantidad, ma.id_obra, m.nombre_material FROM materiales_obra ma  
+                       inner join materiales m on m.id=ma.id_material /* where ma.id_obra = 4 */";
+               $query2 = mysqli_query($con, $sql_obra2);
            if($action == 'ajax'){
                 $q = mysqli_real_escape_string($con,(strip_tags($_REQUEST['q'], ENT_QUOTES)));
                 $aColumns = array('id_obra');//Columnas de busqueda
@@ -70,9 +73,7 @@
                $sql="SELECT * FROM  $sTable $sWhere LIMIT $offset,$per_page";
                $sql_obra="SELECT * FROM materiales_obra where id_obra like '".$_GET['id']."'";
 
-               $sql_obra2="SELECT ma.id, ma.id_material, ma.cantidad, ma.id_obra, m.nombre_material FROM materiales_obra ma  
-                       inner join materiales m on m.id=ma.id_material /* where ma.id_obra = 4 */";
-               $query2 = mysqli_query($con, $sql_obra2);
+               
 
 
                $query = mysqli_query($con, $sql);
