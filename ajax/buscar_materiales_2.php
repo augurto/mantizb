@@ -68,7 +68,7 @@
                $reload = './inventario_general.php';
                //main query to fetch the data
                $sql="SELECT * FROM  $sTable where  id_obra='".$id_obra."' LIMIT $offset,$per_page";
-               $sql_obra="SELECT * FROM materiales_obra where id_obra = '$id_obra'";
+               $sql_obra="SELECT * FROM materiales_obra where id_obra = '".$_GET['id']."'";
                $query = mysqli_query($con, $sql_obra);
                //loop through fetched data
                if ($numrows>0){
