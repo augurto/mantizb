@@ -121,10 +121,10 @@
             $nom=$rwd["nombre"];
               $id_ent=$rwd["id"];
 
-            $t=mysqli_query($con,"SELECT count(*) as t FROM comments WHERE codigo_proyecto='".$id_p."' AND id_seguimiento='".$id."' AND id_entregable='".$id_ent."'");
+            $t=mysqli_query($con,"SELECT count(*) as t , estado FROM comments WHERE codigo_proyecto='".$id_p."' AND id_seguimiento='".$id."' AND id_entregable='".$id_ent."'");
             $rwdt=mysqli_fetch_array($t);
             $ts=$rwdt["t"];
-            $estado=$rwdt["estado"];
+            $estado=$rwdt['estado'];
 
     ?>
           <div class="col-xl-4 col-lg-5">
