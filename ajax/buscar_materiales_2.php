@@ -42,7 +42,7 @@
                 $aColumns = array('id_obra');//Columnas de busqueda
                 $sTable = "materiales_obra";
                 $sWhere = "";
-                $_GET['id'] =$id_obra;
+                $id_obra=$_GET['id'] ;
                if ( $_GET['q'] != "" )
                {
                    $sWhere = "WHERE (";
