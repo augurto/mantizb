@@ -67,7 +67,7 @@
                $total_pages = ceil($numrows/$per_page);
                $reload = './inventario_general.php';
                //main query to fetch the data
-               $sql="SELECT * FROM  $sTable where id_obra =$id_obra LIMIT $offset,$per_page";
+               $sql="SELECT * FROM  $sTable where /* id_obra =$id_obra */ LIMIT $offset,$per_page";
                $query = mysqli_query($con, $sql);
                //loop through fetched data
                if ($numrows>0){
@@ -95,8 +95,8 @@
                        $count=1;
                        while ($row=mysqli_fetch_array($query)){
                                $id=$row['id'];
-                               $programa=$row['nombre_obra'];
-                                   $estado=$row['estado'];
+                               $programa=$row['id_material'];
+                                   $estado=$row['cantidad'];
                                
                                    if ($estado=='activo'){$label_class='warning '; $ico='info';}
                                    elseif ($estado=='terminado'){$label_class='primary'; $ico='check';}
