@@ -22,7 +22,7 @@ session_start();
                 // crypt the user's password with PHP 5.5's password_hash() function, results in a 60 character
                 // hash string. the PASSWORD_DEFAULT constant is defined by the PHP 5.5, or if you are using
                 // PHP 5.3/5.4, by the password hashing compatibility library
-       $sql = "INSERT INTO comments (codigo_proyecto, id_seguimiento, id_entregable, comentario, id_user, rol, link) VALUES ('$id_p', '$id_seg','$id_ent','$comentario','$id_user','$rol','$link');";
+       $sql = "INSERT INTO comments (codigo_proyecto, id_seguimiento, id_entregable, comentario, id_user, rol, link, estado) VALUES ('$id_p', '$id_seg','$id_ent','$comentario','$id_user','$rol','$link','$estado');";
                     $query_new_user_insert = mysqli_query($con,$sql);
                     if ($query_new_user_insert) {
                         $messages[] = "Publicado con exito.";
