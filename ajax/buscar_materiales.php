@@ -120,8 +120,9 @@
                          </a></td>
                               <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>	
                            <td ><span class="pull-right">
-                           <a href="#" class='btn btn-success' title='Editar programa' onclick="obtener_datos('<?php echo $id;?>');" data-toggle="modal" data-target="#myModal2"><i class="fa fa-edit"></i></a>
-                               <a href="#" class='btn btn-success' title='Borrar programa' onclick="eliminar('<?php echo $id;?>');"><i class="fa fa-trash"></i></a> 
+                           <a href="#" class='btn btn-success' title='Editar Obra' onclick="obtener_datos('<?php echo $id;?>');" data-toggle="modal" data-target="#myModal2"><i class="fa fa-edit"></i></a>
+                           <a href="#" class='btn btn-success' title='Borrar Obra' onclick="eliminar('<?php echo $id;?>');"><i class="fa fa-trash"></i></a> 
+                           <a href="ver_obra.php&<?php echo $id;?>" class='btn btn-success' title='Ver Obra'><i class="fa fa-trash"></i></a> 
                            </span></td>
                                <?php } ?>
                            </tr>
