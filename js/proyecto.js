@@ -155,8 +155,8 @@ function loads(page){
 function eliminar (id)
 		{
 				swal({
-  title: "Realmente deseas eliminar el proyecto?",
-  text: "Una vez eliminado, no volveras a ver el proyecto",
+  title: "Realmente deseas eliminar la obra?",
+  text: "Una vez eliminado, no volveras a ver la obra",
   icon: "warning",
   buttons: true,
   dangerMode: true,
@@ -164,7 +164,7 @@ function eliminar (id)
 .then((willDelete) => {
 
   if (willDelete) {
-    swal("Proyecto eliminado exitosamente", {
+    swal("Obra eliminada exitosamente", {
       icon: "success",
     });
         $.ajax({

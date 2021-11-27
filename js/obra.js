@@ -21,8 +21,8 @@ function load(page){
 function eliminar (id)
 {
         swal({
-title: "Realmente deseas eliminar la obra?",
-text: "Una vez eliminado, no volveras a ver la obra",
+title: "Realmente deseas eliminar la obra222?",
+text: "Una vez eliminado, no volveras a ver la obra222",
 icon: "warning",
 buttons: true,
 dangerMode: true,
