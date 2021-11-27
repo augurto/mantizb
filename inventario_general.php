@@ -77,13 +77,13 @@
           
            <div id="resultados2"></div>
            <div class="outer_div2" id="outer_div2"></div>
-                <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#nuevoPrograma"><i class="fas fa-user fa-sm text-white-50"></i> Nuevo Material</a>
+               <!--  <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#nuevoPrograma"><i class="fas fa-user fa-sm text-white-50"></i> Nuevo Material</a>
                 <a href="#" class="btn btn-primary btn-icon-split" title='Ver seguimiento' onclick="segg(<?php echo $id;?>);" data-toggle="modal" data-target="#seguim">
                     <span class="icon text-white-50">
                       <i class="fas fa-check"></i>
                     </span>
                     <span class="text">Modaaaal1</span>
-                  </a>
+                  </a> -->
            <div id="resultados3"></div>
            <div class="outer_div3" id="outer_div3"></div>
           
@@ -93,22 +93,7 @@
 
         <!-- /.container-fluid -->
 
-        <div class="container-fluid">
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800"><b>Inventario General 1.1 </b></h1>
-                  <?php if($_SESSION['prol']=='administrador'   || $_SESSION['prol']=="Inv Principal"){?>
-                    <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#nuevoPrograma"><i class="fas fa-user fa-sm text-white-50"></i> Nueva Obra</a>
-                  <?php } ?>
-            </div>
-
-          <!-- DataTales Example -->
-          
-           <div id="resultados3"></div>
-           <div class="outer_div3" id="outer_div3"></div>
-          
-          
-
-        </div>
+        
             
       </div>
       <!-- End of Main Content -->
