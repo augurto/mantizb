@@ -94,7 +94,7 @@
                          <tbody>
                        <?php
                        $count=1;
-                       $sql_obra2="SELECT * FROM materiales_obra where id_obra like '".$_GET['id']."'";
+                       $sql_obra2="SELECT * FROM materiales_obra  where id_obra = 4";
                         $query2 = mysqli_query($con, $sql_obra2);
                        while ($row=mysqli_fetch_array($query2)){
                                $id=$row['id'];
