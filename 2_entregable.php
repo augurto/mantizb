@@ -335,8 +335,9 @@ var myLineChart = new Chart(ctx, {
 </script>
   
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="js/obra.js"></script>
-  <script src="js/materiales.js"></script>
+<!-- <script src="js/obra.js"></script> -->
+<script src="./js/materiales.js"></script>
+<script src="./js/obra.js"></script>
 
 </body>
 
