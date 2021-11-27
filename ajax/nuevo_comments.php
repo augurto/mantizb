@@ -16,6 +16,7 @@ session_start();
                     $id_seg = mysqli_real_escape_string($con,(strip_tags($_POST["id_seg"],ENT_QUOTES)));
                     $comentario = mysqli_real_escape_string($con,(strip_tags($_POST["comentario"],ENT_QUOTES)));
 					$link = mysqli_real_escape_string($con,(strip_tags($_POST["link"],ENT_QUOTES)));
+					$estado = mysqli_real_escape_string($con,(strip_tags($_POST["estado"],ENT_QUOTES)));
                  $id_user = $_SESSION['id_user'];
                   $rol = $_SESSION['prol'];
                 // crypt the user's password with PHP 5.5's password_hash() function, results in a 60 character

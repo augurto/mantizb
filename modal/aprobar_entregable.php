@@ -1,5 +1,5 @@
 
-		  	<div class="modal fade" id="comments" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  	<div class="modal fade" id="aprobar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -27,13 +27,6 @@
                 <textarea class="form-control form-control-rounded" id="comentario" name="comentario" rows="3" placeholder="Escribe tu comentario..." required=""></textarea>
                 <br>
                 <input type="text" class="form-control" placeholder="Pegar link" id="link" name="link" placeholder="Pegue el link">
-                <div class="col-sm-12">
-                <select name="estado"  id="estado"  class="form-control">
-                <option value="aprobado">Aprobado</option>
-                <option value="observado">Observado</option>
-                <option value="pendiente">Pendiente</option>
-                </select>
-                </div>
                 <input class="form-control" type="hidden" value="<?php echo $_GET['id_p']; ?>" id="idd_proyecto"  name="idd_proyecto">
                   <input class="form-control" type="hidden" value="<?php echo $_GET['id_est']; ?>" id="id_est"  name="id_est"> <!-- este no se muestra no hay la variable -->
                     <input class="form-control" type="hidden" value="" id="id_seg"  name="id_seg">
