@@ -96,7 +96,7 @@
                        while ($row=mysqli_fetch_array($query)){
                                $id=$row['id'];
                                $programa=$row['id_material'];
-                                   $estado=$row['cantidad'];
+                                   $cantidad=$row['cantidad'];
                                
                                    if ($estado=='activo'){$label_class='warning '; $ico='info';}
                                    elseif ($estado=='terminado'){$label_class='primary'; $ico='check';}
@@ -113,12 +113,13 @@
                            <input type="hidden" value="<?php echo $estado;?>" id="estado<?php echo $id;?>">
                                <td><?php echo $count++;?></td>
                                <td><?php echo $programa; ?></td>
-                               <td><a href="#" class="btn btn-<?php echo $label_class;?> btn-icon-split">
+                               <!-- <td><a href="#" class="btn btn-<?php echo $label_class;?> btn-icon-split">
                            <span class="icon text-white-50">
                              <i class="fas fa-<?php echo $ico; ?>"></i>
                            </span>
                            <span class="text"><?php echo $estado; ?></span>
-                         </a></td>
+                         </a></td> -->
+                             <td><?php echo $cantidad; ?></td>
                               <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>	
                            <td ><span class="pull-right">
                            <a href="#" class='btn btn-success' title='Editar Obra' onclick="obtener_datos('<?php echo $id;?>');" data-toggle="modal" data-target="#myModal2"><i class="fa fa-edit"></i></a>
