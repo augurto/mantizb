@@ -21,7 +21,7 @@ function load(page){
 function eliminar (id)
 {
         swal({
-title: "Realmente deseas eliminar el programa?",
+title: "Realmente deseas eliminar?",
 text: "Una vez eliminado, no volveras a ver el programa",
 icon: "warning",
 buttons: true,
