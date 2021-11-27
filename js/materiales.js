@@ -21,8 +21,8 @@ function load(page){
 function eliminar (id)
 {
         swal({
-title: "Realmente deseas eliminar?",
-text: "Una vez eliminado, no volveras a ver el programa",
+title: "Realmente deseas eliminar la Obra?",
+text: "Una vez eliminado, no volveras a ver la Obra",
 icon: "warning",
 buttons: true,
 dangerMode: true,
@@ -30,7 +30,7 @@ dangerMode: true,
 .then((willDelete) => {
 
 if (willDelete) {
-swal("Programa eliminado exitosamente", {
+swal("Obra eliminada exitosamente", {
 icon: "success",
 });
 $.ajax({

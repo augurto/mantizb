@@ -16,7 +16,15 @@
                      <strong>Aviso!</strong> Datos eliminados exitosamente.
                    </div>
                    <?php 
-               }else {
+               }
+               elseif ($delete2=mysqli_query($con,"DELETE FROM obras WHERE id='".$idd."'")){
+                ?>
+                <div class="alert alert-success alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <strong>Aviso!</strong> Datos eliminados exitosamente.
+                </div>
+                <?php 
+                 }else {
                    ?>
                    <div class="alert alert-danger alert-dismissible" role="alert">
                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
