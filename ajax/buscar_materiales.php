@@ -86,7 +86,7 @@
                        $count=1;
                        while ($row=mysqli_fetch_array($query)){
                                $id=$row['id'];
-                               $programa=$row['programa'];
+                               $programa=$row['nombre_obra'];
                                    $estado=$row['estado'];
                                
                                    if ($estado=='activo'){$label_class='warning '; $ico='info';}
