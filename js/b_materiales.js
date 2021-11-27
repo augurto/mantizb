@@ -6,7 +6,7 @@ function load(page){
     var q= $("#q").val();
     $("#loader").fadeIn('slow');
     $.ajax({
-        url:'./ajax/buscar_programas.php?action=ajax&page='+page+'&q='+q,
+        url:'./ajax/buscar_materiales_2.php?action=ajax&page='+page+'&q='+q,
          beforeSend: function(objeto){
          $('#loader').html('<img src="./img/ajax-loader.gif"> Cargando...');
       },
