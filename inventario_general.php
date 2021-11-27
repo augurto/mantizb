@@ -119,7 +119,7 @@
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="js/obra.js"></script>
-  <script src="js/materiales.js"></script>
+  <!-- <script src="js/materiales.js"></script> -->
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
