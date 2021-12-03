@@ -16,82 +16,37 @@
         <div class="modal-body">
 			<form class="form-horizontal" method="post" id="guardar_programa" name="guardar_programa">
 			<div id="resultados_ajax"></div>
-      <label>Nombre del material</label>
+			 	<label>Material</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <select class='mi-selector' >
-                        <option class="form-control" name="id_material" id="id_material" value="0">Seleccione:</option>
-                        
-                        <?php
-                        
-                        $query = $mysqli -> query ("SELECT * FROM materiales");
-                        while ($valores = mysqli_fetch_array($query)) {
-                            echo '<option value="'.$valores[id].'">'.$valores[nombre_material].'</option>';
-                        }
-                        ?>
-                  </select>
-                </div>
-
-                <label>Unidad</label>
-			  <div class="input-group mb-3">
-
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><span class="icon-books"></span></span>
-                  </div>
-                  
-                  <select>
-                        <option class="form-control" name="unidad" id="unidad" value="0">Seleccione:</option>
-                        
-                        <?php
-                        
-                        $query = $mysqli -> query ("SELECT * FROM undad");
-                        while ($valores = mysqli_fetch_array($query)) {
-                            echo '<option value="'.$valores[id].'">'.$valores[nombre_unidad].' - '.$valores[unidad].'</option>';
-                        }
-                        ?>
-                  </select>
-                  
-                </div>
-
-                <label>Cantidad</label>
-			  <div class="input-group mb-3">
-
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><span class="icon-books"></span></span>
-                  </div>
-                  <input type="text" class="form-control" name="cantidad" placeholder="Nombre del programa">
-                </div>
-
-
-                <label>id_obra</label>
-			  <div class="input-group mb-3">
-
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><span class="icon-books"></span></span>
-                  </div>
-                  <input type="text" class="form-control" name="id_obra" value="<?php echo $_GET['id']?>">
-                </div>
-
-                <label>Fecha</label>
-			  <div class="input-group mb-3">
-
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><span class="icon-books"></span></span>
-                  </div>
-                  <input type="date" value="<?php echo date('Y-m-d'); ?>" class="form-control" name="fecha" >
+                  <input type="text" class="form-control" name="programa" placeholder="Nombre del programa">
                 </div>
             </div>
 
-            <label>Usuario</label>
+		  <div class="modal-footer">
+      <div id="resultados_ajax"></div>
+			 	<label>Material</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" value="<?php echo $_POST['username'] ?>" class="form-control" name="usuario" >
+                  <input type="text" class="form-control" name="programa" placeholder="Nombre del programa">
+                </div>
+            </div>
+
+		  <div class="modal-footer">
+      <div id="resultados_ajax"></div>
+			 	<label>Material</label>
+			  <div class="input-group mb-3">
+
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><span class="icon-books"></span></span>
+                  </div>
+                  <input type="text" class="form-control" name="programa" placeholder="Nombre del programa">
                 </div>
             </div>
 
