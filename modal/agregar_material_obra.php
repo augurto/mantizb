@@ -16,7 +16,7 @@
           </button>
         </div> 
         <div class="modal-body">
-			<form class="form-horizontal" method="post" id="guardar_programa" name="guardar_programa">
+			<form class="form-horizontal" method="post" id="guardar_programa_material_obra" name="guardar_programa_material_obra">
 			<div id="resultados_ajax"></div>
 			 	<label>Nombre del material</label>
 			  <div class="input-group mb-3">
@@ -89,7 +89,7 @@
            
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			<button type="submit" class="btn btn-primary" id="guardar_datos">Guardar datos</button>
+			<button type="submit" class="btn btn-primary" id="guardar_datos_mat_obra">Guardar datos</button>
 		  </div>
 		  </form>
 		    </div>

@@ -53,8 +53,8 @@ load(1);
 
 
 
-$( "#guardar_programa" ).submit(function( event ) {
-$('#guardar_datos').attr("disabled", true);
+$( "#guardar_programa_material_obra" ).submit(function( event ) {
+$('#guardar_datos_mat_obra').attr("disabled", true);
 
 var parametros = $(this).serialize();
 $.ajax({
@@ -66,8 +66,8 @@ $.ajax({
       },
     success: function(datos){
     $("#resultados_ajax").html(datos);
-    $('#guardar_datos').attr("disabled", false);
-    document.getElementById("guardar_programa").reset();
+    $('#guardar_datos_mat_obra').attr("disabled", false);
+    document.getElementById("guardar_programa_material_obra").reset();
     load(1);
   }
 });
