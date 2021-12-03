@@ -45,7 +45,7 @@
                   </div>
                   
                   <select>
-                        <option class="form-control" name="obra" value="0">Seleccione:</option>
+                        <option class='mi-selector' name="obra" value="0">Seleccione:</option>
                         
                         <?php
                         
