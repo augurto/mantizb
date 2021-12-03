@@ -8,7 +8,7 @@
     <div class="modal-dialog modal-cm" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><i class='fa fa-file'></i> Nueva Material a la Obra <?php echo $nom?></h5>
+          <h5 class="modal-title" id="exampleModalLabel"><i class='fa fa-file'></i> Agregar Material a la Obra <?php echo $_GET['nom']?></h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
@@ -16,13 +16,20 @@
         <div class="modal-body">
 			<form class="form-horizontal" method="post" id="guardar_programa" name="guardar_programa">
 			<div id="resultados_ajax"></div>
-			 	<label>Nombre del material/label>
+			 	<label>Nombre del material</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" class="form-control" name="obra" placeholder="Nombre del programa">
+                  <label>Cantidad del material</label>
+                  <input type="text" class="form-control" name="obra" placeholder="Cantidad">
+                  <label>Fecha de compra</label>
+                  <input type="date" class="form-control" name="fecha">
+                  <label>Precio del material</label>
+                  <input type="text" class="form-control" name="obra" placeholder="Precio">
+                  
+
                 </div>
             </div>
 
