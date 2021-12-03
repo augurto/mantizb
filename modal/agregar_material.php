@@ -22,7 +22,17 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" class="form-control" name="programa" placeholder="Nombre del programa">
+                  <select class='mi-selector' >
+                        <option class="form-control" name="id_material" id="id_material" value="0">Seleccione:</option>
+                        
+                        <?php
+                        
+                        $query = $mysqli -> query ("SELECT * FROM materiales");
+                        while ($valores = mysqli_fetch_array($query)) {
+                            echo '<option value="'.$valores[id].'">'.$valores[nombre_material].'</option>';
+                        }
+                        ?>
+                  </select>
                 </div>
             </div>
 
@@ -34,7 +44,17 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" class="form-control" name="programa" placeholder="Nombre del programa">
+                  <select>
+                        <option class="form-control" name="unidad" id="unidad" value="0">Seleccione:</option>
+                        
+                        <?php
+                        
+                        $query = $mysqli -> query ("SELECT * FROM undad");
+                        while ($valores = mysqli_fetch_array($query)) {
+                            echo '<option value="'.$valores[id].'">'.$valores[nombre_unidad].' - '.$valores[unidad].'</option>';
+                        }
+                        ?>
+                  </select>
                 </div>
             </div>
 
@@ -46,21 +66,21 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" class="form-control" name="programa" placeholder="Nombre del programa">
+                  <input type="text" class="form-control" name="cantidad" placeholder="Cantidad del material">
                 </div>
             </div>
 
 		  <div class="modal-footer">
 
       <div id="resultados_ajax"></div>
-			 	<label>id_obra del Material</label>
+			 <!-- 	<label>id_obra del Material</label> -->
          <br>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" class="form-control" name="programa" placeholder="Nombre del programa">
+                  <input type="text" class="form-control" name="id_obra" value="<?php echo $_GET['id']?>">
                 </div>
             </div>
 
@@ -73,7 +93,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" class="form-control" name="programa" placeholder="Nombre del programa">
+                  <input type="date" value="<?php echo date('Y-m-d'); ?>" class="form-control" name="fecha" >
                 </div>
             </div>
 
