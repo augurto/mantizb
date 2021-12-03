@@ -14,13 +14,13 @@
         $fecha=mysqli_real_escape_string($con,(strip_tags($_POST["fecha"],ENT_QUOTES)));
         $username2="ego";
 
-		$sql2 = "SELECT * FROM materiales WHERE nombre_material = '" . $material . "';";
+		/* $sql2 = "SELECT * FROM materiales WHERE nombre_material = '" . $material . "';";
                 $query_check_user_name = mysqli_query($con,$sql2);
 				$query_check_user=mysqli_num_rows($query_check_user_name);
 
                 if ($query_check_user == 1) {
                     $errors[] = "Lo sentimos , el material ya está agregado.";
-                } else {
+                } else */ if{
 		$sql="INSERT INTO materiales (nombre_material,unidad,id_unidad, cantidad, id_obra,fecha,fecha_hoy, usuario) VALUES ('$material','$unidad','$unidad2','$cantidad', '$id_obra','$fecha', now(),'$username2')";
 		$query_new_insert = mysqli_query($con,$sql);
 			if ($query_new_insert){
