@@ -24,7 +24,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <select>
+                  <select class='mi-selector'>
                         <option class="form-control" name="obra" value="0">Seleccione:</option>
                         
                         <?php
@@ -45,7 +45,7 @@
                   </div>
                   
                   <select>
-                        <option class='mi-selector' name="obra" value="0">Seleccione:</option>
+                        <option class="form-control" name="obra" value="0">Seleccione:</option>
                         
                         <?php
                         
