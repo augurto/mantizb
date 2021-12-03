@@ -44,6 +44,7 @@
       include("modal/agregar_programas.php");
        include("modal/editar_programas.php");
        include("modal/cambiar_password.php");
+       include("modal/agregar_material_obra.php");
        ?>
   <!-- Page Wrapper -->
   <div id="wrapper">
