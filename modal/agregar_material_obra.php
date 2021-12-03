@@ -3,6 +3,8 @@
 		require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 		require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
 		// escaping, additionally removing everything that could be (html/javascript-) code
+
+        $mysqli = new mysqli('localhost', 'u415020159_mantizb', 'Mantizb*#17', 'u415020159_mantizb');
  ?>
 	 <div class="modal fade" id="nuevoMaterial" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-cm" role="document">
@@ -22,7 +24,17 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" class="form-control" name="obra" placeholder="Nombre del programa">
+                  <select>
+                        <option class="form-control" name="obra" value="0">Seleccione:</option>
+                        
+                        <?php
+                        
+                        $query = $mysqli -> query ("SELECT * FROM materiales");
+                        while ($valores = mysqli_fetch_array($query)) {
+                            echo '<option value="'.$valores[id].'">'.$valores[nombre_material].'</option>';
+                        }
+                        ?>
+                  </select>
                 </div>
 
                 <label>Unidad</label>
@@ -36,7 +48,7 @@
                         <option class="form-control" name="obra" value="0">Seleccione:</option>
                         
                         <?php
-                        $mysqli = new mysqli('localhost', 'u415020159_mantizb', 'Mantizb*#17', 'u415020159_mantizb');
+                        
                         $query = $mysqli -> query ("SELECT * FROM undad");
                         while ($valores = mysqli_fetch_array($query)) {
                             echo '<option value="'.$valores[id].'">'.$valores[nombre_unidad].' - '.$valores[unidad].'</option>';
