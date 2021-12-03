@@ -43,7 +43,7 @@
 <body id="page-top">
 <?php 
       include("modal/agregar_obra.php");
-      include("modal/agregar_material.php");
+/*       include("modal/agregar_material.php"); */
        include("modal/editar_obra.php");
        include("modal/cambiar_password.php");
        include("modal/seguimientos.php");
