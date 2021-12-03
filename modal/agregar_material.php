@@ -4,7 +4,7 @@
 		require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
 		// escaping, additionally removing everything that could be (html/javascript-) code
  ?>
-	 <div class="modal fade" id="nuevoPrograma" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	 <div class="modal fade" id="nuevoMat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-cm" role="document">
       <div class="modal-content">
         <div class="modal-header">
