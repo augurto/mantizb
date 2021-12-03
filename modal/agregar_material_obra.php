@@ -16,7 +16,7 @@
         <div class="modal-body">
 			<form class="form-horizontal" method="post" id="guardar_programa" name="guardar_programa">
 			<div id="resultados_ajax"></div>
-			 	<label>Nombre de la obra</label>
+			 	<label>Nombre del material</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
@@ -25,7 +25,7 @@
                   <input type="text" class="form-control" name="obra" placeholder="Nombre del programa">
                 </div>
 
-                <label>Nombre de la obra</label>
+                <label>Unidad</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
@@ -34,7 +34,7 @@
                   <input type="text" class="form-control" name="obra" placeholder="Nombre del programa">
                 </div>
 
-                <label>Nombre de la obra</label>
+                <label>Nombre de la unidad</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
@@ -43,13 +43,13 @@
                   <input type="text" class="form-control" name="obra" placeholder="Nombre del programa">
                 </div>
 
-                <label>Nombre de la obra</label>
+                <label>Fecha</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" class="form-control" name="obra" placeholder="Nombre del programa">
+                  <input type="date" value="<?php echo date('Y-m-d'); ?>" class="form-control" name="fecha" >
                 </div>
             </div>
 
