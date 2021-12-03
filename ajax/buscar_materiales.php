@@ -67,7 +67,8 @@
                $reload = './inventario_general.php';
                //main query to fetch the data
                $sql="SELECT * FROM  $sTable LIMIT $offset,$per_page";
-               $query = mysqli_query($con, $sql);
+               $sql2="SELECT * FROM  obras";
+               $query = mysqli_query($con, $sql2);
                //loop through fetched data
                if ($numrows>0){
                    
