@@ -26,9 +26,9 @@
                 </div>
             </div>
 
-		  <div class="modal-footer">
+            <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			<button type="submit" class="btn btn-primary" id="guardar_datos">Guardar datos</button>
+			<button type="submit" class="btn btn-primary" id="guardar_datos_mat_obra">Guardar datos</button>
 		  </div>
 		  </form>
 		    </div>
