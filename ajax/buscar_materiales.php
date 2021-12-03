@@ -83,7 +83,7 @@
                            <tr>
                            <th>Id</th>
                            <th>Nombre de la Obra</th>
-                           <th>Estado</th>
+                           <th>Estado.</th>
                               <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>
                            <th>Acciones</th>
                        <?php }?>
