@@ -93,6 +93,7 @@
                            <tr>
                            <th>Id</th>
                            <th>Nombre del Material</th>
+                           <th>Unidad</th>
                            <th>Cantidad</th>
                               <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>
                            <th>Acciones...</th>
@@ -107,6 +108,7 @@
                                $id=$row['id'];
                                $programa=$row['nombre_material'];
                                    $cantidad=$row['cantidad'];
+                                   $unidad=$row['unidad'];
                                
                                    if ($estado=='activo'){$label_class='warning '; $ico='info';}
                                    elseif ($estado=='terminado'){$label_class='primary'; $ico='check';}
@@ -129,6 +131,7 @@
                            </span>
                            <span class="text"><?php echo $estado; ?></span>
                          </a></td> -->
+                             <td><?php echo $unidad;?></td>
                              <td><?php echo $cantidad; ?></td>
                               <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>	
                            <td ><span class="pull-right">
