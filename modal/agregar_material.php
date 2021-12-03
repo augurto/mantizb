@@ -16,7 +16,7 @@
         <div class="modal-body">
 			<form class="form-horizontal" method="post" id="guardar_programa" name="guardar_programa">
 			<div id="resultados_ajax"></div>
-			 	<label>Material</label>
+			 	<label>Nombre del Material</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
@@ -28,7 +28,7 @@
 
 		  <div class="modal-footer">
       <div id="resultados_ajax"></div>
-			 	<label>Material</label>
+			 	<label>Unidad</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
@@ -40,7 +40,33 @@
 
 		  <div class="modal-footer">
       <div id="resultados_ajax"></div>
-			 	<label>Material</label>
+			 	<label>Cantidad</label>
+			  <div class="input-group mb-3">
+
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><span class="icon-books"></span></span>
+                  </div>
+                  <input type="text" class="form-control" name="programa" placeholder="Nombre del programa">
+                </div>
+            </div>
+
+		  <div class="modal-footer">
+
+      <div id="resultados_ajax"></div>
+			 	<label>id_obra</label>
+			  <div class="input-group mb-3">
+
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><span class="icon-books"></span></span>
+                  </div>
+                  <input type="text" class="form-control" name="programa" placeholder="Nombre del programa">
+                </div>
+            </div>
+
+		  <div class="modal-footer">
+
+      <div id="resultados_ajax"></div>
+			 	<label>fecha</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
