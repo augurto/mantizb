@@ -28,7 +28,7 @@
 
 		  <div class="modal-footer">
       <div id="resultados_ajax"></div>
-			 	<label>Unidad</label>
+			 	<label>Unidad del Material</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
@@ -40,20 +40,7 @@
 
 		  <div class="modal-footer">
       <div id="resultados_ajax"></div>
-			 	<label>Cantidad</label>
-			  <div class="input-group mb-3">
-
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><span class="icon-books"></span></span>
-                  </div>
-                  <input type="text" class="form-control" name="programa" placeholder="Nombre del programa">
-                </div>
-            </div>
-
-		  <div class="modal-footer">
-
-      <div id="resultados_ajax"></div>
-			 	<label>id_obra</label>
+			 	<label>Cantidad de Material</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
@@ -66,7 +53,20 @@
 		  <div class="modal-footer">
 
       <div id="resultados_ajax"></div>
-			 	<label>fecha</label>
+			 	<label>id_obra del Material</label>
+			  <div class="input-group mb-3">
+
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><span class="icon-books"></span></span>
+                  </div>
+                  <input type="text" class="form-control" name="programa" placeholder="Nombre del programa">
+                </div>
+            </div>
+
+		  <div class="modal-footer">
+
+      <div id="resultados_ajax"></div>
+			 	<label>Fecha de ingreso del Material</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
