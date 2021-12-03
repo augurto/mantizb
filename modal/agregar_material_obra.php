@@ -16,7 +16,7 @@
           </button>
         </div> 
         <div class="modal-body">
-			<form class="form-horizontal" method="post" action="insert/insert_agregar_material_obra.php">
+			<form class="form-horizontal" action="insert/insert_agregar_material_obra.php" method="post" >
 			<div id="resultados_ajax"></div>
 			 	<label>Nombre del material</label>
 			  <div class="input-group mb-3">
@@ -93,7 +93,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" value="<?php echo $username ?>" class="form-control" name="usuario" >
+                  <input type="text" value="<?php echo $_POST['username'] ?>" class="form-control" name="usuario" >
                 </div>
             </div>
            
