@@ -25,7 +25,7 @@
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
                   <select class='mi-selector' >
-                        <option class="form-control" name="material" id="material" value="0">Seleccione:</option>
+                        <option class="form-control" name="id_material" id="id_material" value="0">Seleccione:</option>
                         
                         <?php
                         
@@ -84,6 +84,16 @@
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
                   <input type="date" value="<?php echo date('Y-m-d'); ?>" class="form-control" name="fecha" >
+                </div>
+            </div>
+
+            <label>Usuario</label>
+			  <div class="input-group mb-3">
+
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><span class="icon-books"></span></span>
+                  </div>
+                  <input type="text" value="<?php echo $username ?>" class="form-control" name="usuario" >
                 </div>
             </div>
            
