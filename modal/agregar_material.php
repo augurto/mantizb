@@ -29,7 +29,7 @@
                         
                         $query = $mysqli -> query ("SELECT * FROM materiales");
                         while ($valores = mysqli_fetch_array($query)) {
-                            echo '<option value="'.$valores[id].'">'.$valores[nombre_material].'</option>';
+                            echo '<option value="'.$valores['id'].'">'.$valores['nombre_material'].'</option>';
                         }
                         ?>
                   </select>
@@ -51,7 +51,7 @@
                         
                         $query = $mysqli -> query ("SELECT * FROM undad");
                         while ($valores = mysqli_fetch_array($query)) {
-                            echo '<option value="'.$valores[id].'">'.$valores[nombre_unidad].' - '.$valores[unidad].'</option>';
+                            echo '<option value="'.$valores['id'].'">'.$valores['nombre_unidad'].' - '.$valores['unidad'].'</option>';
                         }
                         ?>
                   </select>
