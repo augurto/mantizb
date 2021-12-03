@@ -1,5 +1,10 @@
 <?php
-require_once("conexion.php");
+$servername = "localhost";
+$database = "u415020159_mantizb";
+$username = "u415020159_mantizb";
+$password = "Mantizb*#17";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 
 $id_material=$_POST["id_material"];
