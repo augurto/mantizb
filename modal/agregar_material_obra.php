@@ -76,7 +76,12 @@
                   <input type="date" value="<?php echo date('Y-m-d'); ?>" class="form-control" name="fecha" >
                 </div>
             </div>
-
+            <select name="id_country" id="id_country">
+    <option value="231">Afganistán</option>
+    <option value="230">Albania</option>
+    <option value="1">Alemania</option>
+    ...
+</select>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 			<button type="submit" class="btn btn-primary" id="guardar_datos">Guardar datos</button>

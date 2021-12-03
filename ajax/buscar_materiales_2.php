@@ -167,7 +167,15 @@
          <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
           <!-- Page level custom scripts -->
          <script src="js/demo/datatables-demo.js"></script>
-       
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="./zelect.js"></script>
+        <script type="text/javascript">
+        $(setup)
+
+        function setup() {
+            $('#id_country').zelect({ placeholder:'Selecciona país...' })
+        }
+        </script>
        
        
        
