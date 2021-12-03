@@ -42,6 +42,7 @@
                         }
                         ?>
                   </select>
+                  <input type="text" value="<?php echo $valores[nombre_unidad]" >
                 </div>
 
                 <label>Nombre de la unidad</label>
