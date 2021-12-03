@@ -95,6 +95,8 @@
                            <th>Nombre del Material</th>
                            <th>Unidad</th>
                            <th>Cantidad</th>
+                           <th>id_obra</th>
+                           <th>Usuario</th>
                               <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>
                            <th>Acciones...</th>
                        <?php }?>
@@ -109,6 +111,8 @@
                                $programa=$row['nombre_material'];
                                    $cantidad=$row['cantidad'];
                                    $unidad=$row['unidad'];
+                                   $id_obra=$row['id_obra'];
+                                   $usuario_ob=$row['usuario'];
                                
                                    if ($estado=='activo'){$label_class='warning '; $ico='info';}
                                    elseif ($estado=='terminado'){$label_class='primary'; $ico='check';}
@@ -133,6 +137,8 @@
                          </a></td> -->
                              <td><?php echo $unidad;?></td>
                              <td><?php echo $cantidad; ?></td>
+                             <td><?php echo $id_obra; ?></td>
+                             <td><?php echo $usuario_ob; ?></td>
                               <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>	
                            <td ><span class="pull-right">
                            <a href="#" class='btn btn-success' title='Editar Obra' onclick="obtener_datos('<?php echo $id;?>');" data-toggle="modal" data-target="#myModal2"><i class="fa fa-edit"></i></a>
