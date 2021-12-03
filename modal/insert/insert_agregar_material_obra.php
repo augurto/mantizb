@@ -20,7 +20,7 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO materiales_obra /* (id_material, id_unidad, cantidad, id_obra, fecha, fecha_hoy, usuario)  */
+$sql = "INSERT INTO materiales_obra (id_material, id_unidad, cantidad, id_obra, fecha, fecha_hoy, usuario) 
 VALUES ('1', '2', '3', '3','0000-00-00','0000-00-00','ego')";
 /* VALUES ('$id_material', '$unidad', '$cantidad', '$id_obra','$fecha','$fecha2','$usuario')"; */
 if (mysqli_query($conn, $sql)) {
