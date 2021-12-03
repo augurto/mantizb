@@ -66,7 +66,7 @@
  <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800"><b>Obra  </b> <?php echo$_GET['nom']?></h1>
                <?php if($_GET['estado']=='activo'){ ?>
-            <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#nuevoPrograma"><i class="fas fa-user fa-sm text-white-50"></i> Registrar Materiales</a>
+            <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#nuevoMaterial"><i class="fas fa-user fa-sm text-white-50"></i> Registrar Materiales</a>
           <?php } ?>
           </div>
 
