@@ -37,6 +37,16 @@
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="./zelect.js"></script>
+<script type="text/javascript">
+$(setup)
+
+function setup() {
+    $('#id_country').zelect({ placeholder:'Selecciona país...' })
+}
+</script>
+
 </head>
 
 <body id="page-top">
@@ -122,6 +132,8 @@
   <script src="js/demo/datatables-demo.js"></script>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
 
 </body>
 
