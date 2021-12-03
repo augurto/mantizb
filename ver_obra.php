@@ -37,13 +37,24 @@
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" src="./zelect.js"></script>
-<script type="text/javascript">
-$(setup)
-
-function setup() {
-    $('#id_country').zelect({ placeholder:'Selecciona país...' })
+  <script>
+function buscarSelect()
+{
+	// creamos un variable que hace referencia al select
+	var select=document.getElementById("elementos");
+ 
+	// obtenemos el valor a buscar
+	var buscar=document.getElementById("buscar").value;
+ 
+	// recorremos todos los valores del select
+	for(var i=1;i<select.length;i++)
+	{
+		if(select.options[i].text==buscar)
+		{
+			// seleccionamos el valor que coincide
+			select.selectedIndex=i;
+		}
+	}
 }
 </script>
 
