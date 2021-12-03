@@ -34,14 +34,25 @@
                   
                   <select>
                         <option class="form-control" name="obra" value="0">Seleccione:</option>
+                        
                         <?php
-                        $mysqli = new mysqli('localhost', 'u415020159_mantizb', 'Mantizb*#17', 'u415020159_mantizb');
+                        $mysqli = new mysqli('localhost', 'u415020159_mantizb', '', '');
                         $query = $mysqli -> query ("SELECT * FROM undad");
                         while ($valores = mysqli_fetch_array($query)) {
                             echo '<option value="'.$valores[id].'">'.$valores[unidad].'</option>';
                         }
                         ?>
                   </select>
+                  <label>SELECT 1 (Continentes)</label>
+                    <select id="lista1" name="lista1">
+                        <option value="0">Selecciona una opcion</option>
+                        <option value="1">America</option>
+                        <option value="2">Asia</option>
+                        <option value="3">Europa</option>
+                        <option value="4">Africa</option>
+                    </select>
+                    <br>
+                    <div id="select2lista"></div>
                   <input type="text" value="<?php echo $valores[nombre_unidad]?>" >
                 </div>
 
@@ -73,3 +84,25 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#lista1').val(1);
+		recargarLista();
+
+		$('#lista1').change(function(){
+			recargarLista();
+		});
+	})
+</script>
+<script type="text/javascript">
+	function recargarLista(){
+		$.ajax({
+			type:"POST",
+			url:"datos.php",
+			data:"continente=" + $('#lista1').val(),
+			success:function(r){
+				$('#select2lista').html(r);
+			}
+		});
+	}
+</script>
