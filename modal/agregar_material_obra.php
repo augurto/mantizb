@@ -31,7 +31,16 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" class="form-control" name="obra" placeholder="Nombre del programa">
+                  
+                  <select>
+                        <option class="form-control" name="obra" value="0">Seleccione:</option>
+                        <?php
+                        $query = $mysqli -> query ("SELECT * FROM undad");
+                        while ($valores = mysqli_fetch_array($query)) {
+                            echo '<option value="'.$valores[id].'">'.$valores[unidad].'</option>';
+                        }
+                        ?>
+                  </select>
                 </div>
 
                 <label>Nombre de la unidad</label>
