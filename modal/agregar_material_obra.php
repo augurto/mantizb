@@ -39,7 +39,7 @@
                         $mysqli = new mysqli('localhost', 'u415020159_mantizb', 'Mantizb*#17', 'u415020159_mantizb');
                         $query = $mysqli -> query ("SELECT * FROM undad");
                         while ($valores = mysqli_fetch_array($query)) {
-                            echo '<option value="'.$valores[id].'">'.$valores[nombre_unidad].'</option>';
+                            echo '<option value="'.$valores[id].'">'.$valores[nombre_unidad].' - '.$valores[unidad].'</option>';
                         }
                         ?>
                   </select>
