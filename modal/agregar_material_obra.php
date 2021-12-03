@@ -16,7 +16,7 @@
           </button>
         </div> 
         <div class="modal-body">
-			<form class="form-horizontal" action="insert/insert_agregar_material_obra.php" method="post" >
+			<form class="form-horizontal" action="insert/insert_agregar_material_obra.php" method="post" id="guardar_programa" name="guardar_programa">
 			<div id="resultados_ajax"></div>
 			 	<label>Nombre del material</label>
 			  <div class="input-group mb-3">
