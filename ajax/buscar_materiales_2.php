@@ -72,7 +72,7 @@
                //main query to fetch the data
                $sql="SELECT * FROM  $sTable $sWhere LIMIT $offset,$per_page";
                $sql_obra="SELECT * FROM materiales_obra inner join materiales  
-               on materiales_obra.id_material= materiales.id/* where id_obra='".$idd."' */ ";
+               on materiales_obra.id_material= materiales.id where materiales_obra.id_obra='".$idd."' ";
 
                
 
