@@ -121,7 +121,7 @@ function buscarSelect()
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-
+  <script src="js/agregar_material_obra.js"></script>
   <!-- Logout Modal-->
  <?php include('modal/logout.php'); ?>
 

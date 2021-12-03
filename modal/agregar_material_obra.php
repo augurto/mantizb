@@ -24,8 +24,8 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <select class='mi-selector'>
-                        <option class="form-control" name="obra" value="0">Seleccione:</option>
+                  <select class='mi-selector' >
+                        <option class="form-control" name="material" id="material" value="0">Seleccione:</option>
                         
                         <?php
                         
@@ -45,7 +45,7 @@
                   </div>
                   
                   <select>
-                        <option class="form-control" name="obra" value="0">Seleccione:</option>
+                        <option class="form-control" name="unidad" id="unidad" value="0">Seleccione:</option>
                         
                         <?php
                         
@@ -58,13 +58,23 @@
                   
                 </div>
 
-                <label>Nombre de la unidad</label>
+                <label>Cantidad</label>
 			  <div class="input-group mb-3">
 
                   <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon-books"></span></span>
                   </div>
-                  <input type="text" class="form-control" name="obra" placeholder="Nombre del programa">
+                  <input type="text" class="form-control" name="cantidad" placeholder="Nombre del programa">
+                </div>
+
+
+                <label>id_obra</label>
+			  <div class="input-group mb-3">
+
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><span class="icon-books"></span></span>
+                  </div>
+                  <input type="text" class="form-control" name="id_obra" value="<?php echo $_GET['id']?>">
                 </div>
 
                 <label>Fecha</label>
